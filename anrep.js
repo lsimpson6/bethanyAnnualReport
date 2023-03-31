@@ -8,12 +8,7 @@
   
 window.addEventListener('scroll', ()=>{
   	var y = scrollY;
-    	for(var i = 0; i < tLength; i++){
-          var posFromTop = target[i].getClientBoundingRect().top;
-          if(posFromTop <= 0){
-          sectionTitle.textContent = textSelector[i];
-          }
-      }
+    alert(y);
   })
   
   
