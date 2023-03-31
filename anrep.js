@@ -1,5 +1,5 @@
 (function (){
-  var winHeight = window.innerHeight/1.5;
+  var winHeight = window.innerHeight;
   var sectionTitle = document.getElementById('section-title');
   var textSelector = ["Annual Report", "Motivated by Faith", "Global Impact", "Mission and Vision"];
   var target = document.querySelectorAll('.title-target');
@@ -31,7 +31,7 @@
       for(var a = 0; a < animate.length; a++){
         var tmpAnimate = animate[a];
         var ayPos = tmpAnimate.getBoundingClientRect().top;
-          if(ayPos <= winHeight){
+          if(ayPos <= (winHeight/1.5)){
             tmpAnimate.classList.add('fade-in');
             tmpAnimate.classList.remove('animate');
           }
