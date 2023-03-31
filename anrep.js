@@ -17,10 +17,6 @@
           x++;
           sectionTitle.textContent = textSelector[x];
         }
-        else {
-          x--;
-          sectionTitle.textContent = textSelector[x];
-        }
       }
     });
       
