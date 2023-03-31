@@ -26,7 +26,7 @@
         }
       }
 
-      /* fades in elements
+      // fades in elements
       for(var a = 0; a < animate.length; a++){
         var winHeight = window.innerHeight/2;
         var tmpAnimate = animate[a];
@@ -35,7 +35,8 @@
             tmpAnimate.classList.add('fade-in');
             tmpAnimate.classList.remove('animate');
           }
-      } */
+      }
+       
     });
       
 })();
