@@ -16,9 +16,6 @@
         if(yPos <= 0){
           x++;
         }
-        else {
-          x--;
-        }
         sectionTitle.textContent = textSelector[x];
       }
     });
