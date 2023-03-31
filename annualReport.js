@@ -4,9 +4,6 @@
   window.addEventListener('scroll', ()=>{
   	var y = scrollY;
     
-    if(y > 30){
-      alert('hello');
-    }
-  
+      alert(y);
   })
 })();
