@@ -4,14 +4,11 @@
   var target = document.querySelectorAll('.title-target');
   var tLength = target.length;
   
-window.addEventListener('scroll', animate);
+    window.addEventListener('scroll', ()=>{
 
-function animate(){
-  var y = scrollY;
-  alert(y);
-};
-  
-  
-  
+      var y = scrollY;
+      alert(y);
+    });
+      
 })();
 
