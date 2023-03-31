@@ -15,8 +15,12 @@
         var x = 0;
         if(yPos <= 0){
           x++;
+          sectionTitle.textContent = textSelector[x];
         }
-        sectionTitle.textContent = textSelector[x];
+        else {
+          x--;
+          sectionTitle.textContent = textSelector[x];
+        }
       }
     });
       
