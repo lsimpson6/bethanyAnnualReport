@@ -1,5 +1,5 @@
 (function (){
-  const winHeight = window.innerHeight/2;
+  var winHeight = window.innerHeight/2;
   var sectionTitle = document.getElementById('section-title');
   var textSelector = ["Annual Report", "Motivated by Faith", "Global Impact", "Mission and Vision"];
   var target = document.querySelectorAll('.title-target');
