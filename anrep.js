@@ -14,8 +14,12 @@
         var yPos = tmpTarget.getBoundingClientRect().top;
         var x = 0;
         if(yPos <= 0){
-          x++;
-          sectionTitle.textContent = textSelector[x];
+          if(i > textSelector.length){
+            sectionTitle.textContent = textSelector[0];
+          }
+          else {
+            sectionTitle.textContent = textSelector[i];
+          }
         }
       }
     });
