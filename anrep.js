@@ -12,14 +12,6 @@
   
     window.addEventListener('scroll', ()=>{
 
-      // removing parralax after scroll y pixels
-      var divAbs = document.querySelectorAll('.remove-fixed');
-      if(scrollY >= winHeight){
-        for(var r = 0; r < divAbs.length; r++){
-          divAbs[r].style.position = "relative";
-        }
-      }
-
       // changes text on top left
       for(var i = 0; i < target.length; i++){
         var tmpTarget = target[i];
