@@ -5,7 +5,7 @@
   	var y = scrollY;
     
     if(y > 30){
-      sectionTitle.text = "hello";
+      alert('hello');
     }
   
   })
