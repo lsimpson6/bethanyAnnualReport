@@ -13,6 +13,6 @@ window.addEventListener('scroll', ()=>{
   
   
   
-});
+})();
 
 </script>
