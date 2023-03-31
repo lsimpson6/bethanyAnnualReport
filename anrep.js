@@ -1,5 +1,4 @@
 (function (){
-  var winHeight = window.innerHeight/2;
   var sectionTitle = document.getElementById('section-title');
   var textSelector = ["Annual Report", "Motivated by Faith", "Global Impact", "Mission and Vision"];
   var target = document.querySelectorAll('.title-target');
@@ -27,12 +26,13 @@
       }
 
       for(var a = 0; a < animate.length; a++){
+        var winHeight = window.innerHeight/2;
         var tmpAnimate = animate[a];
         var ayPos = tmpAnimate.getBoundingClientRect().top;
-        if(ayPos <= winHeight){
-          tmpAnimate.classList.add('fade-in');
-          tmpAnimate.classList.remove('animate');
-        }
+          if(ayPos <= winHeight){
+            tmpAnimate.classList.add('fade-in');
+            tmpAnimate.classList.remove('animate');
+          }
       }
     });
       
