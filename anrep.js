@@ -66,9 +66,6 @@ function switchLocationStats(countryIndex){
             }
             topHeader.style.backgroundColor = "#ffffff";
         }
-        else {
-            topHeader.style.backgroundColor = "transparent";
-        }
       }
 
       // fades in elements
