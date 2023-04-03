@@ -58,14 +58,16 @@ function switchLocationStats(countryIndex){
         var tyPos = tmpTarget.getBoundingClientRect().top;
         var x = 0;
         if((tyPos-topHeader.clientHeight) <= 0){
+          sectionTitle.textContent = textSelector[0];
           if(i > textSelector.length){
             topHeader.style.backgroundColor = "#ffffff";
-            sectionTitle.textContent = textSelector[0];
           }
           else {
             sectionTitle.textContent = textSelector[i];
-            topHeader.style.backgroundColor = "transparent";
           }
+        }
+        else {
+            topHeader.style.backgroundColor = "transparent";
         }
       }
 
