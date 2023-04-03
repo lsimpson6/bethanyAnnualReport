@@ -44,7 +44,7 @@ function switchLocationStats(countryIndex){
   var animate = document.querySelectorAll('.animate');
   var firstElement = document.getElementById('first-element');
   var fixed = document.querySelectorAll('.fixed');
-  var topHeaderHeight = document.getElementById('blogofixed').clientHeight;
+  var topHeader = document.getElementById('blogofixed');
 
   (function (){
     sectionTitle.textContent = textSelector[0];
@@ -57,12 +57,14 @@ function switchLocationStats(countryIndex){
         var tmpTarget = target[i];
         var tyPos = tmpTarget.getBoundingClientRect().top;
         var x = 0;
-        if((tyPos-topHeaderHeight) <= 0){
+        if((tyPos-topHeader.clientHeight) <= 0){
           if(i > textSelector.length){
+            topHeader.style.backgroundColor = "#ffffff";
             sectionTitle.textContent = textSelector[0];
           }
           else {
             sectionTitle.textContent = textSelector[i];
+            topHeader.style.backgroundColor = "transparent";
           }
         }
       }
