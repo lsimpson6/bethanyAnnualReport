@@ -59,3 +59,50 @@
       
 })();
 
+(function (){
+var unitedStatesMap = document.getElementById('united-states-map');
+var unitedStatesPin = document.getElementById('united-states-pin');
+var romaniaMap = document.getElementById('Romania-Map');
+var romaniaPin = document.getElementById('Romania-Pin');
+var ghanaMap = document.getElementById('Ghana-Map');
+var ghanaPin = document.getElementById('Ghana-Pin');
+var colombiaMap = document.getElementById('Colombia-Map');
+var colombiaPin = document.getElementById('Colombia-Pin');
+var haitiMap = document.getElementById('Haiti-Map');
+var haitiPin = document.getElementById('Haiti-Pin');
+var albaniaMap = document.getElementById('Albania-Map');
+var albaniaPin = document.getElementById('Albania-Pin');
+var ethipioaMap = document.getElementById('Ethipoia-Map');
+var ethipioaPin = document.getElementById('Ethiopia-Pin');
+
+function unitedStatesClick() {
+    alert('us was clicked or hovered');
+}
+
+function ghanaClick() {
+  
+}
+
+function romaniaClick() {
+  
+}
+
+function colombiaClick() {
+  
+}
+
+function albaniaClick() {
+  
+}
+
+function haitiClick() {
+  
+}
+
+function ethipoiaClick() {
+  
+}
+
+
+})();
+
