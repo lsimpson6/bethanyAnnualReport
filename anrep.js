@@ -4,7 +4,8 @@
   var textSelector = ["Annual Report", "Motivated by Faith", "Global Impact", "Mission and Vision"];
   var target = document.querySelectorAll('.title-target');
   var animate = document.querySelectorAll('.animate');
-
+  var firstElement = document.getElementById('first-element');
+  var fixed = document.querySelectorAll('.fixed');
 
   (function (){
     sectionTitle.textContent = textSelector[0];
@@ -35,6 +36,23 @@
             tmpAnimate.classList.add('fade-in');
             tmpAnimate.classList.remove('animate');
           }
+      }
+
+      // remove fixed after a page is scrolled
+      var firstElementTop = firstElement.getBoundingClientRect().top;
+      if(firstElementTop <= 0){
+        for(var f = 0; f <= 2; f++){
+          if($(fixed[f]).hasClass('fixed')){
+            fixed[f].classList.remove('fixed');
+          }
+        }
+      }
+      else {
+        for(var f = 0; f <= 2; f++){
+          if(!($(fixed[f]).hasClass('fixed'))){
+            fixed[f].classList.add('fixed');
+          }
+        }
       }
 
     });
