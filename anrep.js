@@ -46,6 +46,7 @@ function switchLocationStats(countryIndex){
   var fixed = document.querySelectorAll('.fixed');
   var topHeaderHeight = document.getElementById('blogofixed').clientHeight;
   var topHeader = document.getElementById('blogofixed');
+  var firstElementTop = firstElement.getBoundingClientRect().top;
 
   (function (){
     sectionTitle.textContent = textSelector[0];
@@ -69,7 +70,7 @@ function switchLocationStats(countryIndex){
       }
 
       //change header color
-      if((tyPos) <= 0){
+      if((firstElementTop-topHeaderHeight) <= 0){
         topHeader.style.backgroundColor = '#ffffff';
       }
       else {
@@ -87,7 +88,6 @@ function switchLocationStats(countryIndex){
       }
 
       // remove fixed after a page is scrolled
-      var firstElementTop = firstElement.getBoundingClientRect().top;
       if(firstElementTop <= 0){
         for(var f = 0; f <= 2; f++){
           if($(fixed[f]).hasClass('fixed')){
