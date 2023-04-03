@@ -13,34 +13,23 @@ var albaniaPin = document.getElementById('Albania-Pin');
 var ethipioaMap = document.getElementById('Ethipoia-Map');
 var ethipioaPin = document.getElementById('Ethiopia-Pin');
 
-var stats
+var countryText = document.getElementById('stat-one-wrldmp');
+var statOne = document.getElementById('stat-one-wrldmp');
+var statTwo = document.getElementById('stat-two-wrldmp');
+var statThree = document.getElementById('stat-three-wrldmp');
+var statFour = document.getElementById('stat-four-wrldmp');
 
-function unitedStatesClick() {
-    alert('us was clicked or hovered');
-}
+var countryNameArr = ["United States", "Ethiopia", "Colombia", "Romania", "Ghana", "Haiti", "Albania"];
+var peopleServedArr = ["700,019", "240,019", "100,018", "50,019", "220,019", "9,790", "700,019"];
+var programsArr = ["389", "34", "9", "89", "39", "77", "38"];
+var locationsArr = ["78", "5", "2", "23", "13", "4", "1"];
+var expendituresArr = ["829", "35", "245", "8,480", "443", "463", "574"];
 
-function ghanaClick() {
-  
-}
-
-function romaniaClick() {
-  
-}
-
-function colombiaClick() {
-  
-}
-
-function albaniaClick() {
-  
-}
-
-function haitiClick() {
-  
-}
-
-function ethipoiaClick() {
-  
+function switchLocationStats(value){
+  countryText.textContent = countryNameArr[i];
+  statOne.textContent = peopleServedArr[i];
+  statTwo.textContent = programsArr[i];
+  statThree.textContent = expendituresArr[i];
 }
 
 (function (){
