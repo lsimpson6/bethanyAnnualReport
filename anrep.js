@@ -88,7 +88,7 @@ function switchLocationStats(countryIndex){
       }
       else {
         for(var f = 0; f <= 2; f++){
-          if(!$(fixed[f]).hasClass('fixed')){
+          if(!($(fixed[f]).hasClass('fixed'))){
             fixed[f].classList.add('fixed');
           }
         }
