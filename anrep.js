@@ -69,7 +69,7 @@ function switchLocationStats(countryIndex){
       }
 
       //change header color
-      if((tyPos-topHeaderHeight) <= 0){
+      if((tyPos) <= 0){
         topHeader.style.backgroundColor = '#ffffff';
       }
       else {
