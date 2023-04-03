@@ -25,11 +25,11 @@ var programsArr = ["389", "34", "9", "89", "39", "77", "38"];
 var locationsArr = ["78", "5", "2", "23", "13", "4", "1"];
 var expendituresArr = ["829", "35", "245", "8,480", "443", "463", "574"];
 
-function switchLocationStats(value){
-  countryText.textContent = countryNameArr[i];
-  statOne.textContent = peopleServedArr[i];
-  statTwo.textContent = programsArr[i];
-  statThree.textContent = expendituresArr[i];
+function switchLocationStats(countryIndex){
+  countryText.textContent = countryNameArr[countryIndex];
+  statOne.textContent = peopleServedArr[countryIndex];
+  statTwo.textContent = programsArr[countryIndex];
+  statThree.textContent = expendituresArr[countryIndex];
 }
 
 (function (){
