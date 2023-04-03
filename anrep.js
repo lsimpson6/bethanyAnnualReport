@@ -55,8 +55,9 @@ function switchLocationStats(countryIndex){
       for(var i = 0; i < target.length; i++){
         var tmpTarget = target[i];
         var tyPos = tmpTarget.getBoundingClientRect().top;
+        var topHeaderHeight = document.getElementById('blogofixed').innerHeight;
         var x = 0;
-        if(tyPos <= 0){
+        if(tyPos-topHeaderHeight <= 0){
           if(i > textSelector.length){
             sectionTitle.textContent = textSelector[0];
           }
