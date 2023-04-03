@@ -46,13 +46,13 @@ function switchLocationStats(countryIndex){
   var fixed = document.querySelectorAll('.fixed');
   var topHeaderHeight = document.getElementById('blogofixed').clientHeight;
   var topHeader = document.getElementById('blogofixed');
-  var firstElementTop = firstElement.getBoundingClientRect().top;
 
   (function (){
     sectionTitle.textContent = textSelector[0];
   })();
   
     window.addEventListener('scroll', ()=>{
+      var firstElementTop = firstElement.getBoundingClientRect().top;
 
       // changes text on top left
       for(var i = 0; i < target.length; i++){
