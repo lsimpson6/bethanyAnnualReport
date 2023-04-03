@@ -13,7 +13,7 @@ var albaniaPin = document.getElementById('Albania-Pin');
 var ethipioaMap = document.getElementById('Ethipoia-Map');
 var ethipioaPin = document.getElementById('Ethiopia-Pin');
 
-var countryText = document.getElementById('stat-one-wrldmp');
+var countryText = document.getElementById('country-Name-wrldmp');
 var statOne = document.getElementById('stat-one-wrldmp');
 var statTwo = document.getElementById('stat-two-wrldmp');
 var statThree = document.getElementById('stat-three-wrldmp');
@@ -24,6 +24,10 @@ var peopleServedArr = ["700,019", "240,019", "100,018", "50,019", "220,019", "9,
 var programsArr = ["389", "34", "9", "89", "39", "77", "38"];
 var locationsArr = ["78", "5", "2", "23", "13", "4", "1"];
 var expendituresArr = ["829", "35", "245", "8,480", "443", "463", "574"];
+
+(function(){
+  switchLocationStats(0);
+})();
 
 function switchLocationStats(countryIndex){
   countryText.textContent = countryNameArr[countryIndex];
