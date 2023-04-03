@@ -57,14 +57,14 @@ function switchLocationStats(countryIndex){
         var tmpTarget = target[i];
         var tyPos = tmpTarget.getBoundingClientRect().top;
         var x = 0;
-        if((tyPos-topHeader.clientHeight) <= 0){
+        var headHeight = topHeader.clientHeight;
+        if((tyPos-headHeight) <= 0){
             if(i > textSelector.length){
               sectionTitle.textContent = textSelector[0];
             }
             else {
               sectionTitle.textContent = textSelector[i];
             }
-            topHeader.style.backgroundColor = "#ffffff";
         }
       }
 
