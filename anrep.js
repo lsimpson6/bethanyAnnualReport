@@ -59,7 +59,6 @@ function switchLocationStats(countryIndex){
         var tyPos = tmpTarget.getBoundingClientRect().top;
         var x = 0;
         if((tyPos-topHeaderHeight) <= 0){
-          topHeader.style.backgroundColor = '#ffffff';
             if(i > textSelector.length){
               sectionTitle.textContent = textSelector[0];
             }
@@ -67,6 +66,14 @@ function switchLocationStats(countryIndex){
               sectionTitle.textContent = textSelector[i];
             }
         }
+      }
+
+      //change header color
+      if((tyPos-topHeaderHeight) <= 0){
+        topHeader.style.backgroundColor = '#ffffff';
+      }
+      else {
+        topHeader.style.backgroundColor = 'transparent';
       }
 
       // fades in elements
