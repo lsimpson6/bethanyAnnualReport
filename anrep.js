@@ -113,6 +113,7 @@ var unitedStatesSum = function(){
   }
 }
 
+
 const countries = [
     {country: "United States", served: servedSum, programs: programSum, locations: locationSum , expenditures: expenditureSum},
     {country: "Colombia", served: "12,496", programs: "1", locations: "3", expenditures: "472,665"},
@@ -125,6 +126,7 @@ const countries = [
 ];
 
 function globalStats(index){
+  unitedStatesSum();
   countryName.textContent = countries[index].country;
   numServed.textContent = countries[index].served;
   numPrograms.textContent = countries[index].programs;
