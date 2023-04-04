@@ -115,22 +115,22 @@ var unitedStatesSum = function(){
 
 unitedStatesSum();
 
-const countries = [
-    {country: "United States", served: servedSum, programs: programSum, locations: locationSum , expenditures: expenditureSum},
-    {country: "Colombia", served: 12496, programs: 1, locations: 3, expenditures: 472665},
-    {country: "Ghana", served: 309, programs: 4, locations: 1, expenditures: 370726},
-    {country: "Ethiopia", served: 9056, programs: 6, locations: 5, expenditures: 1777025},
-    {country: "Haiti", served: 36, programs: 2, locations: 1, expenditures: 307886},
-    {country: "South Africa", served: 4267, programs: 3, locations: 1, expenditures: 247577},
-    {country: "Albania", served: 189, programs: 3, locations: 1, expenditures: 80865},
-    {country: "Romania", served: 825, programs: 1, locations: 1, expenditures: 108039}
-];
+const countries = {
+  "gl-us": {country: "United States", served: servedSum, programs: programSum, locations: locationSum , expenditures: expenditureSum},
+  "gl-col": {country: "Colombia", served: 12496, programs: 1, locations: 3, expenditures: 472665},
+  "gl-gh": {country: "Ghana", served: 309, programs: 4, locations: 1, expenditures: 370726},
+  "gl-et": {country: "Ethiopia", served: 9056, programs: 6, locations: 5, expenditures: 1777025},
+  "gl-ht": {country: "Haiti", served: 36, programs: 2, locations: 1, expenditures: 307886},
+  "gl-sa": {country: "South Africa", served: 4267, programs: 3, locations: 1, expenditures: 247577},
+  "gl-al": {country: "Albania", served: 189, programs: 3, locations: 1, expenditures: 80865},
+  "gl-rm": {country: "Romania", served: 825, programs: 1, locations: 1, expenditures: 108039}
+};
 
 function globalStats(index){
-  countryName.textContent = countries[index].country;
-  numServed.textContent = countries[index].served.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  numPrograms.textContent = countries[index].programs;
-  numLocations.textContent = countries[index].locations;
-  var tmpExpenditures = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(countries[index].expenditures);
-  numExpenditures = tmpExpenditures.toFixed(0);
+
+    countryName.textContent = countries[index].country;
+    numServed.textContent = countries[index].served.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    numPrograms.textContent = countries[index].programs;
+    numLocations.textContent = countries[index].locations;
+    numExpenditures = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(countries[index].expenditures);
 }
