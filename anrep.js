@@ -103,10 +103,9 @@ const countries = [
 */
 
 function globalStats(index){
-  var countries = c;
-  countryName.textContent = c[index].country;
-  numServed.textContent = c[index].served;
-  numPrograms.textContent = c[index].programs;
-  numLocations.textContent = c[index].locations;
-  numExpenditures.textContent = c[index].expenditures;
+  countryName.textContent = countries[index].country;
+  numServed.textContent = countries[index].served;
+  numPrograms.textContent = countries[index].programs;
+  numLocations.textContent = countries[index].locations;
+  numExpenditures.textContent = countries[index].expenditures;
 }
