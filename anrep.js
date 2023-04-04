@@ -106,10 +106,10 @@ var expenditureSum = 0;
 
 var unitedStatesSum = function(){
   for(var s = 0; s <= states.length; s++){
-    servedSum += parseInt(states[s].served);
-    programSum += parseInt(states[s].programs);
-    locationSum += parseInt(states[s].locations);
-    expenditureSum += parseInt(states[s].expenditures);
+    servedSum += states[s].served;
+    programSum += states[s].programs;
+    locationSum += states[s].locations;
+    expenditureSum += states[s].expenditures;
   }
 }
 
