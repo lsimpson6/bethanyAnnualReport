@@ -99,29 +99,29 @@ const states = [
 {state: "Washington", served: "51", programs: "0", locations: "0", expenditures: "0"}
 ];
 
-var servedSum;
-var programSum; 
-var locationSum;
-var expenditureSum;
+var servedSum = 0;
+var programSum = 0; 
+var locationSum = 0;
+var expenditureSum = 0;
 
 var unitedStatesSum = function(){
   for(var s = 0; s < states.length; s++){
-    servedSum = Math.sum(states[s].served);
-    programSum = Math.sum(states[s].programs);
-    locationSum= Math.sum(states[s].locations);
-    expenditureSum = Math.sum(states[s].expenditures);
+    servedSum += states[s].served;
+    programSum += states[s].programs;
+    locationSum += states[s].locations;
+    expenditureSum += states[s].expenditures;
   }
 }
 
 const countries = [
     {country: "United States", served: unitedStatesSum.servedSum, programs: unitedStatesSum.programSum, locations: unitedStatesSum.locationSum , expenditures: unitedStatesSum.expenditureSum},
-    {country: "Colombia", served: "12,496", programs: "1", locations: "3", expenditures: "$472,665"},
-    {country: "Ghana", served: "309", programs: "4", locations: "1", expenditures: "$370,726"},
-    {country: "Ethiopia", served: "9,056", programs: "6", locations: "5", expenditures: "$1,777,025"},
-    {country: "Haiti", served: "36", programs: "2", locations: "1", expenditures: "$307,886"},
-    {country: "South Africa", served: "4,267", programs: "3", locations: "1", expenditures: "$247,577"},
-    {country: "Albania", served: "189", programs: "3", locations: "1", expenditures: "$80,865"},
-    {country: "Romania", served: "825", programs: "1", locations: "1", expenditures: "$108,039"}
+    {country: "Colombia", served: "12,496", programs: "1", locations: "3", expenditures: "472,665"},
+    {country: "Ghana", served: "309", programs: "4", locations: "1", expenditures: "370,726"},
+    {country: "Ethiopia", served: "9,056", programs: "6", locations: "5", expenditures: "1,777,025"},
+    {country: "Haiti", served: "36", programs: "2", locations: "1", expenditures: "307,886"},
+    {country: "South Africa", served: "4,267", programs: "3", locations: "1", expenditures: "247,577"},
+    {country: "Albania", served: "189", programs: "3", locations: "1", expenditures: "80,865"},
+    {country: "Romania", served: "825", programs: "1", locations: "1", expenditures: "108,039"}
 ];
 
 function globalStats(index){
