@@ -105,16 +105,16 @@ var locationSum = 0;
 var expenditureSum = 0;
 
 var unitedStatesSum = function(){
-  for(var s = 0; s <= states.length; s++){
-    servedSum += states[s].served;
-    programSum += states[s].programs;
-    locationSum += states[s].locations;
-    expenditureSum += states[s].expenditures;
+  for(var s = 0; s < states.length; s++){
+    servedSum += parseInt(states[s].served);
+    programSum += parseInt(states[s].programs);
+    locationSum += parseInt(states[s].locations);
+    expenditureSum += parseInt(states[s].expenditures);
   }
 }
 
 const countries = [
-    {country: "United States", served: unitedStatesSum.servedSum, programs: unitedStatesSum.programSum, locations: unitedStatesSum.locationSum , expenditures: unitedStatesSum.expenditureSum},
+    {country: "United States", served: servedSum, programs: programSum, locations: locationSum , expenditures: expenditureSum},
     {country: "Colombia", served: "12,496", programs: "1", locations: "3", expenditures: "472,665"},
     {country: "Ghana", served: "309", programs: "4", locations: "1", expenditures: "370,726"},
     {country: "Ethiopia", served: "9,056", programs: "6", locations: "5", expenditures: "1,777,025"},
