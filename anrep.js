@@ -131,5 +131,6 @@ function globalStats(index){
   numServed.textContent = countries[index].served.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   numPrograms.textContent = countries[index].programs;
   numLocations.textContent = countries[index].locations;
-  numExpenditures.textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(countries[index].expenditures);
+  var tmpExpenditures = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(countries[index].expenditures);
+  numExpenditures = tmpExpenditures.toFixed(0);
 }
