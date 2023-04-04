@@ -76,27 +76,27 @@ var numLocations = document.getElementById('stat-three-wrldmp');
 var numExpenditures = document.getElementById('stat-four-wrldmp');
 
 const states = [
-{state: "Arkansas", served: "432", programs: "4", locations: "1", expenditures: "218,682"},
-{state: "California", served: "4,168", programs: "21", locations: "6", expenditures: "5,500,779"},
-{state: "Colorado & Texas", served: "1,569", programs: "5", locations: "4", expenditures: "2,318,021"},
-{state: "Florida", served: "2,694", programs: "9", locations: "3", expenditures: "3,073,140"},
-{state: "Georgia", served: "4,792", programs: "21", locations: "7", expenditures: "11,511,564"},
-{state: "Illinois", served: "8,220", programs: "7", locations: "1", expenditures: "1,623,226"},
-{state: "Indiana & Kentucky", served: "561", programs: "7", locations: "1", expenditures: "3,735,197"},
-{state: "Maryland & DC", served: "1,001", programs: "9", locations: "2", expenditures: "3,575,705"},
-{state: "Michigan", served: "13,951", programs: "66", locations: "13", expenditures: "69,373,037"},
-{state: "Minnesota", served: "114", programs: "6", locations: "1", expenditures: "623,111"},
-{state: "Missouri", served: "551", programs: "11", locations: "4", expenditures: "3,752,053"},
-{state: "Nebraska & Iowa", served: "168", programs: "9", locations: "2", expenditures: "490,939"},
-{state: "New England", served: "2,467", programs: "15", locations: "5", expenditures: "2,100,501"},
-{state: "Mid Atlantic", served: "14,435", programs: "83", locations: "14", expenditures: "26,063,298"},
-{state: "North Carolina", served: "439", programs: "5", locations: "2", expenditures: "2,863,739"},
-{state: "South Carolina", served: "268", programs: "4", locations: "1", expenditures: "614,712"},
-{state: "South Dakota", served: "119", programs: "2", locations: "2", expenditures: "348,560"},
-{state: "Tennessee", served: "1,332", programs: "13", locations: "5", expenditures: "4,274,463"},
-{state: "Virgnia", served: "1,330", programs: "7", locations: "1", expenditures: "958,299"},
-{state: "Wisconsin", served: "189", programs: "9", locations: "2", expenditures: "2,899,742"},
-{state: "Washington", served: "51", programs: "0", locations: "0", expenditures: "0"}
+  {state: "Arkansas", served: "432", programs: "4", locations: "1", expenditures: "218,682"},
+  {state: "California", served: "4,168", programs: "21", locations: "6", expenditures: "5,500,779"},
+  {state: "Colorado & Texas", served: "1,569", programs: "5", locations: "4", expenditures: "2,318,021"},
+  {state: "Florida", served: "2,694", programs: "9", locations: "3", expenditures: "3,073,140"},
+  {state: "Georgia", served: "4,792", programs: "21", locations: "7", expenditures: "11,511,564"},
+  {state: "Illinois", served: "8,220", programs: "7", locations: "1", expenditures: "1,623,226"},
+  {state: "Indiana & Kentucky", served: "561", programs: "7", locations: "1", expenditures: "3,735,197"},
+  {state: "Maryland & DC", served: "1,001", programs: "9", locations: "2", expenditures: "3,575,705"},
+  {state: "Michigan", served: "13,951", programs: "66", locations: "13", expenditures: "69,373,037"},
+  {state: "Minnesota", served: "114", programs: "6", locations: "1", expenditures: "623,111"},
+  {state: "Missouri", served: "551", programs: "11", locations: "4", expenditures: "3,752,053"},
+  {state: "Nebraska & Iowa", served: "168", programs: "9", locations: "2", expenditures: "490,939"},
+  {state: "New England", served: "2,467", programs: "15", locations: "5", expenditures: "2,100,501"},
+  {state: "Mid Atlantic", served: "14,435", programs: "83", locations: "14", expenditures: "26,063,298"},
+  {state: "North Carolina", served: "439", programs: "5", locations: "2", expenditures: "2,863,739"},
+  {state: "South Carolina", served: "268", programs: "4", locations: "1", expenditures: "614,712"},
+  {state: "South Dakota", served: "119", programs: "2", locations: "2", expenditures: "348,560"},
+  {state: "Tennessee", served: "1,332", programs: "13", locations: "5", expenditures: "4,274,463"},
+  {state: "Virgnia", served: "1,330", programs: "7", locations: "1", expenditures: "958,299"},
+  {state: "Wisconsin", served: "189", programs: "9", locations: "2", expenditures: "2,899,742"},
+  {state: "Washington", served: "51", programs: "0", locations: "0", expenditures: "0"}
 ];
 
 var servedSum = 0;
@@ -105,7 +105,7 @@ var locationSum = 0;
 var expenditureSum = 0;
 
 var unitedStatesSum = function(){
-  for(var s = 0; s < states.length; s++){
+  for(var s = 0; s <= states.length; s++){
     servedSum += states[s].served;
     programSum += states[s].programs;
     locationSum += states[s].locations;
