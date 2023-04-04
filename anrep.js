@@ -76,7 +76,7 @@ var numLocations = document.getElementById('stat-three-wrldmp');
 var numExpenditures = document.getElementById('stat-four-wrldmp');
 
 const states = [
-  {state: "Arkansas", served: "432", programs: "4", locations: "1", expenditures: "218,682"},
+  {state: "Arkansas", served: 432, programs: 4, locations: 1, expenditures: 218682},
   {state: "California", served: "4,168", programs: "21", locations: "6", expenditures: "5,500,779"},
   {state: "Colorado & Texas", served: "1,569", programs: "5", locations: "4", expenditures: "2,318,021"},
   {state: "Florida", served: "2,694", programs: "9", locations: "3", expenditures: "3,073,140"},
