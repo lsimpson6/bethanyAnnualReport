@@ -114,12 +114,16 @@ const states = {
 };
 
 function unitedStatesSum(){
-  for(var s = 0; s < states.length; s++){
-    servedSum += states[s].served;
-    programSum += states[s].programs;
-    locationSum += states[s].locations;
-    expenditureSum += states[s].expenditures;
+  const statesSumArr = ["us-ak", "us-ca","us-co-tx", "us-fl", "us-ga", "us-il", "us-in-ky","us-md-dc", "us-mi", 
+  "us-mn", "us-mo","us-ne-ia", "us-new-eng","us-mid-atlantic", "us-nc", "us-sc","us-sd", "us-sc", "us-tn","us-va", "us-wi", "us-wa"];
+
+  for(var s = 0; s < statesSumArr.length; s++){
+    servedSum += states[statesSumArr[s]].served;
+    programSum += states[statesSumArr[s]].programs;
+    locationSum += states[statesSumArr[s]].locations;
+    expenditureSum += states[statesSumArr[s]].expenditures;
   }
+
 }
 
 unitedStatesSum();
@@ -146,6 +150,7 @@ stateSelected.forEach(s => s.addEventListener('click', ()=>{
 }))
 
 function globalStats(value){
+  unitedStatesSum();
     countryName.textContent = countries[value].country;
     var tmpServed = countries[value].served;
     globalServed.textContent = tmpServed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
