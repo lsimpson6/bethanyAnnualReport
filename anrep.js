@@ -114,7 +114,7 @@ const countries = {
 };
 
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
-  var dataAttr = $(this).attr('data-country');
+  var dataAttr = this.getAttribute('data-country');
   globalStats(dataAttr);
 }))
 
@@ -135,8 +135,8 @@ var unitedStatesSum = function(){
 
 unitedStatesSum();
 
-function globalStats(value){
-    countryName.textContent = countries[value].country;
+function globalStats(){
+    countryName.textContent = countries["gl-us"].country;
     numServed.textContent = countries[value].served.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     numPrograms.textContent = countries[value].programs;
     numLocations.textContent = countries[value].locations;
