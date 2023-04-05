@@ -75,7 +75,7 @@ var numPrograms = document.getElementById('stat-two-wrldmp');
 var numLocations = document.getElementById('stat-three-wrldmp');
 var numExpenditures = document.getElementById('stat-four-wrldmp');
 
-var countrySelect = document.getElementsByClassName('country');
+var countrySelected = document.querySelectorAll('.country');
 var stateSelect = document.getElementsByClassName('state');
 
 const states = [
@@ -113,10 +113,11 @@ const countries = {
   "gl-rm": {country: "Romania", served: 825, programs: 1, locations: 1, expenditures: 108039}
 };
 
-countrySelect.addEventListener('click', function(){
-  var $this = $(this).attr("data-country");
-  globalStats($this);
-});
+countrySelected.forEach(c => c.addEventListener('click', ()=>{
+  var dataAttr = $(this).attr('data-country');
+  globalStats(dataAttr);
+}))
+
 
 var servedSum = 0;
 var programSum = 0; 
