@@ -135,6 +135,11 @@ const countries = {
   "gl-rm": {country: "Romania", served: 825, programs: 1, locations: 1, expenditures: 108039}
 };
 
+(function(){
+  globalStats(countries[0]);
+  stateStats(states[0]);
+});
+
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
     var id = c.getAttribute('data-country');
     globalStats(id);
@@ -156,11 +161,11 @@ function globalStats(value){
 }
 
 function stateStats(value){
-  countryName.textContent = states[value].country;
+  stateName.textContent = states[value].state;
   var tmpServed = states[value].served;
   stateServed.textContent = tmpServed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   statePrograms.textContent = states[value].programs;
   stateLocations.textContent = states[value].locations;
   var tmpExpenditures = states[value].expenditures;
-  numExpenditures.textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tmpExpenditures);
+  stateExpenditures.textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tmpExpenditures);
 }
