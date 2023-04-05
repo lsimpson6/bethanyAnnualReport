@@ -113,7 +113,7 @@ const states = {
   "us-wa": {state: "Washington", served: 51, programs: 0, locations: 0, expenditures: 0}
 };
 
-var unitedStatesSum = function(){
+function unitedStatesSum(){
   for(var s = 0; s < states.length; s++){
     servedSum += states[s].served;
     programSum += states[s].programs;
