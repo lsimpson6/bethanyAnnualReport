@@ -1,13 +1,4 @@
 (function (){
-  var winHeight = window.innerHeight;
-  var sectionTitle = document.getElementById('section-title');
-  var textSelector = ["Annual Report", "Motivated by Faith", "Global Impact", "Mission and Vision"];
-  var target = document.querySelectorAll('.title-target');
-  var animate = document.querySelectorAll('.animate');
-  var firstElement = document.getElementById('first-element');
-  var fixed = document.querySelectorAll('.fixed');
-  var topHeaderHeight = document.getElementById('blogofixed').clientHeight;
-  var topHeader = document.getElementById('blogofixed');
 
   (function (){
     sectionTitle.textContent = textSelector[0];
@@ -75,6 +66,9 @@ var numPrograms = document.getElementById('stat-two-wrldmp');
 var numLocations = document.getElementById('stat-three-wrldmp');
 var numExpenditures = document.getElementById('stat-four-wrldmp');
 
+var countrySelect = document.getElementsByClassName('country');
+var stateSelect = document.getElementsByClassName('state');
+
 const states = [
   {state: "Arkansas", served: 432, programs: 4, locations: 1, expenditures: 218682},
   {state: "California", served: 4168, programs: 21, locations: 6, expenditures: 5500779},
@@ -99,6 +93,22 @@ const states = [
   {state: "Washington", served: 51, programs: 0, locations: 0, expenditures: 0}
 ];
 
+const countries = {
+  "gl-us": {country: "United States", served: servedSum, programs: programSum, locations: locationSum , expenditures: expenditureSum},
+  "gl-col": {country: "Colombia", served: 12496, programs: 1, locations: 3, expenditures: 472665},
+  "gl-gh": {country: "Ghana", served: 309, programs: 4, locations: 1, expenditures: 370726},
+  "gl-et": {country: "Ethiopia", served: 9056, programs: 6, locations: 5, expenditures: 1777025},
+  "gl-ht": {country: "Haiti", served: 36, programs: 2, locations: 1, expenditures: 307886},
+  "gl-sa": {country: "South Africa", served: 4267, programs: 3, locations: 1, expenditures: 247577},
+  "gl-al": {country: "Albania", served: 189, programs: 3, locations: 1, expenditures: 80865},
+  "gl-rm": {country: "Romania", served: 825, programs: 1, locations: 1, expenditures: 108039}
+};
+
+countrySelect.addEventListener('click', function(){
+  var $this = $(this).attr("data-country");
+  globalStats($this);
+});
+
 var servedSum = 0;
 var programSum = 0; 
 var locationSum = 0;
@@ -115,22 +125,10 @@ var unitedStatesSum = function(){
 
 unitedStatesSum();
 
-const countries = {
-  "gl-us": {country: "United States", served: servedSum, programs: programSum, locations: locationSum , expenditures: expenditureSum},
-  "gl-col": {country: "Colombia", served: 12496, programs: 1, locations: 3, expenditures: 472665},
-  "gl-gh": {country: "Ghana", served: 309, programs: 4, locations: 1, expenditures: 370726},
-  "gl-et": {country: "Ethiopia", served: 9056, programs: 6, locations: 5, expenditures: 1777025},
-  "gl-ht": {country: "Haiti", served: 36, programs: 2, locations: 1, expenditures: 307886},
-  "gl-sa": {country: "South Africa", served: 4267, programs: 3, locations: 1, expenditures: 247577},
-  "gl-al": {country: "Albania", served: 189, programs: 3, locations: 1, expenditures: 80865},
-  "gl-rm": {country: "Romania", served: 825, programs: 1, locations: 1, expenditures: 108039}
-};
-
-function globalStats(index){
-
-    countryName.textContent = countries[index].country;
-    numServed.textContent = countries[index].served.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    numPrograms.textContent = countries[index].programs;
-    numLocations.textContent = countries[index].locations;
-    numExpenditures = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(countries[index].expenditures);
+function globalStats(value){
+    countryName.textContent = countries[value].country;
+    numServed.textContent = countries[value].served.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    numPrograms.textContent = countries[value].programs;
+    numLocations.textContent = countries[value].locations;
+    numExpenditures = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(countries[value].expenditures);
 }
