@@ -137,7 +137,8 @@ unitedStatesSum();
 
 function globalStats(value){
     countryName.textContent = countries[value].country;
-    numServed.textContent = countries[value].served.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    numServed.textContent = countries[value].served;
+    //numServed.textContent = countries[value].served.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     numPrograms.textContent = countries[value].programs;
     numLocations.textContent = countries[value].locations;
     numExpenditures = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(countries[value].expenditures);
