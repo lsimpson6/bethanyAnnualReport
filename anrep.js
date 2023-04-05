@@ -139,10 +139,10 @@ const countries = {
   "gl-rm": {country: "Romania", served: 825, programs: 1, locations: 1, expenditures: 108039}
 };
 
-(function(){
-  globalStats('gl-us');
-  stateStats('us-ak');
-})();
+window.addEventListener('load', ()=>{
+  globalStats("gl-us");
+  stateStats("us-ak");
+})
 
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
     var id = c.getAttribute('data-country');
