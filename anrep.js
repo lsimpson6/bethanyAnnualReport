@@ -75,37 +75,43 @@ var locationSum = 0;
 var expenditureSum = 0;
 
 var countryName = document.getElementById('country-Name-wrldmp');
-var numServed = document.getElementById('stat-one-wrldmp');
-var numPrograms = document.getElementById('stat-two-wrldmp');
-var numLocations = document.getElementById('stat-three-wrldmp');
-var numExpenditures = document.getElementById('stat-four-wrldmp');
+var globalServed = document.getElementById('stat-one-wrldmp');
+var globalPrograms = document.getElementById('stat-two-wrldmp');
+var globalLocations = document.getElementById('stat-three-wrldmp');
+var globalExpenditures = document.getElementById('stat-four-wrldmp');
+
+var stateName = document.getElementById('state-name');
+var stateServed = document.getElementById('state-people-served');
+var statePrograms = document.getElementById('state-program-count');
+var stateLocations = document.getElementById('state-location-count');
+var stateExpenditures = document.getElementById('state-expenditure-total');
 
 var countrySelected = document.querySelectorAll('.country');
-var stateSelect = document.getElementsByClassName('state');
+var stateSelected = document.querySelectorAll('.state');
 
-const states = [
-  {state: "Arkansas", served: 432, programs: 4, locations: 1, expenditures: 218682},
-  {state: "California", served: 4168, programs: 21, locations: 6, expenditures: 5500779},
-  {state: "Colorado & Texas", served: 1569, programs: 5, locations: 4, expenditures: 2318021},
-  {state: "Florida", served: 2694, programs: 9, locations: 3, expenditures: 3073140},
-  {state: "Georgia", served: 4792, programs: 21, locations: 7, expenditures: 11511564},
-  {state: "Illinois", served: 8220, programs: 7, locations: 1, expenditures: 1623226},
-  {state: "Indiana & Kentucky", served: 561, programs: 7, locations: 1, expenditures: 3735197},
-  {state: "Maryland & DC", served: 1001, programs: 9, locations: 2, expenditures: 3575705},
-  {state: "Michigan", served: 13951, programs: 66, locations: 13, expenditures: 69373037},
-  {state: "Minnesota", served: 114, programs: 6, locations: 1, expenditures: 623111},
-  {state: "Missouri", served: 551, programs: 11, locations: 4, expenditures: 3752053},
-  {state: "Nebraska & Iowa", served: 168, programs: 9, locations: 2, expenditures: 490939},
-  {state: "New England", served: 2467, programs: 15, locations: 5, expenditures: 2100501},
-  {state: "Mid Atlantic", served: 14435, programs: 83, locations: 14, expenditures: 26063298},
-  {state: "North Carolina", served: 439, programs: 5, locations: 2, expenditures: 2863739},
-  {state: "South Carolina", served: 268, programs: 4, locations: 1, expenditures: 614712},
-  {state: "South Dakota", served: 119, programs: 2, locations: 2, expenditures: 348560},
-  {state: "Tennessee", served: 1332, programs: 13, locations: 5, expenditures: 4274463},
-  {state: "Virgnia", served: 1330, programs: 7, locations: 1, expenditures: 958299},
-  {state: "Wisconsin", served: 189, programs: 9, locations: 2, expenditures: 2899742},
-  {state: "Washington", served: 51, programs: 0, locations: 0, expenditures: 0}
-];
+const states = {
+  "us-ak": {state: "Arkansas", served: 432, programs: 4, locations: 1, expenditures: 218682},
+  "us-ca": {state: "California", served: 4168, programs: 21, locations: 6, expenditures: 5500779},
+  "us-co-tx": {state: "Colorado & Texas", served: 1569, programs: 5, locations: 4, expenditures: 2318021},
+  "us-fl": {state: "Florida", served: 2694, programs: 9, locations: 3, expenditures: 3073140},
+  "us-ga": {state: "Georgia", served: 4792, programs: 21, locations: 7, expenditures: 11511564},
+  "us-il": {state: "Illinois", served: 8220, programs: 7, locations: 1, expenditures: 1623226},
+  "us-in-ky": {state: "Indiana & Kentucky", served: 561, programs: 7, locations: 1, expenditures: 3735197},
+  "us-md-dc": {state: "Maryland & DC", served: 1001, programs: 9, locations: 2, expenditures: 3575705},
+  "us-mi": {state: "Michigan", served: 13951, programs: 66, locations: 13, expenditures: 69373037},
+  "us-mn": {state: "Minnesota", served: 114, programs: 6, locations: 1, expenditures: 623111},
+  "us-mo": {state: "Missouri", served: 551, programs: 11, locations: 4, expenditures: 3752053},
+  "us-ne-ia": {state: "Nebraska & Iowa", served: 168, programs: 9, locations: 2, expenditures: 490939},
+  "us-new-eng": {state: "New England", served: 2467, programs: 15, locations: 5, expenditures: 2100501},
+  "us-mid-atlantic": {state: "Mid Atlantic", served: 14435, programs: 83, locations: 14, expenditures: 26063298},
+  "us-nc": {state: "North Carolina", served: 439, programs: 5, locations: 2, expenditures: 2863739},
+  "us-sc": {state: "South Carolina", served: 268, programs: 4, locations: 1, expenditures: 614712},
+  "us-sd": {state: "South Dakota", served: 119, programs: 2, locations: 2, expenditures: 348560},
+  "us-tn": {state: "Tennessee", served: 1332, programs: 13, locations: 5, expenditures: 4274463},
+  "us-va": {state: "Virgnia", served: 1330, programs: 7, locations: 1, expenditures: 958299},
+  "us-wi": {state: "Wisconsin", served: 189, programs: 9, locations: 2, expenditures: 2899742},
+  "us-wa": {state: "Washington", served: 51, programs: 0, locations: 0, expenditures: 0}
+};
 
 var unitedStatesSum = function(){
   for(var s = 0; s < states.length; s++){
@@ -134,12 +140,27 @@ countrySelected.forEach(c => c.addEventListener('click', ()=>{
     globalStats(id);
 }))
 
+stateSelected.forEach(s => s.addEventListener('click', ()=>{
+    var id = s.getAttribute('data-state');
+    stateStats(id);
+}))
+
 function globalStats(value){
     countryName.textContent = countries[value].country;
     var tmpServed = countries[value].served;
-    numServed.textContent = tmpServed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    numPrograms.textContent = countries[value].programs;
-    numLocations.textContent = countries[value].locations;
+    globalServed.textContent = tmpServed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    globalPrograms.textContent = countries[value].programs;
+    globalLocations.textContent = countries[value].locations;
     var tmpExpenditures = countries[value].expenditures;
-    numExpenditures.textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tmpExpenditures);
+    globalExpenditures.textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tmpExpenditures);
+}
+
+function stateStats(value){
+  countryName.textContent = states[value].country;
+  var tmpServed = states[value].served;
+  stateServed.textContent = tmpServed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  statePrograms.textContent = states[value].programs;
+  stateLocations.textContent = states[value].locations;
+  var tmpExpenditures = states[value].expenditures;
+  numExpenditures.textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tmpExpenditures);
 }
