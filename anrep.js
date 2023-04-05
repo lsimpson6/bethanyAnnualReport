@@ -114,7 +114,6 @@ const countries = {
 };
 
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
-  console.log(this.dataset.country);
   globalStats();
 }))
 
