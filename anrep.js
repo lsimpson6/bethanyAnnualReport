@@ -69,6 +69,11 @@
       
 })();
 
+var servedSum = 0;
+var programSum = 0; 
+var locationSum = 0;
+var expenditureSum = 0;
+
 var countryName = document.getElementById('country-Name-wrldmp');
 var numServed = document.getElementById('stat-one-wrldmp');
 var numPrograms = document.getElementById('stat-two-wrldmp');
@@ -102,6 +107,17 @@ const states = [
   {state: "Washington", served: 51, programs: 0, locations: 0, expenditures: 0}
 ];
 
+var unitedStatesSum = function(){
+  for(var s = 0; s < states.length; s++){
+    servedSum += states[s].served;
+    programSum += states[s].programs;
+    locationSum += states[s].locations;
+    expenditureSum += states[s].expenditures;
+  }
+}
+
+unitedStatesSum();
+
 const countries = {
   "gl-us": {country: "United States", served: servedSum, programs: programSum, locations: locationSum , expenditures: expenditureSum},
   "gl-col": {country: "Colombia", served: 12496, programs: 1, locations: 3, expenditures: 472665},
@@ -113,27 +129,10 @@ const countries = {
   "gl-rm": {country: "Romania", served: 825, programs: 1, locations: 1, expenditures: 108039}
 };
 
-unitedStatesSum();
-
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
   var id = c.getAttribute('data-country');
   globalStats(id);
 }))
-
-
-var servedSum = 0;
-var programSum = 0; 
-var locationSum = 0;
-var expenditureSum = 0;
-
-var unitedStatesSum = function(){
-  for(var s = 0; s < states.length; s++){
-    servedSum += states[s].served;
-    programSum += states[s].programs;
-    locationSum += states[s].locations;
-    expenditureSum += states[s].expenditures;
-  }
-}
 
 function globalStats(value){
     countryName.textContent = countries[value].country;
