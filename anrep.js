@@ -114,8 +114,8 @@ const countries = {
 };
 
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
-  console.log(this.dataset.country)
-  globalStats(this.dataset.country);
+  console.log(this.dataset.country);
+  globalStats();
 }))
 
 
@@ -135,7 +135,8 @@ var unitedStatesSum = function(){
 
 unitedStatesSum();
 
-function globalStats(value){
+function globalStats(){
+    value = "gl-col";
     countryName.textContent = countries[value].country;
     numServed.textContent = countries[value].served.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     numPrograms.textContent = countries[value].programs;
