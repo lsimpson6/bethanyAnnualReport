@@ -130,8 +130,8 @@ const countries = {
 };
 
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
-  var id = c.getAttribute('data-country');
-  globalStats(id);
+    var id = c.getAttribute('data-country');
+    globalStats(id);
 }))
 
 function globalStats(value){
@@ -141,5 +141,5 @@ function globalStats(value){
     numPrograms.textContent = countries[value].programs;
     numLocations.textContent = countries[value].locations;
     var tmpExpenditures = countries[value].expenditures;
-    numExpenditures = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tmpExpenditures);
+    numExpenditures.textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tmpExpenditures);
 }
