@@ -11,6 +11,12 @@
   var clickToMoveMap = document.querySelectorAll('.drag-to-move-map');
 
   (function (){
+    const repClasses = ["widget", "widget-liquid", "widget-align-justify", "widget-size-100"];
+
+    for(let c = 0; c < repClasses.length; c++){
+      repClasses[c].classList.replace(repClasses[c],"row-100");
+    }
+
     sectionTitle.textContent = textSelector[0];
   })();
   
