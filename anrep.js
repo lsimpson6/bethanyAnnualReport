@@ -43,8 +43,15 @@
       // fades in elements
       for(var a = 0; a < animate.length; a++){
         var tmpAnimate = animate[a];
+        var tmpHeight = 0;
+        if(window.innerWidth < 768){
+          tmpHeight = winHeight;
+        }
+        else {
+          tmpHeight = winHeight/1.5
+        }
         var ayPos = tmpAnimate.getBoundingClientRect().top;
-          if(ayPos <= (winHeight/1.5)){
+          if(ayPos <= tmpHeight){
             tmpAnimate.classList.add('fade-in');
             tmpAnimate.classList.remove('animate');
           }
