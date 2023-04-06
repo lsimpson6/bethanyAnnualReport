@@ -1,13 +1,14 @@
 (function (){
   var winHeight = window.innerHeight;
   var sectionTitle = document.getElementById('section-title');
-  var textSelector = ["Annual Report", "Motivated by Faith", "Global Impact", "Mission and Vision"];
+  var textSelector = ["Annual Report", "Motivated by Faith", "Global Impact","Local Impact", "Mission and Vision"];
   var target = document.querySelectorAll('.title-target');
   var animate = document.querySelectorAll('.animate');
   var firstElement = document.getElementById('first-element');
   var fixed = document.querySelectorAll('.fixed');
   var topHeaderHeight = document.getElementById('blogofixed').clientHeight;
   var topHeader = document.getElementById('blogofixed');
+  var clickToMoveMap = document.querySelectorAll('.drag-to-move-map');
 
   (function (){
     sectionTitle.textContent = textSelector[0];
@@ -66,6 +67,12 @@
       }
 
     });
+
+    clickToMoveMap.forEach(moveMap => moveMap.addEventListener('click', ()=>{
+        for(let i = 0; i < clickToMoveMap.length; i++){
+          moveMap[i].classList.add('d-none');
+        }
+    }));
       
 })();
 
