@@ -80,8 +80,8 @@
       if(increaseNeedY <= winHeight){
         var percent = 0;
           setInterval(() => {
-            if(percent <= 134){
-              percent ++;
+            if(percent <= 130){
+              percent += 5;
             }
             increaseNeed.textContent = percent + "%";
           }, 10);
