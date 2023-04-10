@@ -44,7 +44,7 @@
         var tmpAnimate = animate[a];
         var tmpHeight = 0;
         if(window.innerWidth < 768){
-          tmpHeight = winHeight;
+          tmpHeight = winHeight/2;
         }
         else {
           tmpHeight = winHeight/1.5
