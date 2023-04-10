@@ -9,7 +9,7 @@
   var topHeaderHeight = document.getElementById('blogofixed').clientHeight;
   var topHeader = document.getElementById('blogofixed');
   var clickToMoveMap = document.querySelectorAll('.drag-to-move-map');
-  
+
   sectionTitle.textContent = textSelector[0];
   
     window.addEventListener('scroll', ()=>{
@@ -68,6 +68,21 @@
           if(!($(fixed[f]).hasClass('fixed'))){
             fixed[f].classList.add('fixed');
           }
+        }
+      }
+
+      //animate the bar chart
+      var bars = querySelectorAll('.bar-chart');
+      var barWidth = 10;
+
+      if(barsTop <= winHeight){
+        var barsTop = bars[b].getBoundingClientRect().top;
+        for(let b = 0; b < bars.length; b++){
+          setInterval(()=>{
+            if(bars[b].innerWidth <= 100){
+              bars[b].style.width += barWidth
+            }
+          }, 100);
         }
       }
 
