@@ -79,12 +79,12 @@
 
       if(increaseNeedY <= 0){
         var percent = 0;
-        if(percent <= 134){
           setInterval(() => {
-          percent ++;
-          }, 30);
+            if(percent <= 134){
+              percent ++;
+            }
+          }, 10);
           increaseNeed.textContent = percent + "%";
-        }
       }
 
     });
