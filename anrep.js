@@ -73,7 +73,6 @@
       }
 
       //animate the bar chart
-      var barWidth = 10;
 
       for(let b = 0; b < bars.length; b++){
 
@@ -89,11 +88,12 @@
         }
 
         if(barsTop <= winHeight){
+          var barWidth;
           if(barWidth <= maxBarWidth){
             setInterval(()=>{
                 barWidth += 1;
+                bars[b].style.width = barWidth + "%";
             }, 20);
-            bars[b].style.width = barWidth + "%";
           }
         }
       } 
