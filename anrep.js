@@ -78,6 +78,7 @@
 
         var barsTop = bars[b].getBoundingClientRect().top;
         var maxBarWidth = 100;
+        var barWidth = 0;
 
         if(b == 0){
           maxBarWidth = 87;
@@ -88,7 +89,6 @@
         }
 
         if(barsTop <= winHeight){
-          var barWidth;
           if(barWidth <= maxBarWidth){
             setInterval(()=>{
                 barWidth += 1;
@@ -96,6 +96,7 @@
             }, 20);
           }
         }
+
       } 
 
     });
