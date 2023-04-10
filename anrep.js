@@ -78,12 +78,21 @@
       for(let b = 0; b < bars.length; b++){
 
         var barsTop = bars[b].getBoundingClientRect().top;
+        var maxBarWidth = 100;
+
+        if(b == 0){
+          maxBarWidth = 87;
+        }else if (b == 1 || b == 3){
+          maxBarWidth = 100;
+        }else {
+          maxBarWidth = 70
+        }
 
         if(barsTop <= winHeight){
-          if(barWidth <= 100){
+          if(barWidth <= maxBarWidth){
             setInterval(()=>{
-                barWidth ++;
-            }, 100);
+                barWidth += 1;
+            }, 20);
             bars[b].style.width = barWidth + "%";
           }
         }
