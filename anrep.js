@@ -10,11 +10,6 @@
   var topHeader = document.getElementById('blogofixed');
   var clickToMoveMap = document.querySelectorAll('.drag-to-move-map');
   var bars = document.querySelectorAll('.bar-chart');
-  var widgetSize100 = document.querySelectorAll('.widget');
-
-  for(var w = 0; w < widgetSize100; w++){
-    widgetSize100[w].classList.replace('widget-size-100', " ");
-  }
 
   sectionTitle.textContent = textSelector[0];
   
@@ -81,15 +76,17 @@
 
       var increaseNeed = document.getElementById('percent-increase');
       var increaseNeedY = increaseNeed.getBoundingClientRect().top;
+      var percent = 0;
 
-      if(increaseNeedY <= winHeight){
-        var percent = 0;
+      if(increaseNeed.textContent == "135%"){
+        if(increaseNeedY <= winHeight){
           setInterval(() => {
             if(percent <= 130){
               percent += 5;
             }
             increaseNeed.textContent = percent + "%";
           }, 10);
+        }
       }
 
     });
