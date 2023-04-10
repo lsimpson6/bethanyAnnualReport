@@ -44,10 +44,10 @@
         var tmpAnimate = animate[a];
         var tmpHeight = 0;
         if(window.innerWidth < 768){
-          tmpHeight = winHeight;
+          tmpHeight = winHeight/1.5;
         }
         else {
-          tmpHeight = winHeight/.8;
+          tmpHeight = winHeight;
         }
         var ayPos = tmpAnimate.getBoundingClientRect().top;
           if(ayPos <= tmpHeight){
