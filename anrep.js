@@ -78,7 +78,7 @@
       var increaseNeedY = increaseNeed.getBoundingClientRect().top;
       var percent = 0;
 
-      if(increaseNeed.textContent == "135%"){
+      if(increaseNeed.textContent != "135%"){
         if(increaseNeedY <= winHeight){
           setInterval(() => {
             if(percent <= 130){
