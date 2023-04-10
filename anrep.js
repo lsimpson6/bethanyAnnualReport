@@ -10,6 +10,11 @@
   var topHeader = document.getElementById('blogofixed');
   var clickToMoveMap = document.querySelectorAll('.drag-to-move-map');
   var bars = document.querySelectorAll('.bar-chart');
+  var widgetSize100 = document.querySelectorAll('.widget-size-100');
+
+  for(w = 0; w < widgetSize100; w++){
+    widgetSize100[w].classList.replace('widget-size-100', "");
+  }
 
   sectionTitle.textContent = textSelector[0];
   
