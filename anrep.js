@@ -92,8 +92,8 @@
           if(barWidth <= maxBarWidth){
             setInterval(()=>{
                 barWidth += 5;
-                bars[b].style.width = barWidth + "%";
             }, 100);
+            bars[b].style.width = barWidth + "%";
           }
         }
 
