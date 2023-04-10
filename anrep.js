@@ -78,11 +78,11 @@
       if(barsTop <= winHeight){
         var barsTop = bars[b].getBoundingClientRect().top;
         for(let b = 0; b < bars.length; b++){
-          setInterval(()=>{
-            if(bars[b].innerWidth <= 100){
-              bars[b].style.width += barWidth
-            }
-          }, 100);
+          if(bars[b].style.width <= 100){
+            setInterval(()=>{
+                bars[b].style.width += barWidth
+            }, 100);
+          }
         }
       }
 
