@@ -74,7 +74,7 @@
 
       //animate the bar chart
 
-      for(let b = 0; b < bars.length; b++){
+      for(var b = 0; b < bars.length; b++){
 
         var barsTop = bars[b].getBoundingClientRect().top;
         var maxBarWidth = 100;
@@ -93,7 +93,7 @@
             setInterval(()=>{
                 barWidth += 5;
                 bars[b].style.width = barWidth + "%";
-            }, 500);
+            }, 100);
           }
         }
 
