@@ -83,8 +83,8 @@
             if(percent <= 134){
               percent ++;
             }
+            increaseNeed.textContent = percent + "%";
           }, 10);
-          increaseNeed.textContent = percent + "%";
       }
 
     });
