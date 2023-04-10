@@ -81,7 +81,7 @@
         var barWidth = 0;
 
         if(b == 0){
-          maxBarWidth = 87;
+          maxBarWidth = 80;
         }else if (b == 1 || b == 3){
           maxBarWidth = 100;
         }else {
@@ -91,9 +91,9 @@
         if(barsTop <= winHeight){
           if(barWidth <= maxBarWidth){
             setInterval(()=>{
-                barWidth += 1;
+                barWidth += 5;
                 bars[b].style.width = barWidth + "%";
-            }, 20);
+            }, 500);
           }
         }
 
