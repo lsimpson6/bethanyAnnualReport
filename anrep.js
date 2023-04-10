@@ -80,10 +80,11 @@
         var barsTop = bars[b].getBoundingClientRect().top;
 
         if(barsTop <= winHeight){
-          if(bars[b].clientWidth <= 100){
+          if(barWidth <= 100){
             setInterval(()=>{
-                bars[b].style.width += barWidth
+                barWidth ++;
             }, 100);
+            bars[b].style.width = barWidth + "%";
           }
         }
       } 
