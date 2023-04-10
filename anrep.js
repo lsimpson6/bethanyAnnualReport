@@ -85,7 +85,7 @@
         }else if (b == 1 || b == 3){
           maxBarWidth = 100;
         }else {
-          maxBarWidth = 70
+          maxBarWidth = 70;
         }
 
         if(barsTop <= winHeight){
