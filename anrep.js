@@ -72,32 +72,20 @@
         }
       }
 
-      /*animate the bar chart
+    // animate increase in need
 
-      for(var b = 0; b < bars.length; b++){
+      var increaseNeed = document.getElementById('percent-increase');
+      var increaseNeedY = increaseNeed.getBoundingClientRect().top;
 
-        var barsTop = bars[b].getBoundingClientRect().top;
-        var maxBarWidth = 100;
-        var barWidth = 0;
-
-        if(b == 0){
-          maxBarWidth = 80;
-        }else if (b == 1 || b == 3){
-          maxBarWidth = 100;
-        }else {
-          maxBarWidth = 70;
+      if(increaseNeedY <= 0){
+        var percent = 0;
+        if(percent <= 134){
+          setInterval(() => {
+          percent ++;
+          }, 30);
+          increaseNeed.textContent = percent + "%";
         }
-
-        if(barsTop <= winHeight){
-          if(barWidth <= maxBarWidth){
-            setInterval(()=>{
-                barWidth + 5;
-            }, 100);
-            bars[b].style.width = barWidth + "%";
-          }
-        }
-
-      } */
+      }
 
     });
 
