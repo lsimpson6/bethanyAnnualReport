@@ -9,6 +9,7 @@
   var topHeaderHeight = document.getElementById('blogofixed').clientHeight;
   var topHeader = document.getElementById('blogofixed');
   var clickToMoveMap = document.querySelectorAll('.drag-to-move-map');
+  var bars = document.querySelectorAll('.bar-chart');
 
   sectionTitle.textContent = textSelector[0];
   
@@ -72,7 +73,6 @@
       }
 
       //animate the bar chart
-      var bars = querySelectorAll('.bar-chart');
       var barWidth = 10;
 
       if(barsTop <= winHeight){
