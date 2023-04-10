@@ -77,7 +77,7 @@
       var increaseNeed = document.getElementById('percent-increase');
       var increaseNeedY = increaseNeed.getBoundingClientRect().top;
 
-      if(increaseNeedY <= 0){
+      if(increaseNeedY <= winHeight){
         var percent = 0;
           setInterval(() => {
             if(percent <= 134){
