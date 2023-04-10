@@ -75,16 +75,21 @@
       //animate the bar chart
       var barWidth = 10;
 
-      if(barsTop <= winHeight){
+      for(let b = 0; b < bars.length; b++){
+
         var barsTop = bars[b].getBoundingClientRect().top;
-        for(let b = 0; b < bars.length; b++){
+        
+        if(barsTop <= winHeight){
+
+          alert(bars[b].stlye.width);
           if(bars[b].style.width <= 100){
             setInterval(()=>{
                 bars[b].style.width += barWidth
             }, 100);
+
           }
         }
-      }
+      } 
 
     });
 
