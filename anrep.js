@@ -47,7 +47,7 @@
           tmpHeight = winHeight;
         }
         else {
-          tmpHeight = winHeight/2.4;
+          tmpHeight = winHeight/.8;
         }
         var ayPos = tmpAnimate.getBoundingClientRect().top;
           if(ayPos <= tmpHeight){
