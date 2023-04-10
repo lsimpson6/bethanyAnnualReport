@@ -72,7 +72,7 @@
         }
       }
 
-      //animate the bar chart
+      /*animate the bar chart
 
       for(var b = 0; b < bars.length; b++){
 
@@ -91,13 +91,13 @@
         if(barsTop <= winHeight){
           if(barWidth <= maxBarWidth){
             setInterval(()=>{
-                barWidth += 5;
+                barWidth + 5;
             }, 100);
             bars[b].style.width = barWidth + "%";
           }
         }
 
-      } 
+      } */
 
     });
 
