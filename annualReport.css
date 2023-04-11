@@ -170,16 +170,16 @@
 
 .animate-img {
   opacity: 0;
-  transform: scale(100%);
+  transform: scale(80%);
 }
 
 .grow-image {
-  animation: growImg .3s 1 ease;
+  animation: growImg .6s 1 ease;
 }
 
 @keyframes growImg {
-  from {transform: scale(90%);opacity:0;}
-  to {transform: scale(100%);opacity:1;}
+  from {transform: scale(650%);opacity:0;}
+  to {transform: scale(80%);opacity:1;}
 }
 
 .winsandhightlights-img {
