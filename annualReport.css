@@ -183,6 +183,7 @@
 }
 
 .winsandhightlights-img {
+  transform: scale(80%);
   min-height: 400px;
 }
 
