@@ -173,7 +173,7 @@
   transform: scale(100%);
 }
 
-.image-animation {
+.grow-image {
   animation: growImg .3s 1 ease;
 }
 
