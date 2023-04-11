@@ -83,7 +83,7 @@
         if(increaseNeedY <= winHeight){
           increaseNeed.classList.replace('todo', 'done');
           setInterval(() => {
-            if(percent <= percentValue){
+            if(percent < percentValue){
               percent += 1;
             }
             increaseNeed.textContent = percent + "%";
