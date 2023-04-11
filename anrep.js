@@ -91,13 +91,17 @@
         }
       }
 
-    });
+    // animate images 
+    var img = document.querySelectorAll('.animate-img');
+    var imgTop = img[im].getBoundingClientRect().top;
 
-    clickToMoveMap.forEach(moveMap => moveMap.addEventListener('click', ()=>{
-        for(let i = 0; i < clickToMoveMap.length; i++){
-          moveMap[i].classList.add('d-none');
+    for(var im = 0; im < img.length; im++){
+      if(imgTop <= winHeight && ($(img[im]).hasClass('animate-img'))){
+          img[im].classList.replace('animate-img','grow-image');
         }
-    }));
+    }
+
+    });
       
 })();
 
