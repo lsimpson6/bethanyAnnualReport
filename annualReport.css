@@ -8,8 +8,33 @@
 }
   
 .country:hover {
-	fill: #000000 !important;
+  opacity: .8;
 }
+
+.cls-2 {
+  fill: #EBF1F3;
+  stroke: #fff;
+  stroke-width: .5px;
+}
+      .cls-1, .cls-2, .cls-3 {
+  fill: #EBF1F3;
+}
+
+.cls-1, .cls-3 {
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: .5px;
+}
+
+.cls-4 {
+  fill: #473c93;
+}
+
+.state, .country, .country path {
+  fill : #59CAE8;
+}
+.state:hover, .country:hover {opacity: .8 !important; transition: all .4s ease; cursor: pointer;}
+.location-pin { fill:#493D93 !important;}
   
 .bg-transparent {
   background-color: transparent !important;
