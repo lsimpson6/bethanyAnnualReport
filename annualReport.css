@@ -101,6 +101,7 @@
    position: relative; 
    z-index: 5;
    width: 100%;
+   padding: 0rem 5rem 0rem 5rem;
  }
 
  .row-title {
@@ -204,8 +205,12 @@
     h1 {
       font-size: 5rem;
     }
-      
-      .row-half, .row-third, .row-two-third {
+    
+    .row-full {
+      padding: 0rem;
+    }
+
+    .row-half, .row-third, .row-two-third {
       width: 100%;
         padding: 2.5rem;
     }
