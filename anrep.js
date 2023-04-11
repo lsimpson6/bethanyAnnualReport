@@ -77,13 +77,14 @@
       var increaseNeed = document.getElementById('percent-increase');
       var increaseNeedY = increaseNeed.getBoundingClientRect().top;
       var percent = 0;
+      var percentValue = 130;
 
       if($(increaseNeed).hasClass('todo')){
         if(increaseNeedY <= winHeight){
           increaseNeed.classList.replace('todo', 'done');
           setInterval(() => {
-            if(percent <= 130){
-              percent += 5;
+            if(percent <= percentValue){
+              percent += 1;
             }
             increaseNeed.textContent = percent + "%";
           }, 10);
