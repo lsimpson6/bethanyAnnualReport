@@ -16,7 +16,7 @@
     tmpHeight = winHeight/1.5;
   }
   else {
-    tmpHeight = winHeight/1.5;
+    tmpHeight = winHeight;
   }
 
   sectionTitle.textContent = textSelector[0];
@@ -97,7 +97,7 @@
 
     for(var im = 0; im < img.length; im++){
       var imgTop = img[im].getBoundingClientRect().top;
-      if(imgTop <=tmpHeight){
+      if(imgTop <=tmpHeight/1.2){
         if($(img[im]).hasClass('animate-img')){
           img[im].classList.replace('animate-img','grow-image');
         }
