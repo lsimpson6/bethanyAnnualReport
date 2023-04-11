@@ -1,6 +1,15 @@
 
 .widget{padding-right:0px; padding-left:0px;}
 
+#continue-to-site {
+  position: absolute;
+  left:60%;
+  top:50%;
+  z-index:999;
+  transform: translate(-50%, 50%);
+
+}
+
 .location-pin:hover {
   stroke: #473C93;
   transition: all .2s ease;
