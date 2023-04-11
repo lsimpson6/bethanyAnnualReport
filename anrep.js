@@ -79,8 +79,8 @@
       var percent = 0;
 
       if($(increaseNeed).hasClass('todo')){
-        increaseNeed.classList.replace('todo', 'done');
         if(increaseNeedY <= winHeight){
+          increaseNeed.classList.replace('todo', 'done');
           setInterval(() => {
             if(percent <= 130){
               percent += 5;
