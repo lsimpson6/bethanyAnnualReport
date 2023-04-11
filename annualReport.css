@@ -32,8 +32,9 @@
 
 .state, .country, .country path {
   fill : #59CAE8;
+  transition: all .4s ease;
 }
-.state:hover, .country:hover {opacity: .8 !important; transition: all .4s ease; cursor: pointer;}
+.state:hover, .country:hover {opacity: .8 !important; cursor: pointer;}
 .location-pin { fill:#493D93 !important;}
   
 .bg-transparent {
