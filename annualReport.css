@@ -178,7 +178,7 @@
 }
 
 @keyframes growImg {
-  from {transform: scale(650%);opacity:0;}
+  from {transform: scale(65%);opacity:0;}
   to {transform: scale(80%);opacity:1;}
 }
 
