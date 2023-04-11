@@ -78,7 +78,8 @@
       var increaseNeedY = increaseNeed.getBoundingClientRect().top;
       var percent = 0;
 
-      if(increaseNeed.textContent != "135%"){
+      if($(increaseNeed).hasClass('todo')){
+        increaseNeed.classList.replace('todo', 'done');
         if(increaseNeedY <= winHeight){
           setInterval(() => {
             if(percent <= 130){
