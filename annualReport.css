@@ -147,14 +147,14 @@
 }
 
 .wins-container {
-  width: 30%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 2% auto 2% auto;
 }
 
 .row-icon {
-  width: 85%;
+  width: 10%;
   padding: 2%;
 }
 
@@ -164,7 +164,7 @@
 }
 
 .row-copy {
-  width: 85%;
+  width: 90%;
   padding: 2%;
 }
   
