@@ -181,7 +181,11 @@
   from {transform: scale(90%);opacity:0;}
   to {transform: scale(100%);opacity:1;}
 }
-  
+
+.winsandhightlights-img {
+  min-height: 400px;
+}
+
 @media screen and (max-width: 968px){
   
     #head-text h1{
