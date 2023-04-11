@@ -188,9 +188,9 @@
 }
 
 @media screen and (max-width: 1925px){
-  .row-fixed-width {
-    padding:0rem 3rem 0rem 3rem;
-   }
+  .row-half, .row-third, .row-two-third {
+      padding: 3rem;
+  }
 }
 
 @media screen and (max-width: 968px){
