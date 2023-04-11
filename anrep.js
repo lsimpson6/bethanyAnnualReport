@@ -11,6 +11,14 @@
   var clickToMoveMap = document.querySelectorAll('.drag-to-move-map');
   var bars = document.querySelectorAll('.bar-chart');
 
+  var tmpHeight = 0;
+  if(window.innerWidth < 768){
+    tmpHeight = winHeight/1.5;
+  }
+  else {
+    tmpHeight = winHeight/1.5;
+  }
+
   sectionTitle.textContent = textSelector[0];
   
     window.addEventListener('scroll', ()=>{
@@ -42,13 +50,6 @@
       // fades in elements
       for(var a = 0; a < animate.length; a++){
         var tmpAnimate = animate[a];
-        var tmpHeight = 0;
-        if(window.innerWidth < 768){
-          tmpHeight = winHeight/1.5;
-        }
-        else {
-          tmpHeight = winHeight/1.5;
-        }
         var ayPos = tmpAnimate.getBoundingClientRect().top;
           if(ayPos <= tmpHeight){
             tmpAnimate.classList.add('fade-in');
@@ -96,7 +97,7 @@
 
     for(var im = 0; im < img.length; im++){
       var imgTop = img[im].getBoundingClientRect().top;
-      if(imgTop <= winHeight){
+      if(imgTop <=tmpHeight){
         if($(img[im]).hasClass('animate-img')){
           img[im].classList.replace('animate-img','grow-image');
         }
