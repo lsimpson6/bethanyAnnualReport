@@ -222,10 +222,13 @@ function stateStats(value){
 
   function winsHighlightSlider(value){
     if($(slides[value]).hasClass('d-none')){
-      for(let slideIndex = 0; slideIndex < slideIndex.length; slideIndex ++){
-        slides[slideIndex].classList.replace('d-flex', 'd-none');
-        btnSlide[slideIndex].classList.replace('tc-active', 'tc-inactive');
+      for(var tmpVal = 0; tmpVal < slides.length; tmpVal ++){
+        if(tmpVal != value){
+          slides[tmpVal].classList.replace('d-flex', 'd-none');
+          btnSlide[tmpVal].classList.replace('tc-active', 'tc-inactive');
+        }
       }
+
       slides[value].classList.replace('d-none', 'd-flex');
       btnSlide[value].classList.replace('tc-inactive', 'tc-active');
     }
