@@ -213,3 +213,20 @@ function stateStats(value){
   var tmpExpenditures = states[value].expenditures;
   stateExpenditures.textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tmpExpenditures);
 }
+
+
+// control the slider
+
+  var slides = document.querySelectorAll('.selector-items-container');
+  var btnSlide = document.querySelectorAll('.title-controls');
+
+  function winsHighlightsSlider(value){
+    if($(slides[value].hasClass('d-none'))){
+      for(let slideIndex = 0; slideIndex < slideIndex.length;){
+        slides[slideIndex].classList.replace('d-flex', 'd-none');
+        btnSlide[slideIndex].classList.replace('tc-active', 'tc-inactive');
+      }
+      slides[value].classList.replace('d-none', 'd-flex');
+      btnSlide[value].classList.replace('tc-inactive', 'tc-active');
+    }
+  }
