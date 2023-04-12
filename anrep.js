@@ -49,9 +49,9 @@
       }
 
       // fades in elements
-      for(var a = 0; a < animate.length; a++){
-        var tmpAnimate = animate[a];
-        var ayPos = tmpAnimate.getBoundingClientRect().top;
+      for(let a = 0; a < animate.length; a++){
+        let tmpAnimate = animate[a];
+        let ayPos = tmpAnimate.getBoundingClientRect().top;
           if(ayPos <= tmpHeight){
             tmpAnimate.classList.add('fade-in');
             tmpAnimate.classList.remove('animate');
@@ -59,10 +59,10 @@
       }
 
       // rainfall effect on location pins
-      for(var r = 0; r < rainfall.length; r++){
+      for(let r = 0; r < rainfall.length; r++){
 
-        var tmpRainfall = rainfall[r];
-        var rainfallTop = tmpRainfall.getBoundingClientRect().top;
+        let tmpRainfall = rainfall[r];
+        let rainfallTop = tmpRainfall.getBoundingClientRect().top;
         if(rainfallTop <= tmpHeight){
           tmpRainfall.classList.add('rainfall-animation');
           tmpRainfall.classList.remove('rainfall');
@@ -71,14 +71,14 @@
 
       // remove fixed after a page is scrolled
       if(firstElementTop <= 0){
-        for(var f = 0; f <= 2; f++){
+        for(let f = 0; f <= 2; f++){
           if($(fixed[f]).hasClass('fixed')){
             fixed[f].classList.remove('fixed');
           }
         }
       }
       else {
-        for(var f = 0; f <= 2; f++){
+        for(let f = 0; f <= 2; f++){
           if(!($(fixed[f]).hasClass('fixed'))){
             fixed[f].classList.add('fixed');
           }
