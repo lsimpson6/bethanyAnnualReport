@@ -4,6 +4,7 @@
   var textSelector = ["Annual Report", "Motivated by Faith", "Global Impact","Local Impact", "Mission and Vision", "Wins and Highlights"];
   var target = document.querySelectorAll('.title-target');
   var animate = document.querySelectorAll('.animate');
+  var rainfall = document.querySelectorAll('.rainfall');
   var firstElement = document.getElementById('first-element');
   var fixed = document.querySelectorAll('.fixed');
   var topHeaderHeight = document.getElementById('blogofixed').clientHeight;
@@ -54,6 +55,16 @@
           if(ayPos <= tmpHeight){
             tmpAnimate.classList.add('fade-in');
             tmpAnimate.classList.remove('animate');
+          }
+      }
+
+      // rainfall effect on location pins
+      for(var r = 0; a < rainfall.length; r++){
+        var tmpRainfall = rainfall[r];
+        var ayPos = tmpRainfall.getBoundingClientRect().top;
+          if(ayPos <= tmpHeight){
+            tmpRainfall.classList.add('rainfall-animate');
+            tmpRainfall.classList.remove('rainfall');
           }
       }
 
