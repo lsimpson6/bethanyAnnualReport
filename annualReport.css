@@ -195,11 +195,12 @@
 }
 
 .title-controls {
+  border-radius: .5rem;
   transition: all .3s ease;
   width: 30%;
   text-align:center;
-  border: 2px solid #000000;
-  padding: 2rem;
+  border: 2px solid #D0D3D4;
+  padding: 1.8rem;
   cursor: pointer;
 }
 
@@ -213,7 +214,7 @@
 }
 
 .title-controls h5 {
-  color: #000000;
+  color: #D0D3D4;
 }
 
 .animate-img {
