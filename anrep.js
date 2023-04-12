@@ -220,7 +220,7 @@ function stateStats(value){
   var slides = document.querySelectorAll('.selector-items-container');
   var btnSlide = document.querySelectorAll('.title-controls');
 
-  function winsHighlightsSlider(value){
+  function winsHighlightSlider(value){
     if($(slides[value].hasClass('d-none'))){
       for(let slideIndex = 0; slideIndex < slideIndex.length;){
         slides[slideIndex].classList.replace('d-flex', 'd-none');
