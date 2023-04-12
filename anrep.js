@@ -59,13 +59,13 @@
       }
 
       // rainfall effect on location pins
-      for(var r = 0; a < rainfall.length; r++){
+      for(var r = 0; r < rainfall.length; r++){
         var tmpRainfall = rainfall[r];
         var rainfallTop = tmpRainfall.getBoundingClientRect().top;
-          if(rainfallTop <= tmpHeight){
-            tmpRainfall.classList.add('rainfall-animate');
-            tmpRainfall.classList.remove('rainfall');
-          }
+        if(rainfallTop <= tmpHeight){
+          tmpRainfall.classList.add('rainfall-animate');
+          tmpRainfall.classList.remove('rainfall');
+        }
       }
 
       // remove fixed after a page is scrolled
