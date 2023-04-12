@@ -239,19 +239,19 @@ function stateStats(value){
 
 var videos = document.querySelectorAll('.video-slider-items');
 
-function sliderVideo(value){
+function sliderVideo(videoIndex){
 
-  if(value < 0){
-    value = 3;
-  }else if(value > 3){
-    value = 0;
+  if(videoIndex < 0){
+    videoIndex = 3;
+  }else if(videoIndex > 3){
+    videoIndex = 0;
   }
 
-  for(var tmpVal = 0; tmpVal < slides.length; tmpVal ++){
-    if(tmpVal != value){
-      slides[tmpVal].classList.replace('d-flex', 'd-none');
+  for(var tmpVideoIndex = 0; tmpVideoIndex < slides.length; tmpVideoIndex ++){
+    if(tmpVideoIndex != videoIndex){
+      slides[tmpVideoIndex].classList.replace('d-flex', 'd-none');
     }
   }
-  videos[value].classList.replace('d-none', 'd-flex');
+  videos[videoIndex].classList.replace('d-none', 'd-flex');
 
 }
