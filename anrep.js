@@ -221,7 +221,7 @@ function stateStats(value){
   var btnSlide = document.querySelectorAll('.title-controls');
 
   function winsHighlightSlider(value){
-    if($(slides[value].hasClass('d-none'))){
+    if($(slides[value]).hasClass('d-none')){
       for(let slideIndex = 0; slideIndex < slideIndex.length;){
         slides[slideIndex].classList.replace('d-flex', 'd-none');
         btnSlide[slideIndex].classList.replace('tc-active', 'tc-inactive');
