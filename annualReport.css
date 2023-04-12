@@ -195,13 +195,23 @@
 }
 
 .title-controls {
+  transition: all .3s ease;
   width: 30%;
-  margin: auto;
   text-align:center;
   border: 2px solid #000000;
   padding: 2rem;
   cursor: pointer;
 }
+
+.tc-active {
+  border: 2px solid #59CAE8 ;
+  background-color: #59CAE8;
+}
+
+.tc-active h5 {
+  color: #ffffff;
+}
+
 .title-controls h5 {
   color: #000000 !important;
 }
