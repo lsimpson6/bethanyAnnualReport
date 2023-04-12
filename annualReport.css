@@ -134,6 +134,7 @@
   
 .fade-in {
 	animation: 1s fadeIn ease 1; 
+  animation-delay: 5ms;
 }
   
 @keyframes fadeIn{
