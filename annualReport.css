@@ -209,11 +209,11 @@
 }
 
 .tc-active h5 {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .title-controls h5 {
-  color: #000000 !important;
+  color: #000000;
 }
 
 .animate-img {
