@@ -218,7 +218,7 @@
 
 .animate-img {
   opacity: 0;
-  transform: translateY(0px);
+  transform: translateX(0px);
 }
 
 .grow-image {
@@ -226,12 +226,12 @@
 }
 
 @keyframes growImg {
-  from {transform: translateY(-20px);opacity:0;}
-  to {transform: translateY(0px);opacity:1;}
+  from {transform: translateX(-20px);opacity:0;}
+  to {transform: translateX(0px);opacity:1;}
 }
 
 .winsandhightlights-img {
-  transform: scale(80%);
+  width: 80%;
   min-height: 400px;
   max-height: 568px;
 }
