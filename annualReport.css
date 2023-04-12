@@ -30,9 +30,9 @@
 }
 
 .cls-1, .cls-3 {
-  stroke: #fff;
+  stroke: #473C93;
   stroke-miterlimit: 10;
-  stroke-width: .5px;
+  stroke-width: .1px;
 }
 
 .cls-4 {
@@ -44,7 +44,7 @@
   transition: all .4s ease;
 }
 .state:hover, .country:hover {opacity: .8 !important; cursor: pointer;}
-.location-pin { fill:#493D93 !important;}
+.location-pin { fill:#ffffff !important;}
   
 .bg-transparent {
   background-color: transparent !important;
@@ -119,7 +119,16 @@
 	background-color: rgb(0,0,0,.55);
 }
   
-.animate {
+.rainfall-animation {
+	animation: 1s rainfall ease 1; 
+}
+  
+@keyframes rainfall{
+ from{opacity:0; transform: translateY(-30px);} 
+   to{opacity:1; transform: translateY(0px);} 
+}
+  
+.animate, .rainfall {
   opacity:0;
  }
   
