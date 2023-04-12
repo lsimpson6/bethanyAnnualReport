@@ -222,7 +222,7 @@ function stateStats(value){
 
   function winsHighlightSlider(value){
     if($(slides[value]).hasClass('d-none')){
-      for(let slideIndex = 0; slideIndex < slideIndex.length;){
+      for(let slideIndex = 0; slideIndex < slideIndex.length; slideIndex ++){
         slides[slideIndex].classList.replace('d-flex', 'd-none');
         btnSlide[slideIndex].classList.replace('tc-active', 'tc-inactive');
       }
