@@ -247,11 +247,12 @@ function sliderVideo(videoIndex){
     videoIndex = 0;
   }
 
-  for(var tmpVideoIndex = 0; tmpVideoIndex < slides.length; tmpVideoIndex ++){
-    if(tmpVideoIndex != videoIndex){
-      slides[tmpVideoIndex].classList.replace('d-flex', 'd-none');
-    }
+  if($(videos[videoIndex]).hasClass('d-none')){
+      for(var tmpVideoIndex = 0; tmpVideoIndex < slides.length; tmpVideoIndex ++){
+        if(tmpVideoIndex != videoIndex){
+          videos[tmpVideoIndex].classList.replace('d-flex', 'd-none');
+        }
+      }
+      videos[videoIndex].classList.replace('d-none', 'd-flex');
   }
-  videos[videoIndex].classList.replace('d-none', 'd-flex');
-
 }
