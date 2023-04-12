@@ -231,9 +231,7 @@
 }
 
 .winsandhightlights-img {
-  padding: 2%;
   min-height: 400px;
-  max-height: 568px;
 }
 
 @media screen and (max-width: 1925px){
