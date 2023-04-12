@@ -208,7 +208,7 @@
 .row-copy {
   z-index: 999;
   width: 100%;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
 }
 
 .title-controls {
@@ -324,11 +324,6 @@
     .row-icon {
       width: 20%;
       margin: auto;
-    }
-
-    .row-copy {
-      font-size: 2.4;
-      width: 80%;
     }
 
     .animate-img {
