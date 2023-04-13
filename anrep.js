@@ -257,7 +257,7 @@ btnSlideControls.forEach(btnClick => btnClick.addEventListener('click', ()=>{
   if(btnVideoAttr == "prev"){
     tmpSlideIndex --;
   }else if (btnVideoAttr == "next"){
-    tmpSlideIndex ++;
+    tmpSlideIndex +;;
   }
 
   if(tmpSlideIndex > 3){
@@ -272,14 +272,13 @@ btnSlideControls.forEach(btnClick => btnClick.addEventListener('click', ()=>{
 
 function sliderVideo(slideIndex){
 
-  var video = videos[slideIndex];
 
   for(vid = 0; vid < videos.length; vid++){
     if(vid != slideIndex){
-      video.classList.replace('d-flex', 'd-none');
+      videos[vid].classList.replace('d-flex', 'd-none');
     }
   }
 
-  video.classList.replace('d-none', 'd-flex');
+  videos[slideIndex].classList.replace('d-none', 'd-flex');
 
 }
