@@ -215,14 +215,15 @@ function autoSelectMaps(isAllowed){
   if(isAllowed){
     for(var autoLoopCountries = 0; autoLoopCountries < countriesArr.length; autoLoopCountries ++){
       setInterval(()=>{
-        globalStats(countriesArr[autoLoopCountries]);
+        //globalStats(countriesArr[autoLoopCountries]);
+        globalStats("gl-gh");
       }, 3000);
     }
   }
 }
 
 function globalStats(value){
-  unitedStatesSum();
+    unitedStatesSum();
     countryName.textContent = countries[value].country;
     var tmpServed = countries[value].served;
     globalServed.textContent = tmpServed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
