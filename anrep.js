@@ -202,7 +202,7 @@ window.addEventListener('load', ()=>{
   isAutoStateRotateAllowed = true;
   isAutoCountryRotateAllowed = true;
   autoSelectCountries(isAutoCountryRotateAllowed);
-  autoLoopStates(isAutoStateRotateAllowed);
+  autoSelectStates(isAutoStateRotateAllowed);
 })
 
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
@@ -211,7 +211,7 @@ countrySelected.forEach(c => c.addEventListener('click', ()=>{
     isAutoStateRotateAllowed = true;
     isAutoCountryRotateAllowed = false;
     autoSelectCountries(isAutoCountryRotateAllowed);
-    autoLoopStates(isAutoStateRotateAllowed);
+    autoSelectStates(isAutoStateRotateAllowed);
 }))
 
 stateSelected.forEach(s => s.addEventListener('click', ()=>{
@@ -220,11 +220,11 @@ stateSelected.forEach(s => s.addEventListener('click', ()=>{
     isAutoStateRotateAllowed = false;
     isAutoCountryRotateAllowed = true;
     autoSelectCountries(isAutoCountryRotateAllowed);
-    autoLoopStates(isAutoStateRotateAllowed);
+    autoSelectStates(isAutoStateRotateAllowed);
 }))
 
 function autoSelectCountries(isAllowed){
-  var autoLoopStates = 0;
+  var autoLoopCountries = 0;
   if(isAllowed){
     if(autoLoopCountries <= countriesArr.length){
       setInterval(()=>{
@@ -239,24 +239,20 @@ function autoSelectCountries(isAllowed){
   }
 }
 
-function autoLoopStates(isAllowed){
+function autoSelectStates(isAllowed){
   var autoLoopStates = 0;
-
   if(isAllowed){
     if(autoLoopStates <= statesSumArr.length){
       setInterval(()=>{
-
         if(autoLoopStates == statesSumArr.length){
           autoLoopStates = 0;
         }
-
         let tmpState = statesSumArr[autoLoopStates];
         stateStats(tmpState);
         autoLoopStates ++;
 
       }, 3000);
     }
-
   }
 }
 
