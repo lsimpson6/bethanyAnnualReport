@@ -201,7 +201,8 @@ window.addEventListener('load', ()=>{
   stateStats("us-ak");
   isAutoStateRotateAllowed = true;
   isAutoCountryRotateAllowed = true;
-  autoSelectMaps(isAutoStateRotateAllowed, isAutoCountryRotateAllowed);
+  autoSelectCountries(isAutoCountryRotateAllowed);
+  autoLoopStates(isAutoStateRotateAllowed);
 })
 
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
@@ -209,7 +210,8 @@ countrySelected.forEach(c => c.addEventListener('click', ()=>{
     globalStats(id);
     isAutoStateRotateAllowed = true;
     isAutoCountryRotateAllowed = false;
-    autoSelectMaps(isAutoStateRotateAllowed, isAutoCountryRotateAllowed);
+    autoSelectCountries(isAutoCountryRotateAllowed);
+    autoLoopStates(isAutoStateRotateAllowed);
 }))
 
 stateSelected.forEach(s => s.addEventListener('click', ()=>{
@@ -217,32 +219,30 @@ stateSelected.forEach(s => s.addEventListener('click', ()=>{
     stateStats(id);
     isAutoStateRotateAllowed = false;
     isAutoCountryRotateAllowed = true;
-    autoSelectMaps(isAutoStateRotateAllowed, isAutoCountryRotateAllowed);
+    autoSelectCountries(isAutoCountryRotateAllowed);
+    autoLoopStates(isAutoStateRotateAllowed);
 }))
 
-function autoSelectMaps(isStateAllowed, isCountryAllowed){
-  var autoLoopCountries = 0;
+function autoSelectCountries(isAllowed){
   var autoLoopStates = 0;
-
-  if(isCountryAllowed){
+  if(isAllowed){
     if(autoLoopCountries <= countriesArr.length){
       setInterval(()=>{
-
         if(autoLoopCountries == countriesArr.length){
           autoLoopCountries = 0;
         }
-
         let tmpCountry = countriesArr[autoLoopCountries];
         globalStats(tmpCountry);
         autoLoopCountries ++;
-
-
       }, 3000);
     }
-
   }
+}
 
-  if(isStateAllowed){
+function autoLoopStates(isAllowed){
+  var autoLoopStates = 0;
+
+  if(isAllowed){
     if(autoLoopStates <= statesSumArr.length){
       setInterval(()=>{
 
@@ -259,6 +259,7 @@ function autoSelectMaps(isStateAllowed, isCountryAllowed){
 
   }
 }
+
 
 function globalStats(value){
     unitedStatesSum();
