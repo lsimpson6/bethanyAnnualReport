@@ -247,7 +247,7 @@ function stateStats(value){
 
 // video slideshow
 var videos = document.querySelectorAll('.video-slider-items');
-var btnSlideControls = document.querySelectorAll('video-slider-control');
+var btnSlideControls = document.querySelectorAll('.video-slider-control');
 
 btnSlideControls.forEach(btnClick => btnClick.addEventListener('click', ()=>{
 
