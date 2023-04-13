@@ -196,6 +196,7 @@ const countriesArr = ["gl-us","gl-col", "gl-gh", "gl-et", "gl-ht", "gl-sa", "gl-
 window.addEventListener('load', ()=>{
   globalStats("gl-us");
   stateStats("us-ak");
+  autoSelectMaps(true);
 })
 
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
@@ -209,8 +210,8 @@ stateSelected.forEach(s => s.addEventListener('click', ()=>{
     stateStats(id);
     autoSelectMaps(false);
 }))
+
 function autoSelectMaps(isAllowed){
-  var isAllowed = true;
   if(isAllowed){
     for(autoLoopCountries = 0; autoLoopEl < countriesArr.length; countriesArr ++){
       setInterval(()=>{
