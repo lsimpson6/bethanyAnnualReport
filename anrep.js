@@ -220,10 +220,10 @@ function autoSelectMaps(isAllowed){
   var autoLoopCountries = 0;
 
   if(isAllowed){
+    if(autoLoopCountries > countriesArr.length){
+      autoLoopCountries = 0;
+    }
     if(autoLoopCountries <= countriesArr.length){
-      if(autoLoopCountries >= countriesArr.length){
-        autoLoopCountries = 0;
-      }
       setInterval(()=>{
         let tmpCountry = countriesArr[autoLoopCountries];
         globalStats(tmpCountry);
