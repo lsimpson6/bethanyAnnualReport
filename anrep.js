@@ -193,33 +193,38 @@ const countries = {
 
 const countriesArr = ["gl-us","gl-col", "gl-gh", "gl-et", "gl-ht", "gl-sa", "gl-al", "gl-rm"];
 
-var isAutoRotateAllowed;
+var isAutoStateRotateAllowed;
+var isAutoCountryRotateAllowed;
 
 window.addEventListener('load', ()=>{
   globalStats("gl-us");
   stateStats("us-ak");
-  isAutoRotateAllowed = true;
-  autoSelectMaps(isAutoRotateAllowed);
+  isAutoStateRotateAllowed = true;
+  isAutoCountryRotateAllowed = true;
+  autoSelectMaps(isAutoStateRotateAllowed, isAutoCountryRotateAllowed);
 })
 
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
     var id = c.getAttribute('data-country');
     globalStats(id);
-    isAutoRotateAllowed = false;
-    autoSelectMaps(isAutoRotateAllowed);
+    isAutoStateRotateAllowed = true;
+    isAutoCountryRotateAllowed = false;
+    autoSelectMaps(isAutoStateRotateAllowed, isAutoCountryRotateAllowed);
 }))
 
 stateSelected.forEach(s => s.addEventListener('click', ()=>{
     var id = s.getAttribute('data-state');
     stateStats(id);
-    isAutoRotateAllowed = false;
-    autoSelectMaps(isAutoRotateAllowed);
+    isAutoStateRotateAllowed = false;
+    isAutoCountryRotateAllowed = true;
+    autoSelectMaps(isAutoStateRotateAllowed, isAutoCountryRotateAllowed);
 }))
 
-function autoSelectMaps(isAllowed){
+function autoSelectMaps(isCountryAllowed, isStateAllowed){
   var autoLoopCountries = 0;
+  var autoLoopStates = 0;
 
-  if(isAllowed){
+  if(isCountryAllowed){
     if(autoLoopCountries <= countriesArr.length){
       setInterval(()=>{
 
@@ -230,9 +235,28 @@ function autoSelectMaps(isAllowed){
         let tmpCountry = countriesArr[autoLoopCountries];
         globalStats(tmpCountry);
         autoLoopCountries ++;
-        
+
+
       }, 3000);
     }
+
+  }
+
+  if(isStateAllowed){
+    if(autoLoopStates <= statesSumArr.length){
+      setInterval(()=>{
+
+        if(autoLoopStates == statesSumArr.length){
+          autoLoopStates = 0;
+        }
+
+        let tmpState = statesSumArr[autoLoopStates];
+        stateStats(tmpState);
+        autoLoopStates ++;
+
+      }, 3000);
+    }
+
   }
 }
 
