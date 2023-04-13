@@ -220,15 +220,14 @@ function autoSelectMaps(isAllowed){
   var autoLoopCountries = 0;
 
   if(isAllowed){
-    if(autoLoopCountries < countriesArr.length){
+    if(autoLoopCountries <= countriesArr.length){
+      if(autoLoopCountries >= countriesArr.length){
+        autoLoopCountries = 0;
+      }
       setInterval(()=>{
         let tmpCountry = countriesArr[autoLoopCountries];
         globalStats(tmpCountry);
-        if(autoLoopCountries >= countriesArr.length){
-          autoLoopCountries = 0;
-        }else {
-          autoLoopCountries ++;
-        }
+        autoLoopCountries ++;
       }, 3000);
     }
   }
