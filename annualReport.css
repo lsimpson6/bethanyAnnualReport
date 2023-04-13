@@ -262,8 +262,8 @@
 }
 
 @keyframes sw {
-  from {transform: translateX(-50vh); }
-  to {transform: translateX(0px); }
+  from {transform: translateX(-100vh); opacity:.2; }
+  to {transform: translateX(0px); opacity:1; }
 }
 
 .swipe-left {
@@ -271,8 +271,8 @@
 }
 
 @keyframes sl {
-  from {transform: translateX(50vh); }
-  to {transform: translateX(0px); }
+  from {transform: translateX(100vh);opacity:.2; }
+  to {transform: translateX(0px);opacity:1;  }
 }
 
 @media screen and (max-width: 1925px){
