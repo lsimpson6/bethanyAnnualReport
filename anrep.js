@@ -163,9 +163,11 @@ const states = {
   "us-wa": {state: "Washington", served: 51, programs: 0, locations: 0, expenditures: 0}
 };
 
-function unitedStatesSum(){
-  const statesSumArr = ["us-ak", "us-ca","us-co-tx", "us-fl", "us-ga", "us-il", "us-in-ky","us-md-dc", "us-mi", 
+const statesSumArr = ["us-ak", "us-ca","us-co-tx", "us-fl", "us-ga", "us-il", "us-in-ky","us-md-dc", "us-mi", 
   "us-mn", "us-mo","us-ne-ia", "us-new-eng","us-mid-atlantic", "us-nc", "us-sc","us-sd", "us-sc", "us-tn","us-va", "us-wi", "us-wa"];
+
+
+function unitedStatesSum(){
 
   for(var s = 0; s < statesSumArr.length; s++){
     servedSum += states[statesSumArr[s]].served;
@@ -189,6 +191,8 @@ const countries = {
   "gl-rm": {country: "Romania", served: 825, programs: 1, locations: 1, expenditures: 108039}
 };
 
+const countriesArr = ["gl-us","gl-col", "gl-gh", "gl-et", "gl-ht", "gl-sa", "gl-al", "gl-rm"];
+
 window.addEventListener('load', ()=>{
   globalStats("gl-us");
   stateStats("us-ak");
@@ -197,12 +201,24 @@ window.addEventListener('load', ()=>{
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
     var id = c.getAttribute('data-country');
     globalStats(id);
+    autoSelectMaps(false);
 }))
 
 stateSelected.forEach(s => s.addEventListener('click', ()=>{
     var id = s.getAttribute('data-state');
     stateStats(id);
+    autoSelectMaps(false);
 }))
+function autoSelectMaps(isAllowed){
+  var isAllowed = true;
+  if(isAllowed){
+    for(autoLoopCountries = 0; autoLoopEl < countriesArr.length; countriesArr ++){
+      setInterval(()=>{
+        globalStats(countriesArr[autoLoopEl]);
+      }, 3000);
+    }
+  }
+}
 
 function globalStats(value){
   unitedStatesSum();
