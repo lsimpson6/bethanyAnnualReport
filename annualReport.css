@@ -262,7 +262,7 @@
 }
 
 @keyframes sw {
-  from {transform: translateX(-60px); }
+  from {transform: translateX(-50vh); }
   to {transform: translateX(0px); }
 }
 
@@ -271,7 +271,7 @@
 }
 
 @keyframes sl {
-  from {transform: translateX(60px); }
+  from {transform: translateX(50vh); }
   to {transform: translateX(0px); }
 }
 
