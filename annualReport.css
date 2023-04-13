@@ -257,10 +257,6 @@
   min-height: 400px;
 }
 
-.swipe-slideshow {
-  opacity:0;
-}
-
 .swipe-right {
   animation: sw .6s 1 ease;
 }
