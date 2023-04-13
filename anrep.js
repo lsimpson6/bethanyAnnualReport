@@ -218,12 +218,12 @@ stateSelected.forEach(s => s.addEventListener('click', ()=>{
 
 function autoSelectMaps(isAllowed){
   if(isAllowed){
-    for(var autoLoopCountries = 0; autoLoopCountries < countriesArr.length; autoLoopCountries ++){
-      setInterval(()=>{
-        let tmpCountry = globalStats(countriesArr[autoLoopCountries]);
-        globalStats('"' + tmpCountry + '"');
-      }, 3000);
-    }
+    setInterval(()=>{
+      for(var autoLoopCountries = 0; autoLoopCountries < countriesArr.length; autoLoopCountries ++){
+          let tmpCountry = countriesArr[autoLoopCountries];
+          globalStats(tmpCountry);
+      }
+    }, 3000);
   }
 }
 
