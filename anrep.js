@@ -221,13 +221,16 @@ function autoSelectMaps(isAllowed){
 
   if(isAllowed){
     if(autoLoopCountries <= countriesArr.length){
-      if(autoLoopCountries == countriesArr.length){
-        autoLoopCountries = 0;
-      }
       setInterval(()=>{
+
+        if(autoLoopCountries == countriesArr.length){
+          autoLoopCountries = 0;
+        }
+
         let tmpCountry = countriesArr[autoLoopCountries];
         globalStats(tmpCountry);
         autoLoopCountries ++;
+        
       }, 3000);
     }
   }
