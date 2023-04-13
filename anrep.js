@@ -60,13 +60,14 @@
 
       // rainfall effect on location pins
       for(let r = 0; r < rainfall.length; r++){
-
-        let tmpRainfall = rainfall[r];
-        let rainfallTop = tmpRainfall.getBoundingClientRect().top;
-        if(rainfallTop <= tmpHeight){
-          tmpRainfall.classList.add('rainfall-animation');
-          tmpRainfall.classList.remove('rainfall');
-        }
+        var tmpRainfall = rainfall[r];
+        var rainfallTop = tmpRainfall.getBoundingClientRect().top;
+        setInterval(()=>{
+            if(rainfallTop <= tmpHeight){
+              tmpRainfall.classList.add('rainfall-animation');
+              tmpRainfall.classList.remove('rainfall');
+            }        
+        }, 10);
       }
 
       // remove fixed after a page is scrolled
