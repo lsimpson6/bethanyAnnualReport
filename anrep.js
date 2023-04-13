@@ -61,8 +61,8 @@
       // rainfall effect on location pins
       for(let r = 0; r < rainfall.length; r++){
         var tmpRainfall = rainfall[r];
-        var rainfallTop = tmpRainfall.getBoundingClientRect().top;
-        if(rainfallTop <= tmpHeight){
+        var rainfallBottom = tmpRainfall.getBoundingClientRect().bottom;
+        if(rainfallBottom >= 50){
           tmpRainfall.classList.add('rainfall-animation');
           tmpRainfall.classList.remove('rainfall');
         }        
