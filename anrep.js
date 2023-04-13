@@ -248,17 +248,16 @@ function stateStats(value){
 // video slideshow
 var videos = document.querySelectorAll('.video-slider-items');
 var btnSlideControls = document.querySelectorAll('.video-slider-control');
+var tmpSlideIndex = 0;
 
 btnSlideControls.forEach(btnClick => btnClick.addEventListener('click', ()=>{
 
-  var initialSlide = 0;
-  var tmpSlideIndex;
   var btnVideoAttr = btnClick.getAttribute('data-video-slider-controls');
 
   if(btnVideoAttr == "prev"){
-    tmpSlideIndex -= initialSlide;
+    tmpSlideIndex --;
   }else if (btnVideoAttr == "next"){
-    tmpSlideIndex += initialSlide;;
+    tmpSlideIndex ++;
   }
 
   if(tmpSlideIndex > 3){
