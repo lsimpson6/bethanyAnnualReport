@@ -251,13 +251,14 @@ var btnSlideControls = document.querySelectorAll('.video-slider-control');
 
 btnSlideControls.forEach(btnClick => btnClick.addEventListener('click', ()=>{
 
+  var initialSlide = 0;
   var tmpSlideIndex;
   var btnVideoAttr = btnClick.getAttribute('data-video-slider-controls');
 
   if(btnVideoAttr == "prev"){
-    tmpSlideIndex --;
+    tmpSlideIndex -= initialSlide;
   }else if (btnVideoAttr == "next"){
-    tmpSlideIndex ++;
+    tmpSlideIndex += initialSlide;;
   }
 
   if(tmpSlideIndex > 3){
