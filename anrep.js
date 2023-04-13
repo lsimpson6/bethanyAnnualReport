@@ -193,37 +193,22 @@ const countries = {
 
 const countriesArr = ["gl-us","gl-col", "gl-gh", "gl-et", "gl-ht", "gl-sa", "gl-al", "gl-rm"];
 
-var isAutoStateRotateAllowed;
-var isAutoCountryRotateAllowed;
-
 window.addEventListener('load', ()=>{
   globalStats("gl-us");
   stateStats("us-ak");
-  isAutoStateRotateAllowed = true;
-  isAutoCountryRotateAllowed = true;
-  autoSelectCountries(isAutoCountryRotateAllowed);
-  autoSelectStates(isAutoStateRotateAllowed);
 })
 
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
     var id = c.getAttribute('data-country');
     globalStats(id);
-    isAutoStateRotateAllowed = true;
-    isAutoCountryRotateAllowed = false;
-    autoSelectCountries(isAutoCountryRotateAllowed);
-    autoSelectStates(isAutoStateRotateAllowed);
 }))
 
 stateSelected.forEach(s => s.addEventListener('click', ()=>{
     var id = s.getAttribute('data-state');
     stateStats(id);
-    isAutoStateRotateAllowed = false;
-    isAutoCountryRotateAllowed = true;
-    autoSelectCountries(isAutoCountryRotateAllowed);
-    autoSelectStates(isAutoStateRotateAllowed);
 }))
 
-function autoSelectCountries(isAllowed){
+/* function autoSelectCountries(isAllowed){
   var autoLoopCountries = 0;
   if(isAllowed){
     if(autoLoopCountries <= countriesArr.length){
@@ -254,7 +239,7 @@ function autoSelectStates(isAllowed){
       }, 3000);
     }
   }
-}
+} */
 
 
 function globalStats(value){
