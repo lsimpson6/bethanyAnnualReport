@@ -260,10 +260,10 @@ btnSlideControls.forEach(btnClick => btnClick.addEventListener('click', ()=>{
     tmpSlideIndex ++;
   }
 
-  if(tmpSlideIndex > 3){
+  if(tmpSlideIndex > 2){
     tmpSlideIndex = 0;
   }else if(tmpSlideIndex < 0){
-    tmpSlideIndex = 3;
+    tmpSlideIndex = 2;
   }
 
   sliderVideo(tmpSlideIndex);
