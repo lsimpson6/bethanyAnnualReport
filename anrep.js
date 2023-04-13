@@ -218,12 +218,23 @@ stateSelected.forEach(s => s.addEventListener('click', ()=>{
 
 function autoSelectMaps(isAllowed){
   if(isAllowed){
-    setInterval(()=>{
-      for(var autoLoopCountries = 0; autoLoopCountries < countriesArr.length; autoLoopCountries ++){
+   /* for(var autoLoopCountries = 0; autoLoopCountries < countriesArr.length; autoLoopCountries ++){
+        setInterval(()=>{
           let tmpCountry = countriesArr[autoLoopCountries];
           globalStats(tmpCountry);
-      }
-    }, 3000);
+        }, 3000);
+    } */
+
+    var countryIndex = 0;
+    if(countryIndex < countriesArr.length){
+      setInterval(()=>{
+        let tmpCountry = countriesArr[countryIndex];
+        globalStats(countryIndex);
+      }, 3000); 
+      countryIndex ++
+    }else{
+      countryIndex = 0;
+    }
   }
 }
 
