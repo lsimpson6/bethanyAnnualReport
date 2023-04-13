@@ -245,29 +245,26 @@ function stateStats(value){
     }
   }
 
-
-(function (){
 // video and image slideshow
-var videos = document.querySelectorAll('.video-slider-items');
-var images = document.querySelectorAll('.image-slider-items');
-var btnSlideControls = document.querySelectorAll('.slider-control');
+var btnSlideControls = document.querySelectorAll('.video-slider-control');
 var tmpSlideIndex = 0;
 
 btnSlideControls.forEach(btnClick => btnClick.addEventListener('click', ()=>{
 
-  var btnAttr = btnClick.getAttribute('data-slider-controls');
-  var btnAttrDirection = btnClick.getAttribute('data-slider-direction');
-  var targetSlider;
+  var slideType = btnClick.getAttribute('data-slider-controls');
+  var direction = btnClick.getAttribute('data-slider-direction');
+  var targetAttribute;
 
-  if(btnAttr == "video-slider"){
-    targetSlider = videos;
-  }else if(btnAttr == "image-text-slider"){
-    targetSlider = images;
+  if(slideType == "video-slider"){
+    targetAttribute = ".video-slider-items";
+  }else if(slideType == "image-text-slider") {
+    targetAttribute = ".image-slider-items";
+    
   }
 
-  if(btnAttrDirection == "prev"){
+  if(direction == "prev"){
     tmpSlideIndex --;
-  }else if (btnAttrDirection == "next"){
+  }else if (direction == "next"){
     tmpSlideIndex ++;
   }
 
@@ -277,16 +274,16 @@ btnSlideControls.forEach(btnClick => btnClick.addEventListener('click', ()=>{
     tmpSlideIndex = 2;
   }
 
-  sliderVideo(targetSlider, tmpSlideIndex);
+  slider(targetAttribute, tmpSlideIndex);
 
 }))
 
-function slider(videoimg, slideIndex){
-  for(vid = 0; vid < videoimg.length; vid++){
+function slider(targetAttr, slideIndex){
+  var target = document.querySelectorAll(targetAttr);
+  for(vid = 0; vid < target.length; vid++){
     if(vid != slideIndex){
-      videoimg[vid].classList.replace('d-flex', 'd-none');
+      target[vid].classList.replace('d-flex', 'd-none');
     }
   }
-  videoimg[slideIndex].classList.replace('d-none', 'd-flex');
+  target[slideIndex].classList.replace('d-none', 'd-flex');
 }
-})
