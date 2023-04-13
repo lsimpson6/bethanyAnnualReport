@@ -252,7 +252,7 @@ var btnSlideControls = document.querySelectorAll('video-slider-control');
 btnSlideControls.forEach(btnClick => btnClick.addEventListener('click', ()=>{
 
   var tmpSlideIndex = 0;
-  var btnVideoAttr = document.getAttribute('data-video-slider-controls');
+  var btnVideoAttr = btnClick.getAttribute('data-video-slider-controls');
 
   if(btnVideoAttr == "prev"){
     tmpSlideIndex --
