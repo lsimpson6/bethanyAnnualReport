@@ -312,16 +312,23 @@ btnSlideControls.forEach(btnClick => btnClick.addEventListener('click', ()=>{
     tmpSlideIndex = 2;
   }
 
-  slider(targetAttribute, tmpSlideIndex);
+  slider(targetAttribute, tmpSlideIndex, direction);
 
 }))
 
-function slider(targetAttr, slideIndex){
+function slider(targetAttr, slideIndex, dir){
   var target = document.querySelectorAll(targetAttr);
   for(vid = 0; vid < target.length; vid++){
     if(vid != slideIndex){
       target[vid].classList.replace('d-flex', 'd-none');
+      target[vid].classList.replace('swipe-right', 'swipe-slideshow');
+      target[vid].classList.replace('swipe-left', 'swipe-slideshow');
     }
+  }
+  if(dir == "prev"){
+    target[slideIndex].classList.replace('swipe-slideshow', 'swipe-right');
+  }else if(dir == "next"){
+    target[slideIndex].classList.replace('swipe-slideshow', 'swipe-left');
   }
   target[slideIndex].classList.replace('d-none', 'd-flex');
 }
