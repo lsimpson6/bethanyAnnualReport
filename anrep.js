@@ -217,23 +217,15 @@ stateSelected.forEach(s => s.addEventListener('click', ()=>{
 }))
 
 function autoSelectMaps(isAllowed){
-  if(isAllowed){
-   /* for(var autoLoopCountries = 0; autoLoopCountries < countriesArr.length; autoLoopCountries ++){
-        setInterval(()=>{
-          let tmpCountry = countriesArr[autoLoopCountries];
-          globalStats(tmpCountry);
-        }, 3000);
-    } */
+  var autoLoopCountries = 0;
 
-    var countryIndex = 0;
-    if(countryIndex < countriesArr.length){
+  if(isAllowed){
+    if(autoLoopCountries < countriesArr.length){
       setInterval(()=>{
-        let tmpCountry = countriesArr[countryIndex];
-        globalStats(countryIndex);
-      }, 3000); 
-      countryIndex ++
-    }else{
-      countryIndex = 0;
+        let tmpCountry = countriesArr[autoLoopCountries];
+        globalStats(tmpCountry);
+        autoLoopCountries ++;
+      }, 3000);
     }
   }
 }
