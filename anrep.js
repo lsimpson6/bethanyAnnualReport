@@ -224,7 +224,11 @@ function autoSelectMaps(isAllowed){
       setInterval(()=>{
         let tmpCountry = countriesArr[autoLoopCountries];
         globalStats(tmpCountry);
-        autoLoopCountries ++;
+        if(autoLoopCountries >= countriesArr.length){
+          autoLoopCountries = 0;
+        }else {
+          autoLoopCountries ++;
+        }
       }, 3000);
     }
   }
