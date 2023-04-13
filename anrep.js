@@ -255,7 +255,7 @@ btnSlideControls.forEach(btnClick => btnClick.addEventListener('click', ()=>{
   var btnVideoAttr = btnClick.getAttribute('data-video-slider-controls');
 
   if(btnVideoAttr == "prev"){
-    tmpSlideIndex --
+    tmpSlideIndex --;
   }else if (btnVideoAttr == "next"){
     tmpSlideIndex ++;
   }
@@ -272,10 +272,10 @@ btnSlideControls.forEach(btnClick => btnClick.addEventListener('click', ()=>{
 
 function sliderVideo(slideIndex){
 
-  var video = videos[tmpIndex];
+  var video = videos[slideIndex];
 
   for(vid = 0; vid < videos.length; vid++){
-    if(vid != tmpIndex){
+    if(vid != slideIndex){
       video.classList.replace('d-flex', 'd-none');
     }
   }
