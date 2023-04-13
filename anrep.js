@@ -257,7 +257,7 @@ btnSlideControls.forEach(btnClick => btnClick.addEventListener('click', ()=>{
   if(btnVideoAttr == "prev"){
     tmpSlideIndex --;
   }else if (btnVideoAttr == "next"){
-    tmpSlideIndex +;;
+    tmpSlideIndex ++;
   }
 
   if(tmpSlideIndex > 3){
