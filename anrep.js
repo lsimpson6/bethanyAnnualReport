@@ -260,8 +260,12 @@ function sliderVideo(slideIndex){
 
   var video = videos[tmpIndex];
 
-  if($(video).hasClass('d-none')){
-    video.classList.replace('d-none', 'd-flex');
+  for(vid = 0; vid < videos.length; vid++){
+    if(vid != tmpIndex){
+      video.classList.replace('d-flex', 'd-none');
+    }
   }
+
+  video.classList.replace('d-none', 'd-flex');
 
 }
