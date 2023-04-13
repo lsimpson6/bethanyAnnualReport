@@ -62,12 +62,11 @@
       for(let r = 0; r < rainfall.length; r++){
         var tmpRainfall = rainfall[r];
         var rainfallTop = tmpRainfall.getBoundingClientRect().top;
-        setInterval(()=>{
-            if(rainfallTop <= tmpHeight){
-              tmpRainfall.classList.add('rainfall-animation');
-              tmpRainfall.classList.remove('rainfall');
-            }        
-        }, 10);
+        if(rainfallTop <= tmpHeight){
+          tmpRainfall.classList.add('delay-5');
+          tmpRainfall.classList.add('rainfall-animation');
+          tmpRainfall.classList.remove('rainfall');
+        }        
       }
 
       // remove fixed after a page is scrolled
