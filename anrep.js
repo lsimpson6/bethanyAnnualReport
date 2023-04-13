@@ -62,7 +62,7 @@
       for(let r = 0; r < rainfall.length; r++){
         var tmpRainfall = rainfall[r];
         var rainfallBottom = tmpRainfall.getBoundingClientRect().bottom;
-        if(rainfallBottom > tmpHeight){
+        if(rainfallBottom < tmpHeight){
           tmpRainfall.classList.add('rainfall-animation');
           tmpRainfall.classList.remove('rainfall');
         }        
