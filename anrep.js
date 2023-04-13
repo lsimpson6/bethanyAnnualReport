@@ -220,7 +220,7 @@ stateSelected.forEach(s => s.addEventListener('click', ()=>{
     autoSelectMaps(isAutoStateRotateAllowed, isAutoCountryRotateAllowed);
 }))
 
-function autoSelectMaps(isCountryAllowed, isStateAllowed){
+function autoSelectMaps(isStateAllowed, isCountryAllowed){
   var autoLoopCountries = 0;
   var autoLoopStates = 0;
 
