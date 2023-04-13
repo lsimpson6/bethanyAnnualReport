@@ -193,30 +193,35 @@ const countries = {
 
 const countriesArr = ["gl-us","gl-col", "gl-gh", "gl-et", "gl-ht", "gl-sa", "gl-al", "gl-rm"];
 
+var isAutoRotateAllowed;
+
 window.addEventListener('load', ()=>{
   globalStats("gl-us");
   stateStats("us-ak");
-  autoSelectMaps(true);
+  isAutoRotateAllowed = true;
+  autoSelectMaps(isAutoRotateAllowed);
 })
 
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
     var id = c.getAttribute('data-country');
     globalStats(id);
-    autoSelectMaps(false);
+    isAutoRotateAllowed = false;
+    autoSelectMaps(isAutoRotateAllowed);
 }))
 
 stateSelected.forEach(s => s.addEventListener('click', ()=>{
     var id = s.getAttribute('data-state');
     stateStats(id);
-    autoSelectMaps(false);
+    isAutoRotateAllowed = false;
+    autoSelectMaps(isAutoRotateAllowed);
 }))
 
 function autoSelectMaps(isAllowed){
   if(isAllowed){
     for(var autoLoopCountries = 0; autoLoopCountries < countriesArr.length; autoLoopCountries ++){
       setInterval(()=>{
-        //globalStats(countriesArr[autoLoopCountries]);
-        globalStats("gl-gh");
+        let tmpCountry = globalStats(countriesArr[autoLoopCountries]);
+        globalStats('"' + tmpCountry + '"');
       }, 3000);
     }
   }
