@@ -213,9 +213,9 @@ stateSelected.forEach(s => s.addEventListener('click', ()=>{
 
 function autoSelectMaps(isAllowed){
   if(isAllowed){
-    for(autoLoopCountries = 0; autoLoopEl < countriesArr.length; countriesArr ++){
+    for(var autoLoopCountries = 0; autoLoopCountries < countriesArr.length; autoLoopCountries ++){
       setInterval(()=>{
-        globalStats(countriesArr[autoLoopEl]);
+        globalStats(countriesArr[autoLoopCountries]);
       }, 3000);
     }
   }
