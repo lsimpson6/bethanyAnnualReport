@@ -244,3 +244,24 @@ function stateStats(value){
       btnSlide[value].classList.replace('tc-inactive', 'tc-active');
     }
   }
+
+// video slideshow
+var videos = document.querySelectorAll('.video-slider-items');
+
+function sliderVideo(slideIndex){
+  var tmpIndex = 0;
+  tmpIndex =+ slideIndex;
+
+  if(tmpIndex > 3){
+    tmpIndex = 0;
+  }else if(tmpIndex < 0){
+    tmpIndex = 3;
+  }
+
+  var video = videos[tmpIndex];
+
+  if($(video).hasClass('d-none')){
+    video.classList.replace('d-none', 'd-flex');
+  }
+
+}
