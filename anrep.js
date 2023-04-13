@@ -247,16 +247,30 @@ function stateStats(value){
 
 // video slideshow
 var videos = document.querySelectorAll('.video-slider-items');
+var btnSlideControls = document.querySelectorAll('video-slider-control');
+
+btnSlideControls.forEach(btnClick => btnClick.addEventListener('click', ()=>{
+
+  var tmpSlideIndex = 0;
+  var btnVideoAttr = document.getAttribute('data-video-slider-controls');
+
+  if(btnVideoAttr == "prev"){
+    tmpSlideIndex --
+  }else if (btnVideoAttr == "next"){
+    tmpSlideIndex ++;
+  }
+
+  if(tmpSlideIndex > 3){
+    tmpSlideIndex = 0;
+  }else if(tmpSlideIndex < 0){
+    tmpSlideIndex = 3;
+  }
+
+  sliderVideo(tmpSlideIndex);
+
+}))
 
 function sliderVideo(slideIndex){
-  var tmpIndex = 0;
-  tmpIndex =+ slideIndex;
-
-  if(tmpIndex > 3){
-    tmpIndex = 0;
-  }else if(tmpIndex < 0){
-    tmpIndex = 3;
-  }
 
   var video = videos[tmpIndex];
 
