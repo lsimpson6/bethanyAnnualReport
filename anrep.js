@@ -9,6 +9,7 @@
   var fixed = document.querySelectorAll('.fixed');
   var topHeaderHeight = document.getElementById('blogofixed').clientHeight;
   var topHeader = document.getElementById('blogofixed');
+  var bgOverlay = document.getElementById('bgdarkoverlay');
   var clickToMoveMap = document.querySelectorAll('.drag-to-move-map');
   var bars = document.querySelectorAll('.bar-chart');
 
@@ -75,6 +76,7 @@
             fixed[f].classList.remove('fixed');
           }
         }
+        bgOverlay.classList.add('d-none');
       }
       else {
         for(let f = 0; f <= 2; f++){
@@ -82,6 +84,7 @@
             fixed[f].classList.add('fixed');
           }
         }
+        bgOverlay.classList.remove('d-none');
       }
 
     // animate increase in need
