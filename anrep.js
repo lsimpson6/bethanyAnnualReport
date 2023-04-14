@@ -124,7 +124,7 @@
     for(var txt = 0; txt < txtFade.length; txt ++){
       var txtFadeTop = txtFade[txt].getBoundingClientRect().top;
 
-      if(txtFadeTop <= winHeight/1.8 || txtFadeTop >= winHeight/2.2){
+      if(txtFadeTop > winHeight/1.8 || txtFadeTop < winHeight/2.2){
           txtFade[txt].classList.replace('defualt-opacity', 'increase-opacity');
       }
       else {
