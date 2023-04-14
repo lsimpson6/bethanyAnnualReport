@@ -96,10 +96,10 @@
           perOfFunds.classList.replace('todo', 'done');
           setInterval(() => {
             if(percent < percentValue){
-              percent += 1.5;
+              percent += .5;
             }
             perOfFunds.textContent = percent;
-          }, 10);
+          }, 20);
         }
       }
 
