@@ -118,6 +118,20 @@
       }
     }
 
+    // change text opacity
+    var txtFade = document.querySelectorAll('.fade-text-items');
+
+    for(var txt = 0; txt < txtFade.length; txt ++){
+      var txtFadeTop = txtFade[txt].getBoundingClientRect().top;
+
+      if(txtFadeTop <= winHeight/1.8 || txtFadeTop >= winHeight/2.2){
+          txtFade[txt].classList.replace('defualt-opacity', 'increase-opacity');
+      }
+      else {
+        txtFade[txt].classList.replace('increase-opacity', 'defualt-opacity');
+      }
+    }
+
     });
       
 })();
@@ -161,7 +175,7 @@ const states = {
   "us-sc": {state: "South Carolina", served: 268, programs: 4, locations: 1, expenditures: 614712},
   "us-sd": {state: "South Dakota", served: 119, programs: 2, locations: 2, expenditures: 348560},
   "us-tn": {state: "Tennessee", served: 1332, programs: 13, locations: 5, expenditures: 4274463},
-  "us-va": {state: "Virgnia", served: 1330, programs: 7, locations: 1, expenditures: 958299},
+  "us-va": {state: "Virginia", served: 1330, programs: 7, locations: 1, expenditures: 958299},
   "us-wi": {state: "Wisconsin", served: 189, programs: 9, locations: 2, expenditures: 2899742},
   "us-wa": {state: "Washington", served: 51, programs: 0, locations: 0, expenditures: 0}
 };
