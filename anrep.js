@@ -86,19 +86,19 @@
 
     // animate increase in need
 
-      var increaseNeed = document.getElementById('percent-increase');
-      var increaseNeedY = increaseNeed.getBoundingClientRect().top;
+      var perOfFunds = document.getElementById('percent-of-funds');
+      var perOfFundsTop = perOfFunds.getBoundingClientRect().top;
       var percent = 0;
-      var percentValue = 130;
+      var percentValue = 85.5;
 
-      if($(increaseNeed).hasClass('todo')){
-        if(increaseNeedY <= winHeight){
-          increaseNeed.classList.replace('todo', 'done');
+      if($(perOfFunds).hasClass('todo')){
+        if(perOfFundsTop <= winHeight){
+          perOfFunds.classList.replace('todo', 'done');
           setInterval(() => {
             if(percent < percentValue){
-              percent += 1;
+              percent += 1.5;
             }
-            increaseNeed.textContent = percent + "%";
+            perOfFunds.textContent = percent;
           }, 10);
         }
       }
