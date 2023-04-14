@@ -88,7 +88,7 @@
 
       var perOfFunds = document.getElementById('percent-of-funds');
       var perOfFundsTop = perOfFunds.getBoundingClientRect().top;
-      var percent = 50;
+      var percent = 65;
       var percentValue = 85.5;
 
       if($(perOfFunds).hasClass('todo')){
@@ -99,7 +99,7 @@
               percent += .5;
             }
             perOfFunds.textContent = percent;
-          }, 20);
+          }, 50);
         }
       }
 
