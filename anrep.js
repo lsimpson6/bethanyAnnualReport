@@ -125,10 +125,10 @@
       var txtFadeTop = txtFade[txt].getBoundingClientRect().top;
 
       if(txtFadeTop > winHeight/1.8 || txtFadeTop < winHeight/2.2){
-          txtFade[txt].classList.replace('defualt-opacity', 'increase-opacity');
+        txtFade[txt].classList.replace('increase-opacity', 'defualt-opacity');
       }
       else {
-        txtFade[txt].classList.replace('increase-opacity', 'defualt-opacity');
+        txtFade[txt].classList.replace('defualt-opacity', 'increase-opacity');
       }
     }
 
