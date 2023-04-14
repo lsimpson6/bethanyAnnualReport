@@ -99,7 +99,7 @@
               percent += .5;
             }
             perOfFunds.textContent = percent;
-          }, 50);
+          }, 10);
         }
       }
 
