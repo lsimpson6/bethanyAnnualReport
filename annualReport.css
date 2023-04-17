@@ -337,6 +337,10 @@ height: 100vh;
   margin: auto;
   }
 
+  .mobile-only {
+    display:none;
+  }
+
 @media screen and (max-width: 1925px){
   .row-half, .row-third, .row-two-third {
       padding: 3rem;
@@ -371,6 +375,10 @@ height: 100vh;
 
   .desktop-only {
     display:none;
+  }
+
+  .mobile-only {
+    display:flex;
   }
   
     #head-text h1{
