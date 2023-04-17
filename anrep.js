@@ -319,17 +319,22 @@ southwestSums();
 pacificSums();
 
 const regions = {
-  "reg-pa": {country: "Pacific Region", served: pacServedSum, programs: pacProgramSum, locations: pacLocationSum , expenditures: pacExpenditureSum},
-  "reg-sw": {country: "Southwest Region", served: swServedSum, programs: swProgramSum, locations: swLocationSum, expenditures: swExpenditureSum},
-  "reg-mw": {country: "Mid-West Region", served: mwServedSum, programs: mwProgramSum, locations: mwLocationSum, expenditures: mwExpenditureSum},
-  "reg-se": {country: "Southeast Region", served: seServedSum, programs: seProgramSum, locations: seLocationSum, expenditures: seExpenditureSum},
-  "reg-ma": {country: "Mid-Atlanic Region", served: maServedSum, programs: maProgramSum, locations: maLocationSum, expenditures: maExpenditureSum},
-  "reg-ne": {country: "New England Region", served: states["us-new-eng"].served, programs: states["us-new-eng"].programs, locations: states["us-new-eng"].locations, expenditures: states["us-new-eng"].expenditures}
+  "reg-pa": {region: "Pacific Region", served: pacServedSum, programs: pacProgramSum, locations: pacLocationSum , expenditures: pacExpenditureSum},
+  "reg-sw": {region: "Southwest Region", served: swServedSum, programs: swProgramSum, locations: swLocationSum, expenditures: swExpenditureSum},
+  "reg-mw": {region: "Mid-West Region", served: mwServedSum, programs: mwProgramSum, locations: mwLocationSum, expenditures: mwExpenditureSum},
+  "reg-se": {region: "Southeast Region", served: seServedSum, programs: seProgramSum, locations: seLocationSum, expenditures: seExpenditureSum},
+  "reg-ma": {region: "Mid-Atlanic Region", served: maServedSum, programs: maProgramSum, locations: maLocationSum, expenditures: maExpenditureSum},
+  "reg-ne": {region: "New England Region", served: states["us-new-eng"].served, programs: states["us-new-eng"].programs, locations: states["us-new-eng"].locations, expenditures: states["us-new-eng"].expenditures}
 };
 
 window.addEventListener('load', ()=>{
   globalStats("gl-us");
-  stateStats("us-ak");
+  if(window.innerWidth < 768){
+    regionStats("reg-pa")
+  }
+  else {
+    stateStats("us-ak");
+  }
 })
 
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
@@ -403,7 +408,7 @@ function stateStats(value){
 }
 
 function regionStats(value){
-  regionName.textContent = regions[value].state;
+  regionName.textContent = regions[value].region;
   let tmpServed = regions[value].served;
   regionServed.textContent = tmpServed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   regionPrograms.textContent = regions[value].programs;
