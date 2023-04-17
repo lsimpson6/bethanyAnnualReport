@@ -12,10 +12,16 @@
   var bgOverlay = document.getElementById('bgdarkoverlay');
   var clickToMoveMap = document.querySelectorAll('.drag-to-move-map');
   var bars = document.querySelectorAll('.bar-chart');
+  var desktopOnly = document.querySelectorAll('.desktop-only');
 
   var tmpHeight = 0;
   if(window.innerWidth < 768){
     tmpHeight = winHeight/1.5;
+    for(var deo = 0; deo < desktopOnly.length; deo ++){
+      if($(desktopOnly[deo]).hasClass('title-target')){
+        desktopOnly[deo].classList.remove('title-target');
+      }
+    }
   }
   else {
     tmpHeight = winHeight/1.5;
