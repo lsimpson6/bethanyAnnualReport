@@ -343,7 +343,7 @@ height: 100vh;
   }
 }
 
-@media screen and (max-width: 968px){
+@media screen and (max-width: 768px){
 
   p, .text-md {
     font-size: 2rem;
