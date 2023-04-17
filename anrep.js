@@ -296,15 +296,6 @@ function midatlanticSums(){
   }
 }
 
-const regions = {
-  "reg-pa": {country: "Pacific Region", served: pacServedSum, programs: pacProgramSum, locations: pacLocationSum , expenditures: pacExpenditureSum},
-  "reg-sw": {country: "Southwest Region", served: swServedSum, programs: swProgramSum, swLocationSum: 3, expenditures: swExpenditureSum},
-  "reg-mw": {country: "Mid-West Region", served: mwServedSum, programs: mwProgramSum, locations: mwLocationSum, expenditures: mwExpenditureSum},
-  "reg-se": {country: "Southeast Region", served: swServedSum, programs: swProgramSum, locations: swLocationSum, expenditures: swExpenditureSum},
-  "reg-ma": {country: "Mid-Atlanic Region", served: maServedSum, programs: maProgramSum, locations: maLocationSum, expenditures: maExpenditureSum},
-  "reg-ne": {country: "New England Region", served: states["us-new-eng"].served, programs: states["us-new-eng"].programs, locations: states["us-new-eng"].locations, expenditures: states["us-new-eng"].expenditures}
-};
-
 unitedStatesSum();
 
 const countries = {
@@ -326,6 +317,15 @@ southeastSums();
 midwestSums();
 southwestSums();
 pacificSums();
+
+const regions = {
+  "reg-pa": {country: "Pacific Region", served: pacServedSum, programs: pacProgramSum, locations: pacLocationSum , expenditures: pacExpenditureSum},
+  "reg-sw": {country: "Southwest Region", served: swServedSum, programs: swProgramSum, locations: swLocationSum, expenditures: swExpenditureSum},
+  "reg-mw": {country: "Mid-West Region", served: mwServedSum, programs: mwProgramSum, locations: mwLocationSum, expenditures: mwExpenditureSum},
+  "reg-se": {country: "Southeast Region", served: seServedSum, programs: seProgramSum, locations: seLocationSum, expenditures: seExpenditureSum},
+  "reg-ma": {country: "Mid-Atlanic Region", served: maServedSum, programs: maProgramSum, locations: maLocationSum, expenditures: maExpenditureSum},
+  "reg-ne": {country: "New England Region", served: states["us-new-eng"].served, programs: states["us-new-eng"].programs, locations: states["us-new-eng"].locations, expenditures: states["us-new-eng"].expenditures}
+};
 
 window.addEventListener('load', ()=>{
   globalStats("gl-us");
