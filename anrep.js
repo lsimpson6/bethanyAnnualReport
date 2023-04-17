@@ -161,6 +161,37 @@ var stateExpenditures = document.getElementById('state-expenditure-total');
 
 var countrySelected = document.querySelectorAll('.country');
 var stateSelected = document.querySelectorAll('.state');
+var regionSelected = document.querySelectorAll('.region');
+
+var pacServedSum = 0;
+var pacProgramSum = 0; 
+var pacLocationSum = 0;
+var pacExpenditureSum = 0;
+
+var swServedSum = 0;
+var swProgramSum = 0; 
+var swLocationSum = 0;
+var swExpenditureSum = 0;
+
+var mwServedSum = 0;
+var mwProgramSum = 0; 
+var mwLocationSum = 0;
+var mwExpenditureSum = 0;
+
+var seServedSum = 0;
+var seProgramSum = 0; 
+var seLocationSum = 0;
+var seExpenditureSum = 0;
+
+var maServedSum = 0;
+var maProgramSum = 0; 
+var maLocationSum = 0;
+var maExpenditureSum = 0;
+
+var neServedSum = 0;
+var neProgramSum = 0; 
+var neLocationSum = 0;
+var neExpenditureSum = 0;
 
 const states = {
   "us-ak": {state: "Arkansas", served: 432, programs: 4, locations: 1, expenditures: 218682},
@@ -201,7 +232,88 @@ function unitedStatesSum(){
 
 }
 
+const pacific = ["us-wa", "us-ca"];
+
+function pacificSums(){
+  for(let pac = 0; pac < pacific.length; pac++){
+    pacServedSum += countries[pacific[pac]].served;
+    pacProgramSum += countries[pacific[pac]].programs;
+    pacLocationSum += countries[pacific[pac]].locations;
+    pacExpenditureSum += countries[pacific[pac]].expenditures;
+  }
+}
+
+const southwest = ["us-co-tx"];
+
+function southwestSums(){
+  for(let sw = 0; sw < southwest.length; sw++){
+    swServedSum += countries[southwest[sw]].served;
+    swProgramSum += countries[southwest[sw]].programs;
+    swLocationSum += countries[southwest[sw]].locations;
+    swExpenditureSum += countries[southwest[sw]].expenditures;
+  }
+}
+
+const midwest = ["us-sd", "us-ne-ia", "us-mn", "us-wi", "us-mi", "us-il", "us-in-ky", "us-mo"];
+
+function midwestSums(){
+  for(let mw = 0; mw < midwest.length; mw++){
+    mwServedSum += countries[midwest[mw]].served;
+    mwProgramSum += countries[midwest[mw]].programs;
+    mwLocationSum += countries[midwest[mw]].locations;
+    mwExpenditureSum += countries[midwest[mw]].expenditures;
+  }
+}
+
+const southeast = ["us-ak", "us-tn", "us-va", "us-nc", "us-sc", "us-ga", "us-fl"];
+
+function southeastSums(){
+  for(let se = 0; se < midwest.length; se++){
+    seServedSum += countries[southeast[se]].served;
+    seProgramSum += countries[southeast[se]].programs;
+    seLocationSum += countries[southeast[se]].locations;
+    seExpenditureSum += countries[southeast[se]].expenditures;
+  }
+}
+
+const midatlantic = ["us-mid-atlantic", "us-md-dc"];
+
+function midatlanticSums(){
+  for(let ma = 0; ma < midwest.length; ma++){
+    maServedSum += countries[midatlantic[ma]].served;
+    maProgramSum += countries[midatlantic[ma]].programs;
+    maLocationSum += countries[midatlantic[ma]].locations;
+    maExpenditureSum += countries[midatlantic[ma]].expenditures;
+  }
+}
+
+const newengland = ["us-new-eng"];
+
+function newenglandSums(){
+  for(let ne = 0; ne < midwest.length; ne++){
+    neServedSum += countries[newengland[ne]].served;
+    neProgramSum += countries[newengland[ne]].programs;
+    neLocationSum += countries[newengland[ne]].locations;
+    neExpenditureSum += countries[newengland[ne]].expenditures;
+  }
+}
+
+const regions = {
+  "reg-pa": {country: "Pacific Region", served: pacServedSum, programs: pacProgramSum, locations: pacLocationSum , expenditures: pacExpenditureSum},
+  "reg-sw": {country: "Southwest Region", served: swServedSum, programs: swProgramSum, swLocationSum: 3, expenditures: swExpenditureSum},
+  "reg-mw": {country: "Mid-West Region", served: mwServedSum, programs: mwProgramSum, locations: mwLocationSum, expenditures: mwExpenditureSum},
+  "reg-se": {country: "Southeast Region", served: swServedSum, programs: swProgramSum, locations: swLocationSum, expenditures: swExpenditureSum},
+  "reg-ma": {country: "Mid-Atlanic Region", served: maServedSum, programs: maProgramSum, locations: maLocationSum, expenditures: maExpenditureSum},
+  "reg-ne": {country: "New England Region", served: states["us-new-eng"].served, programs: states["us-new-eng"].programs, locations: states["us-new-eng"].locations, expenditures: states["us-new-eng"].expenditures}
+};
+
 unitedStatesSum();
+newenglandSums();
+midatlanticSums();
+southeastSums();
+midwestSums();
+southwestSums();
+pacificSums();
 
 const countries = {
   "gl-us": {country: "United States", served: servedSum, programs: programSum, locations: locationSum , expenditures: expenditureSum},
@@ -214,6 +326,7 @@ const countries = {
   "gl-rm": {country: "Romania", served: 825, programs: 1, locations: 1, expenditures: 108039}
 };
 
+
 const countriesArr = ["gl-us","gl-col", "gl-gh", "gl-et", "gl-ht", "gl-sa", "gl-al", "gl-rm"];
 
 window.addEventListener('load', ()=>{
@@ -222,13 +335,18 @@ window.addEventListener('load', ()=>{
 })
 
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
-    var id = c.getAttribute('data-country');
+    let id = c.getAttribute('data-country');
     globalStats(id);
 }))
 
 stateSelected.forEach(s => s.addEventListener('click', ()=>{
-    var id = s.getAttribute('data-state');
+  let id = s.getAttribute('data-state');
     stateStats(id);
+}))
+
+regionSelected.forEach(r => r.addEventListener('click', ()=>{
+  let id = r.getAttribute('data-region');
+  regionStats(id);
 }))
 
 /* function autoSelectCountries(isAllowed){
@@ -268,22 +386,32 @@ function autoSelectStates(isAllowed){
 function globalStats(value){
     unitedStatesSum();
     countryName.textContent = countries[value].country;
-    var tmpServed = countries[value].served;
+    let tmpServed = countries[value].served;
     globalServed.textContent = tmpServed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     globalPrograms.textContent = countries[value].programs;
     globalLocations.textContent = countries[value].locations;
-    var tmpExpenditures = countries[value].expenditures;
+    let tmpExpenditures = countries[value].expenditures;
     globalExpenditures.textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tmpExpenditures);
 }
 
 function stateStats(value){
   stateName.textContent = states[value].state;
-  var tmpServed = states[value].served;
+  let tmpServed = states[value].served;
   stateServed.textContent = tmpServed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   statePrograms.textContent = states[value].programs;
   stateLocations.textContent = states[value].locations;
-  var tmpExpenditures = states[value].expenditures;
+  let tmpExpenditures = states[value].expenditures;
   stateExpenditures.textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tmpExpenditures);
+}
+
+function regionStats(value){
+  regionName.textContent = regions[value].state;
+  let tmpServed = regions[value].served;
+  regionServed.textContent = tmpServed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  regionPrograms.textContent = regions[value].programs;
+  regionLocations.textContent = regions[value].locations;
+  let tmpExpenditures = regions[value].expenditures;
+  regionExpenditures.textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tmpExpenditures);
 }
 
 
