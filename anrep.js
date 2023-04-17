@@ -13,6 +13,7 @@
   var clickToMoveMap = document.querySelectorAll('.drag-to-move-map');
   var bars = document.querySelectorAll('.bar-chart');
   var desktopOnly = document.querySelectorAll('.desktop-only');
+  var voiletToWhite = document.querySelectorAll('.v2w');
 
   var tmpHeight = 0;
   if(window.innerWidth < 768){
@@ -45,9 +46,13 @@
       //change header color
       if((firstElementTop-topHeaderHeight) <= 0){
         topHeader.style.backgroundColor = '#ffffff';
+          voiletToWhite[0].style.color = "#473C93";
+          voiletToWhite[1].style.fill = "#473C93";
       }
       else {
         topHeader.style.backgroundColor = 'transparent';
+        voiletToWhite[0].style.color = "#ffffff";
+        voiletToWhite[1].style.fill = "#ffffff";
       }
 
       // fades in elements
