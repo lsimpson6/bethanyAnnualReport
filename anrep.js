@@ -287,17 +287,6 @@ function midatlanticSums(){
   }
 }
 
-const newengland = ["us-new-eng"];
-
-function newenglandSums(){
-  for(let ne = 0; ne < newengland.length; ne++){
-    neServedSum += countries[newengland[ne]].served;
-    neProgramSum += countries[newengland[ne]].programs;
-    neLocationSum += countries[newengland[ne]].locations;
-    neExpenditureSum += countries[newengland[ne]].expenditures;
-  }
-}
-
 const regions = {
   "reg-pa": {country: "Pacific Region", served: pacServedSum, programs: pacProgramSum, locations: pacLocationSum , expenditures: pacExpenditureSum},
   "reg-sw": {country: "Southwest Region", served: swServedSum, programs: swProgramSum, swLocationSum: 3, expenditures: swExpenditureSum},
@@ -323,7 +312,6 @@ const countries = {
 
 const countriesArr = ["gl-us","gl-col", "gl-gh", "gl-et", "gl-ht", "gl-sa", "gl-al", "gl-rm"];
 
-newenglandSums();
 midatlanticSums();
 southeastSums();
 midwestSums();
