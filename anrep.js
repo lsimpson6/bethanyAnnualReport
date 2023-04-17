@@ -308,12 +308,6 @@ const regions = {
 };
 
 unitedStatesSum();
-newenglandSums();
-midatlanticSums();
-southeastSums();
-midwestSums();
-southwestSums();
-pacificSums();
 
 const countries = {
   "gl-us": {country: "United States", served: servedSum, programs: programSum, locations: locationSum , expenditures: expenditureSum},
@@ -328,6 +322,13 @@ const countries = {
 
 
 const countriesArr = ["gl-us","gl-col", "gl-gh", "gl-et", "gl-ht", "gl-sa", "gl-al", "gl-rm"];
+
+newenglandSums();
+midatlanticSums();
+southeastSums();
+midwestSums();
+southwestSums();
+pacificSums();
 
 window.addEventListener('load', ()=>{
   globalStats("gl-us");
