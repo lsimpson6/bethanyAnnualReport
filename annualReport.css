@@ -378,7 +378,7 @@ height: 100vh;
   }
 
   .mobile-only {
-    display:flex;
+    display:flex !important;
   }
   
     #head-text h1{
