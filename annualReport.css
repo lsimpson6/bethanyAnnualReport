@@ -218,7 +218,7 @@
 .title-controls {
   border-radius: .5rem;
   transition: all .3s ease;
-  width: 30%;
+  width: 100%;
   text-align:center;
   border: 2px solid #D0D3D4;
   padding: 1.8rem;
