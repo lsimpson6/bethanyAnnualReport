@@ -153,11 +153,20 @@ var globalPrograms = document.getElementById('stat-two-wrldmp');
 var globalLocations = document.getElementById('stat-three-wrldmp');
 var globalExpenditures = document.getElementById('stat-four-wrldmp');
 
-var stateName = document.getElementById('state-name');
-var stateServed = document.getElementById('state-people-served');
-var statePrograms = document.getElementById('state-program-count');
-var stateLocations = document.getElementById('state-location-count');
-var stateExpenditures = document.getElementById('state-expenditure-total');
+if(window.innerWidth < 768){
+    var regionName = document.getElementById('state-name');
+    var regionServed = document.getElementById('state-people-served');
+    var regionPrograms = document.getElementById('state-program-count');
+    var regionLocations = document.getElementById('state-location-count');
+    var regionExpenditures = document.getElementById('state-expenditure-total');
+}
+else {
+  var stateName = document.getElementById('state-name');
+  var stateServed = document.getElementById('state-people-served');
+  var statePrograms = document.getElementById('state-program-count');
+  var stateLocations = document.getElementById('state-location-count');
+  var stateExpenditures = document.getElementById('state-expenditure-total');
+}
 
 var countrySelected = document.querySelectorAll('.country');
 var stateSelected = document.querySelectorAll('.state');
