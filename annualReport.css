@@ -338,7 +338,7 @@ height: 100vh;
   }
 
   .mobile-only {
-    display:none;
+    display:none !important;
   }
 
 @media screen and (max-width: 1925px){
