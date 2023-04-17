@@ -268,7 +268,7 @@ function midwestSums(){
 const southeast = ["us-ak", "us-tn", "us-va", "us-nc", "us-sc", "us-ga", "us-fl"];
 
 function southeastSums(){
-  for(let se = 0; se < midwest.length; se++){
+  for(let se = 0; se < southeast.length; se++){
     seServedSum += countries[southeast[se]].served;
     seProgramSum += countries[southeast[se]].programs;
     seLocationSum += countries[southeast[se]].locations;
@@ -279,7 +279,7 @@ function southeastSums(){
 const midatlantic = ["us-mid-atlantic", "us-md-dc"];
 
 function midatlanticSums(){
-  for(let ma = 0; ma < midwest.length; ma++){
+  for(let ma = 0; ma < midatlantic.length; ma++){
     maServedSum += countries[midatlantic[ma]].served;
     maProgramSum += countries[midatlantic[ma]].programs;
     maLocationSum += countries[midatlantic[ma]].locations;
@@ -290,7 +290,7 @@ function midatlanticSums(){
 const newengland = ["us-new-eng"];
 
 function newenglandSums(){
-  for(let ne = 0; ne < midwest.length; ne++){
+  for(let ne = 0; ne < newengland.length; ne++){
     neServedSum += countries[newengland[ne]].served;
     neProgramSum += countries[newengland[ne]].programs;
     neLocationSum += countries[newengland[ne]].locations;
