@@ -236,10 +236,10 @@ const pacific = ["us-wa", "us-ca"];
 
 function pacificSums(){
   for(let pac = 0; pac < pacific.length; pac++){
-    pacServedSum += countries[pacific[pac]].served;
-    pacProgramSum += countries[pacific[pac]].programs;
-    pacLocationSum += countries[pacific[pac]].locations;
-    pacExpenditureSum += countries[pacific[pac]].expenditures;
+    pacServedSum += states[pacific[pac]].served;
+    pacProgramSum += states[pacific[pac]].programs;
+    pacLocationSum += states[pacific[pac]].locations;
+    pacExpenditureSum += states[pacific[pac]].expenditures;
   }
 }
 
@@ -247,10 +247,10 @@ const southwest = ["us-co-tx"];
 
 function southwestSums(){
   for(let sw = 0; sw < southwest.length; sw++){
-    swServedSum += countries[southwest[sw]].served;
-    swProgramSum += countries[southwest[sw]].programs;
-    swLocationSum += countries[southwest[sw]].locations;
-    swExpenditureSum += countries[southwest[sw]].expenditures;
+    swServedSum += states[southwest[sw]].served;
+    swProgramSum += states[southwest[sw]].programs;
+    swLocationSum += states[southwest[sw]].locations;
+    swExpenditureSum += states[southwest[sw]].expenditures;
   }
 }
 
@@ -258,10 +258,10 @@ const midwest = ["us-sd", "us-ne-ia", "us-mn", "us-wi", "us-mi", "us-il", "us-in
 
 function midwestSums(){
   for(let mw = 0; mw < midwest.length; mw++){
-    mwServedSum += countries[midwest[mw]].served;
-    mwProgramSum += countries[midwest[mw]].programs;
-    mwLocationSum += countries[midwest[mw]].locations;
-    mwExpenditureSum += countries[midwest[mw]].expenditures;
+    mwServedSum += states[midwest[mw]].served;
+    mwProgramSum += states[midwest[mw]].programs;
+    mwLocationSum += states[midwest[mw]].locations;
+    mwExpenditureSum += states[midwest[mw]].expenditures;
   }
 }
 
@@ -269,10 +269,10 @@ const southeast = ["us-ak", "us-tn", "us-va", "us-nc", "us-sc", "us-ga", "us-fl"
 
 function southeastSums(){
   for(let se = 0; se < southeast.length; se++){
-    seServedSum += countries[southeast[se]].served;
-    seProgramSum += countries[southeast[se]].programs;
-    seLocationSum += countries[southeast[se]].locations;
-    seExpenditureSum += countries[southeast[se]].expenditures;
+    seServedSum += states[southeast[se]].served;
+    seProgramSum += states[southeast[se]].programs;
+    seLocationSum += states[southeast[se]].locations;
+    seExpenditureSum += states[southeast[se]].expenditures;
   }
 }
 
@@ -280,10 +280,10 @@ const midatlantic = ["us-mid-atlantic", "us-md-dc"];
 
 function midatlanticSums(){
   for(let ma = 0; ma < midatlantic.length; ma++){
-    maServedSum += countries[midatlantic[ma]].served;
-    maProgramSum += countries[midatlantic[ma]].programs;
-    maLocationSum += countries[midatlantic[ma]].locations;
-    maExpenditureSum += countries[midatlantic[ma]].expenditures;
+    maServedSum += states[midatlantic[ma]].served;
+    maProgramSum += states[midatlantic[ma]].programs;
+    maLocationSum += states[midatlantic[ma]].locations;
+    maExpenditureSum += states[midatlantic[ma]].expenditures;
   }
 }
 
