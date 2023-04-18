@@ -342,11 +342,12 @@ height: 100vh;
   }
 
   .scroll-arrow {
+      z-index: 999;
 		  position: absolute;
       top:50px;
 		  height: 100px;
-    	width: 60px !important;
-    	background-color: rgb(256,256,256, .7);
+    	width: 45px !important;
+    	background-color: rgb(256,256,256, .8);
   }
 	.scroll-maps-container {
       scroll-behavior: smooth;
