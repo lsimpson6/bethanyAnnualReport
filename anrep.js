@@ -138,6 +138,40 @@
 
     });
       
+})($);
+
+(function(){
+
+  var mapsControl = document.querySelectorAll('.scroll-arrow'); 
+  var countryContainerScroll = document.getElementById("country-scroll-container");
+  var regionContainerScroll = document.getElementById("region-scroll-container");
+  var tmpScrollValue = 0;
+  
+  mapsControl.forEach(mapClick => mapClick.addEventListener('click', ()=>{
+    let mapsData = mapClick.getAttribute('data-maps-slider');
+
+    switch(mapsData){
+      case "country-left":
+        tmpScrollValue -= 20;
+        countryContainerScroll(tmpScrollValue, 0);
+        break;
+      case "country-right":
+        tmpScrollValue += 20;
+        countryContainerScroll(tmpScrollValue, 0);
+        break;
+      case "region-left":
+        tmpScrollValue -= 20;
+        regionContainerScroll(tmpScrollValue, 0);
+        break;
+      case "region-right":
+        tmpScrollValue += 20;
+        regionContainerScroll(tmpScrollValue, 0);
+        break;
+    }
+  
+  }));
+
+
 })();
 
 var servedSum = 0;
