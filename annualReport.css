@@ -296,7 +296,7 @@ to{opacity:1;transform: scale(110%);}
 }
 
 .video-slider-parent-container, .image-slider-parent-container {
-height: 100vh;
+min-height: 100vh;
 }
 
 .image-slider-items {
