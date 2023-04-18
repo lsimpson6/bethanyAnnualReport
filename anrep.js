@@ -1,7 +1,7 @@
 (function (){
   var winHeight = window.innerHeight;
   var sectionTitle = document.getElementById('section-title');
-  var textSelector = ["Annual Report", "Motivated by Faith", "Global Impact","Local Impact", "Mission and Vision", "Wins and Highlights"];
+  var textSelector = ["Annual Report", "Motivated by Faith", "Global Impact","Local Impact","Mission and Vision", "Wins and Highlights", "Video Testimonials", "In the U.S.", "Refugees and Immigrants", "Around the world", "Testimonials", "Financials", "Power of Family", "Pray with Us", "Support Bethany"];
   var target = document.querySelectorAll('.title-target');
   var animate = document.querySelectorAll('.animate');
   var rainfall = document.querySelectorAll('.rainfall');
@@ -28,12 +28,12 @@
     window.addEventListener('scroll', ()=>{
       var firstElementTop = firstElement.getBoundingClientRect().top;
 
-      // changes text on top left
+      // changes text on top
       for(var i = 0; i < target.length; i++){
         var tmpTarget = target[i];
         var tyPos = tmpTarget.getBoundingClientRect().top;
         var x = 0;
-        if((tyPos-topHeaderHeight) <= 0){
+        if((tyPos-(topHeaderHeight - 30)) <= 0){
             if(i > textSelector.length){
               sectionTitle.textContent = textSelector[0];
             }
