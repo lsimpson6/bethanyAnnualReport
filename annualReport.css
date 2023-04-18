@@ -341,6 +341,42 @@ height: 100vh;
     display:none !important;
   }
 
+  .scroll-arrow {
+		  position: absolute;
+      top:50px;
+		  height: 100px;
+    	width: 30px !important;
+    	background-color: rgb(256,256,256, .7);
+  }
+	.scroll-maps-container {
+      scroll-behavior: smooth;
+      text-align: center;
+  		width: 100%;
+  		overflow-x: auto;
+    	display: flex;
+	}
+      
+  .left-scroll-arrow {
+    left: 0px;
+  }
+      
+  .left-scroll-arrow svg, .right-scroll-arrow svg{width: 50px !important; height: 20px !important;}
+  .right-scroll-arrow {
+    right: 0px;
+  }
+	.scroll-maps-container .country, .scroll-maps-container .region {
+		min-width: 25%;
+ 		margin-left: 20px;
+ 		margin-right: 20px;
+	}
+	.scroll-maps-container .country svg, .scroll-maps-container .region svg{
+      	width: 100%;
+      	height: auto;
+	}
+	.scroll-maps-container .country p, .scroll-maps-container .country p{
+    	font-size: 1.4rem; 
+  }
+
 @media screen and (max-width: 1925px){
   .row-half, .row-third, .row-two-third {
       padding: 3rem;
