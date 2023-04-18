@@ -292,7 +292,7 @@ to{opacity:1;transform: scale(110%);}
 
 .vimeo-wrapper iframe, .slide-image img {
   width:800px;
-  height:auto;
+  height:600px;
 }
 
 .video-slider-parent-container, .image-slider-parent-container {
@@ -415,8 +415,8 @@ min-height: 100vh;
       padding: 5rem;
   }
   .vimeo-wrapper iframe, .slide-image img {
-    width:400px;
-    height:auto;
+    width:600px;
+    height:400px;
   }
 }
 
