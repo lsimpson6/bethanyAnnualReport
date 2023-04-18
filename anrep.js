@@ -515,3 +515,24 @@ mapsControl.forEach(mapClick => mapClick.addEventListener('click', ()=>{
   }
 
 }));
+
+var prayerContainer = document.getElementById('prayer-container');
+var prayerScrollBtn = document.querySelectorAll('.scroll-arrows');
+var tmpPrayerVal = 0;
+
+prayerScrollBtn.forEach(btnPrayer => btnPrayer.addEventListener('click', ()=>{
+  let prayerDirection = btnPrayer.getAttribute('data-prayer-slider');
+  const scrollVal = 400;
+
+  switch(prayerDirection){
+    case "left":
+      tmpPrayerVal -= scrollVal;
+      prayerContainer.scroll(tmpPrayerVal, 0);
+      break;
+    case "right":
+      tmpPrayerVal += scrollVal;
+      prayerContainer.scroll(tmpPrayerVal, 0);
+      break;
+  }
+
+}));
