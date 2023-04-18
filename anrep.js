@@ -44,7 +44,7 @@
       }
 
       //change header color
-      if((firstElementTop-topHeaderHeight) <= 0){
+      if((firstElementTop-(topHeaderHeight - 30)) <= 0){
         topHeader.style.backgroundColor = '#ffffff';
           voiletToWhite[0].style.color = "#473C93";
       }
