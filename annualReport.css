@@ -378,6 +378,38 @@ min-height: 100vh;
     	font-size: 1.4rem; 
   }
 
+  #prayer-container {
+    position: relative;
+   scroll-behavior: smooth;
+   text-align: center;
+   width: 100%;
+   overflow-x: auto;
+   display: flex;
+ }
+ #prayer-container::-webkit-scrollbar {
+   width: 0px;
+   background: transparent; /* make scrollbar transparent */
+ }
+ .prayer-prompts {
+   min-width: 33%;
+   padding: 2%;
+   height: auto;
+ }
+ .scroll-arrows {
+ position: absolute;
+   height: 100%;
+   z-index: 999;
+   display: flex;
+   background-color: rgb(256,256,256, .6);
+   width: 100px;
+   cursor: pointer;
+ }
+ .scroll-arrows svg {
+   margin: auto;
+ }
+ 
+ .left {left:50px;} .right{right:50px;}
+
 @media screen and (max-width: 1925px){
   .row-half, .row-third, .row-two-third {
       padding: 3rem;
@@ -519,4 +551,13 @@ min-height: 100vh;
     .card-body {
       padding: 0rem 0rem 2rem 0rem;
     }
+
+    .prayer-prompts {
+      min-width: 90%;
+    }
+    .scroll-arrows {
+      width: 50px;
+    }
+    
+    .left {left:20px;} .right{right:20px;}
 }
