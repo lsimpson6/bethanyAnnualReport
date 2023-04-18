@@ -493,7 +493,7 @@ var tmpScrollValue = 0;
 
 mapsControl.forEach(mapClick => mapClick.addEventListener('click', ()=>{
   let mapsData = mapClick.getAttribute('data-maps-slider');
-  const scrollVal = 40;
+  const scrollVal = 100;
 
   switch(mapsData){
     case "country-left":
