@@ -493,23 +493,24 @@ var tmpScrollValue = 0;
 
 mapsControl.forEach(mapClick => mapClick.addEventListener('click', ()=>{
   let mapsData = mapClick.getAttribute('data-maps-slider');
+  const scrollVal = 40;
 
   switch(mapsData){
     case "country-left":
-      tmpScrollValue -= 20;
-      countryContainerScroll(tmpScrollValue, 0);
+      tmpScrollValue -= scrollVal;
+      countryContainerScroll.scroll(tmpScrollValue, 0);
       break;
     case "country-right":
-      tmpScrollValue += 20;
-      countryContainerScroll(tmpScrollValue, 0);
+      tmpScrollValue += scrollVal;
+      countryContainerScroll.scroll(tmpScrollValue, 0);
       break;
     case "region-left":
-      tmpScrollValue -= 20;
-      regionContainerScroll(tmpScrollValue, 0);
+      tmpScrollValue -= scrollVal;
+      regionContainerScroll.scroll(tmpScrollValue, 0);
       break;
     case "region-right":
-      tmpScrollValue += 20;
-      regionContainerScroll(tmpScrollValue, 0);
+      tmpScrollValue += scrollVal;
+      regionContainerScroll.scroll(tmpScrollValue, 0);
       break;
   }
 
