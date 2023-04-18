@@ -412,7 +412,7 @@ min-height: 100vh;
 
 @media screen and (max-width: 1925px){
   .row-half, .row-third, .row-two-third {
-      padding: 3rem;
+      padding: 5rem;
   }
 }
 
