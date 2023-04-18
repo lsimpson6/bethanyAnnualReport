@@ -518,13 +518,27 @@ mapsControl.forEach(mapClick => mapClick.addEventListener('click', ()=>{
 
 var prayerContainer = document.getElementById('prayer-container');
 var prayerScrollBtn = document.querySelectorAll('.scroll-arrows');
+var prayerPromts = document.querySelectorAll('.prayer-prompts');
 var tmpPrayerVal = 0;
 
 function hideArrowsOnScroll(x){
+  var xMax;
+  for(var p = 0; 0 < prayerPromts; p++){
+    xMax += prayerPromts[p].clientWidth;
+  }
+
+  alert(xMax + "-" + prayerContainer.scrollWidth);
+
   if(x <= 0){
     prayerScrollBtn[0].classList.add('opacity-0');
   }else {
     prayerScrollBtn[0].classList.remove('opacity-0');
+  }
+
+  if(x >= xMax){
+    prayerScrollBtn[1].classList.add('opacity-0');
+  }else {
+    prayerScrollBtn[1].classList.remove('opacity-0');
   }
 }
 
