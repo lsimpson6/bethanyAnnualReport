@@ -33,7 +33,7 @@
         var tmpTarget = target[i];
         var tyPos = tmpTarget.getBoundingClientRect().top;
         var x = 0;
-        if((tyPos-(topHeaderHeight - 30)) <= 0){
+        if((tyPos-(topHeaderHeight + 60)) <= 0){
             if(i > textSelector.length){
               sectionTitle.textContent = textSelector[0];
             }
@@ -44,7 +44,7 @@
       }
 
       //change header color
-      if((firstElementTop-(topHeaderHeight - 30)) <= 0){
+      if((firstElementTop-(topHeaderHeight + 60)) <= 0){
         topHeader.style.backgroundColor = '#ffffff';
           voiletToWhite[0].style.color = "#473C93";
       }
