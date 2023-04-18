@@ -291,8 +291,8 @@ to{opacity:1;transform: scale(110%);}
 }
 
 .vimeo-wrapper iframe, .slide-image img {
-  width:800px;
-  height:450px;
+  width:100%;
+  height:auto;
 }
 
 .video-slider-parent-container, .image-slider-parent-container {
