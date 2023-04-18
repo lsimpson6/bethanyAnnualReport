@@ -547,7 +547,7 @@ prayerScrollBtn.forEach(btnPrayer => btnPrayer.addEventListener('click', ()=>{
   }else {
     scrollVal = 400;
   }
-  if(tmpPrayerVal <= 0 || tmpPrayerVal >= xMax){
+  if(tmpPrayerVal <= (0-scrollVal) || tmpPrayerVal >= (xMax + scrollVal)){
     switch(prayerDirection){
       case "left":
         tmpPrayerVal -= scrollVal;
