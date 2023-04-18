@@ -309,7 +309,7 @@ min-height: 100vh;
   }
   
   
-.slider-control {
+.slider-control, .scroll-arrows {
   	display: flex;
   	flex-direction: column;
   	cursor: pointer;
@@ -318,11 +318,11 @@ min-height: 100vh;
   	margin: auto;
     padding: 1.5rem 2rem 1.5rem 2rem;
 }
-.slider-control svg {
+.slider-control svg, .scroll-arrows svg {
   	text-align:center;
   	margin: auto;
 }
- .slider-control:hover {
+ .slider-control:hover, .scroll-arrows:hover {
   	opacity:.8;
   }
   
