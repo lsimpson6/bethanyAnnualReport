@@ -522,7 +522,13 @@ var tmpPrayerVal = 0;
 
 prayerScrollBtn.forEach(btnPrayer => btnPrayer.addEventListener('click', ()=>{
   let prayerDirection = btnPrayer.getAttribute('data-prayer-slider');
-  const scrollVal = 400;
+  const scrollVal;
+
+  if(window.innerWidth < 768){
+    scrollVal = 150;
+  }else {
+    scrollVal = 400;
+  }
 
   switch(prayerDirection){
     case "left":
