@@ -520,7 +520,17 @@ var prayerContainer = document.getElementById('prayer-container');
 var prayerScrollBtn = document.querySelectorAll('.scroll-arrows');
 var tmpPrayerVal = 0;
 
+function hideArrowsOnScroll(x){
+  if(x <= 0){
+    prayerScrollBtn[0].classList.add('opacity-0');
+  }else {
+    prayerScrollBtn[0].classList.remove('opacity-0');
+  }
+}
+
 prayerScrollBtn.forEach(btnPrayer => btnPrayer.addEventListener('click', ()=>{
+  alert(prayerContainer.innerWidth);
+  hideArrowsOnScroll(tmpPrayerVal);
   let prayerDirection = btnPrayer.getAttribute('data-prayer-slider');
   let scrollVal = 400;
 
