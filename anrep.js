@@ -130,7 +130,20 @@
     for(var txt = 0; txt < txtFade.length; txt ++){
       var txtFadeTop = txtFade[txt].getBoundingClientRect().top;
 
-      if(txtFadeTop > winHeight/1.6 || txtFadeTop < winHeight/2.6){
+      if(window.innerWidth < 1925 && window.innerWidth > 768){
+        var fadeHeightLow = winHeight/1.4;
+        var fadeHeightHigh =  winHeight/2.0;
+      }
+      else if (window.innerWidth < 768){
+         fadeHeightLow = winHeight/1.0;
+         fadeHeightHigh =  winHeight/1.5;
+      }
+      else {
+        fadeHeightLow = winHeight/1.6;
+        fadeHeightHigh =  winHeight/2.4;
+      }
+
+      if(txtFadeTop > fadeHeightLow || txtFadeTop < fadeHeightHigh){
         txtFade[txt].classList.replace('increase-opacity', 'defualt-opacity');
       }
       else {
