@@ -132,15 +132,15 @@
       var txtFadeBottom = txtFade[txt].getBoundingClientRect().bottom;
 
       if(window.innerWidth < 768){
-        var fadeHeight = winHeight/4;
-        var fadeHeightHigh =  winHeight/1.5;
+        var fadeHeightLow = 200
+        var fadeHeightHigh =  400;
       }
       else {
-        fadeHeight = winHeight/1.5;
+        fadeHeightLow = winHeight/1.5;
         fadeHeightHigh =  winHeight/2.5;
       }
 
-      if(txtFadeTop > fadeHeight || txtFadeBottom > fadeHeight){
+      if(txtFadeTop > fadeHeightLow || txtFadeBottom > fadeHeightHigh){
         txtFade[txt].classList.replace('increase-opacity', 'defualt-opacity');
       }
       else {
