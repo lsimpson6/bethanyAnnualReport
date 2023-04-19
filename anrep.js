@@ -140,7 +140,7 @@
         fadeHeightHigh =  winHeight/2.5;
       }
 
-      if(txtFadeTop > fadeHeightLow || txtFadeBottom > fadeHeightHigh){
+      if(txtFadeTop > fadeHeightLow && txtFadeBottom > fadeHeightHigh){
         txtFade[txt].classList.replace('increase-opacity', 'defualt-opacity');
       }
       else {
