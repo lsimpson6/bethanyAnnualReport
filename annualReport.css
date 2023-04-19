@@ -411,7 +411,7 @@ min-height: 100vh;
   font-size: 1.8rem;
 }
 
-#drop-down-menu:hover {
+#dropdown-menu-toggle:hover {
   cursor: pointer;
 }
 
