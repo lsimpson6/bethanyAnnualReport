@@ -275,10 +275,6 @@
 }
 
 .fade-text-items {
-  width: 50%;
-  text-align: center;
-  padding: 3% 0% 3% 0%; 
-  margin: 0px auto 0px auto;
   transition: all .3s ease;
 }
 
