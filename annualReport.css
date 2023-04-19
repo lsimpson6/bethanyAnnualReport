@@ -402,6 +402,22 @@ min-height: 100vh;
     height:auto;
  }
 
+ #drop-down-menu {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top:80%;
+  padding: 2%;
+  width: auto;
+  font-size: 1.8rem;
+}
+#drop-down-menu ul li a{
+text-decoration: none;
+}
+#drop-down-menu ul{
+  list-style-type: none;
+}
+
  .show-dropdown-menu {
   display: flex !important;
   animation: toggleDropdown .4s ease 1;
