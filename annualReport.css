@@ -275,19 +275,18 @@
 }
 
 .fade-text-items {
-  width: 40%;
+  width: 50%;
   text-align: center;
   padding: 3% 0% 3% 0%; 
   margin: 0px auto 0px auto;
   transition: all .3s ease;
-  transform: scale(110%);
 }
 
-.defualt-opacity {opacity: .3;transform: scale(100%);}
+.defualt-opacity {opacity: .3;}
 .increase-opacity {animation: increaseOpacity .3s ease 1;}
 @keyframes increaseOpacity {
-from{opacity:.3;transform: scale(100%);}
-to{opacity:1;transform: scale(110%);}
+from{font-weight:normal;}
+to{font-weight: bolder;}
 }
 
 .vimeo-wrapper iframe, .slide-image img {
