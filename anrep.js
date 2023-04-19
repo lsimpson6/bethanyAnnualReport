@@ -291,3 +291,10 @@ prayerScrollBtn.forEach(btnPrayer => btnPrayer.addEventListener('click', ()=>{
   hideArrowsOnScroll(tmpPrayerVal);
 
 }));
+
+var btnToggleMenu = document.getElementById('dropdown-menu-toggle');
+var toggleMenu = document.getElementById('drop-down-menu');
+
+btnToggleMenu.addEventListener('click', ()=>{
+  $(toggleMenu).toggleClass('show-dropdown-menu');
+});
