@@ -162,6 +162,7 @@
  }
 
  .row-title {
+  padding: 0rem 5rem 0rem 5rem;
   width: 100%;
  }
   
@@ -498,6 +499,7 @@ text-decoration: none;
     }
 
     .row-title {
+      padding: 0rem 3rem 0rem 3rem;
       width: 100%;
     }
       
