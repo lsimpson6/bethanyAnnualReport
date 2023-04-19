@@ -598,8 +598,13 @@ text-decoration: none;
       width: 80%;
     }
 
-    .vimeo-wrapper iframe, .slide-image img {
+    .vimeo-wrapper iframe {
         width:100%;
+    }
+
+    ..slide-image img {
+      height: auto;
+      width: 100%;
     }
 
     .video-slider-parent-container, .image-slider-parent-container {
