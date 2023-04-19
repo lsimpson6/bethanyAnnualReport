@@ -131,7 +131,7 @@
       var txtFadeTop = txtFade[txt].getBoundingClientRect().top;
       var txtFadeBottom = txtFade[txt].getBoundingClientRect().bottom;
 
-      if(windown.innerWidth < 768){
+      if(window.innerWidth < 768){
         var fadeHeightLow = winHeight/4;
         var fadeHeightHigh =  winHeight/1.5;
       }
