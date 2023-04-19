@@ -129,6 +129,7 @@
 
     for(var txt = 0; txt < txtFade.length; txt ++){
       var txtFadeTop = txtFade[txt].getBoundingClientRect().top;
+      var txtFadeBottom = txtFade[txt].getBoundingClientRect().bottom;
 
       if(windown.innerWidth < 768){
         var fadeHeightLow = winHeight/4;
@@ -139,7 +140,7 @@
         fadeHeightHigh =  winHeight/2.5;
       }
 
-      if(txtFadeTop > fadeHeightLow || txtFadeTop < fadeHeightHigh){
+      if(txtFadeTop > fadeHeightLow || txtFadeBottom > fadeHeightHigh){
         txtFade[txt].classList.replace('increase-opacity', 'defualt-opacity');
       }
       else {
