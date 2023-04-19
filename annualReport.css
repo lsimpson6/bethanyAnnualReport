@@ -403,6 +403,7 @@ min-height: 100vh;
  }
 
  .show-dropdown-menu {
+  display: flex !important;
   animation: toggleDropdown .4s 1;
  }
 
