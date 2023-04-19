@@ -404,12 +404,12 @@ min-height: 100vh;
 
  .show-dropdown-menu {
   display: flex !important;
-  animation: toggleDropdown .4s 1;
+  animation: toggleDropdown .4s ease 1;
  }
 
  @keyframes toggleDropdown {
-  from{height: 0%;}
-  to{height: 100%;}
+  from{opacity: 0%;}
+  to{opacity: 100%;}
  }
 
 @media screen and (max-width: 1925px){
