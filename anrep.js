@@ -547,17 +547,22 @@ prayerScrollBtn.forEach(btnPrayer => btnPrayer.addEventListener('click', ()=>{
   }else {
     scrollVal = 400;
   }
-  if(tmpPrayerVal <= (0-scrollVal) || tmpPrayerVal >= (xMax + scrollVal)){
-    switch(prayerDirection){
-      case "left":
-        tmpPrayerVal -= scrollVal;
-        prayerContainer.scroll(tmpPrayerVal, 0);
-        break;
-      case "right":
-        tmpPrayerVal += scrollVal;
-        prayerContainer.scroll(tmpPrayerVal, 0);
-        break;
-    }
+
+  if(tmpPrayerVal > (xMax+scrollVal)){
+    tmpPrayerVal = (xMax + scrollVal);
+  }else if(tmpPrayerVal < (0-scrollVal)) {
+    tmpPrayerVal = (0 - scrollVal);
+  }
+
+  switch(prayerDirection){
+    case "left":
+      tmpPrayerVal -= scrollVal;
+      prayerContainer.scroll(tmpPrayerVal, 0);
+      break;
+    case "right":
+      tmpPrayerVal += scrollVal;
+      prayerContainer.scroll(tmpPrayerVal, 0);
+      break;
   }
 
   hideArrowsOnScroll(tmpPrayerVal);
