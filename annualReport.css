@@ -416,6 +416,8 @@ min-height: 100vh;
 }
 
 #drop-down-menu ul li a{
+margin-top:.5rem;
+margin-bottom: .5rem;
 text-decoration: none;
 }
 #drop-down-menu ul{
