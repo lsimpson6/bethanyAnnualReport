@@ -93,25 +93,6 @@
         bgOverlay.classList.remove('d-none');
       }
 
-    // animate increase in need
-
-      var perOfFunds = document.getElementById('percent-of-funds');
-      var perOfFundsTop = perOfFunds.getBoundingClientRect().top;
-      var percent = 50;
-      var percentValue = 85.5;
-
-      if($(perOfFunds).hasClass('todo')){
-        if(perOfFundsTop <= winHeight){
-          perOfFunds.classList.replace('todo', 'done');
-          setInterval(() => {
-            if(percent < percentValue){
-              percent += .5;
-            }
-            perOfFunds.textContent = percent;
-          }, 10);
-        }
-      }
-
     // animate images 
     var img = document.querySelectorAll('.animate-img');
 
@@ -148,6 +129,7 @@
       }
     }
 
+    // animate heart
     var heartSvg = document.getElementById('TODO-FILL');
 
     if(heartSvg.getBoundingClientRect().top < winHeight && ($(heartSvg).hasClass('todo'))){
