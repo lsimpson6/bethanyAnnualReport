@@ -233,12 +233,24 @@ btnToggleMenu.addEventListener('click', ()=>{
 var scrollHints = document.querySelectorAll('.scroll-hint');
 var scrollContainer = document.querySelectorAll('.scroll-maps-container');
 
+window.addEventListener('scroll', ()=>{
+  var scrollHintsY = scrollHints[hintY].getBoundingClientRect().top;
+  for(var hintY = 0; hintY < scrollHints.length; hintY ++){
+    if(scrollHintsY < winHeight){
+      setInterval(()=>{
+        scrollHints[hintY].classList.replace('d-flex', 'done');
+      },4000)
+    }
+  }
+})
+
+
 scrollContainer.forEach(sc => sc.addEventListener('click', ()=>{
     var hintContainer = sc.getAttribute('data-scroll-maps-hint');
     for(var hint = 0; hint < scrollHints.length; hint++){
       var targetHint = scrollHints[hint].getAttribute('data-scroll-maps-hint');
-      if(hintContainer == targetHint){
-        scrollHints[hint].classList.add('d-none');
+      if(hintContainer == targetHint && ($(scrollHints[hint]).hasClass('d-flex'))){
+        scrollHints[hint].classList.replace('d-flex','d-none');
       }  
     }
 }));
