@@ -137,6 +137,25 @@
       heartSvg.classList.remove('todo');
     }
 
+    //anaimte graphs
+
+    var graphs = document.querySelectorAll('.bar-graph');
+    for(var gr = 0; gr < graphs.length; gr++){
+      var graphTop = graphs[gr].getBoundingClientRect().top;
+      var graphWidth = graphs[gr].clientWidth;
+      var tmpGraphWidth = 0;
+
+      if(graphTop < winHeight){
+        if(tmpGraphWidth < graphWidth){
+          setInterval(()=>{
+            graphs[gr].style.width = tmpGraphWidth + 'px';
+            tmpGraphWidth ++;
+          },1);
+        }
+      }
+
+    }
+
     });
       
 })();
