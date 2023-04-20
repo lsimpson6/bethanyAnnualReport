@@ -136,7 +136,7 @@
       heartSvg.classList.add('fillheart');
       heartSvg.classList.remove('todo');
     }
-    
+
     });
       
 })();
@@ -225,10 +225,16 @@ prayerScrollBtn.forEach(btnPrayer => btnPrayer.addEventListener('click', ()=>{
 
 var btnToggleMenu = document.getElementById('dropdown-menu-toggle');
 var toggleMenu = document.getElementById('drop-down-menu');
+var links = document.querySelectorAll('.inpagenav');
 
 btnToggleMenu.addEventListener('click', ()=>{
   $(toggleMenu).toggleClass('show-dropdown-menu');
 });
+
+links.forEach(linkClick => linkClick.addEventListener(()=>{
+  $(toggleMenu).toggleClass('show-dropdown-menu');
+}))
+
 
 var scrollHints = document.querySelectorAll('.scroll-hint');
 var scrollContainer = document.querySelectorAll('.scroll-maps-container');
