@@ -142,14 +142,14 @@
     var graphs = document.querySelectorAll('.bar-graph');
     for(var gr = 0; gr < graphs.length; gr++){
       var graphTop = graphs[gr].getBoundingClientRect().top;
-      var graphWidth = graphs[gr].clientWidth;
+      var graphWidth = [462.54, 462.54, 360.35, 388.39];
       var tmpGraphWidth = 0;
 
       if(graphTop < winHeight){
-        if(tmpGraphWidth < graphWidth){
+        if(tmpGraphWidth < graphWidth[gr]){
           setInterval(()=>{
             graphs[gr].style.width = tmpGraphWidth + 'px';
-            tmpGraphWidth ++;
+            tmpGraphWidth += 5;
           },1);
         }
       }
