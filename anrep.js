@@ -234,12 +234,21 @@ var scrollHints = document.querySelectorAll('.scroll-hint');
 var scrollContainer = document.querySelectorAll('.scroll-maps-container');
 
 
-scrollContainer.forEach(sc => sc.addEventListener('click', ()=>{
-    var hintContainer = sc.getAttribute('data-scroll-maps-hint');
-    for(var hint = 0; hint < scrollHints.length; hint++){
-      var targetHint = scrollHints[hint].getAttribute('data-scroll-maps-hint');
-      if(hintContainer == targetHint && ($(scrollHints[hint]).hasClass('d-flex'))){
-        scrollHints[hint].classList.replace('d-flex','d-none');
-      }  
-    }
+scrollContainer.forEach(sClick => sClick.addEventListener('click', ()=>{
+  hideHint(sClick);
 }));
+
+scrollContainer.forEach(sScrol => sScrol.addEventListener('scroll', ()=>{
+  hideHint(sScrol);
+}));
+
+
+function hideHint(sc){
+  var hintContainer = sc.getAttribute('data-scroll-maps-hint');
+  for(var hint = 0; hint < scrollHints.length; hint++){
+    var targetHint = scrollHints[hint].getAttribute('data-scroll-maps-hint');
+    if(hintContainer == targetHint && ($(scrollHints[hint]).hasClass('d-flex'))){
+      scrollHints[hint].classList.replace('d-flex','d-none');
+    }  
+  }
+}
