@@ -234,8 +234,8 @@ var scrollHints = document.querySelectorAll('.scroll-hint');
 var scrollContainer = document.querySelectorAll('.scroll-maps-container');
 
 window.addEventListener('scroll', ()=>{
-  var scrollHintsY = scrollHints[hintY].getBoundingClientRect().top;
   for(var hintY = 0; hintY < scrollHints.length; hintY ++){
+    var scrollHintsY = scrollHints[hintY].getBoundingClientRect().top;
     if(scrollHintsY < winHeight){
       setInterval(()=>{
         scrollHints[hintY].classList.replace('d-flex', 'done');
