@@ -229,3 +229,15 @@ var toggleMenu = document.getElementById('drop-down-menu');
 btnToggleMenu.addEventListener('click', ()=>{
   $(toggleMenu).toggleClass('show-dropdown-menu');
 });
+
+var scrollHints = document.querySelectorAll('.scroll-hints');
+var scrollContainer = document.querySelectorAll('.scroll-maps-container');
+
+scrollContainer.forEach(sc => sc.addEventListener('click', ()=>{
+    hintContainer = sc.getAttribute('data-scroll-maps-hint');
+    targetHint = scrollHints.getAttribute('data-scroll-maps-hint');
+    if(hintContainer = targetHint){
+      targetHint.classList.add('d-none');
+    }
+
+}));
