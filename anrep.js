@@ -140,19 +140,21 @@
     //anaimte graphs
 
     var graphs = document.querySelectorAll('.bar-graph');
+    var graphWidth = [462.54, 462.54, 360.35, 388.39];
+    var tmpGraphWidth = 0;
+
     for(var gr = 0; gr < graphs.length; gr++){
+
       var graphTop = graphs[gr].getBoundingClientRect().top;
-      var graphWidth = [462.54, 462.54, 360.35, 388.39];
-      var tmpGraphWidth = 0;
 
       if(graphTop < winHeight){
-        if(tmpGraphWidth < graphWidth[gr]){
           setInterval(()=>{
-            var graph =  graphs[gr];
-            graph.style.width = tmpGraphWidth + 'px';
+            if(tmpGraphWidth < graphWidth[gr]){
+              var graph =  graphs[gr];
+              graph.style = 'width: ' + tmpGraphWidth + 'px';
+            }
           },10);
           tmpGraphWidth += 5;
-        }
       }
 
     }
