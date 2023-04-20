@@ -46,13 +46,15 @@
       //change header color
       if((firstElementTop-(topHeaderHeight + 60)) <= 0){
         topHeader.style.backgroundColor = '#ffffff';
-          voiletToWhite[0].style.color = "#473C93";
-          voiletToWhite[1].style.fill = "#473C93";
+          voiletToWhite[0].style.fill = "#473C93";
+          voiletToWhite[1].style.color = "#473C93";
+          voiletToWhite[2].style.fill = "#473C93";
       }
       else {
         topHeader.style.backgroundColor = 'transparent';
-        voiletToWhite[0].style.color = "#ffffff";
-        voiletToWhite[1].style.fill = "#ffffff";
+        voiletToWhite[0].style.fill = "#ffffff";
+        voiletToWhite[1].style.color = "#ffffff";
+        voiletToWhite[2].style.fill = "#ffffff";
       }
 
       // fades in elements
