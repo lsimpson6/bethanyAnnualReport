@@ -234,11 +234,11 @@ var scrollHints = document.querySelectorAll('.scroll-hints');
 var scrollContainer = document.querySelectorAll('.scroll-maps-container');
 
 scrollContainer.forEach(sc => sc.addEventListener('click', ()=>{
-    hintContainer = sc.getAttribute('data-scroll-maps-hint');
+    var hintContainer = sc.getAttribute('data-scroll-maps-hint');
     for(var hint = 0; hint < scrollHints.length; hint++){
       var targetHint = scrollHints[hint].getAttribute('data-scroll-maps-hint');
-      if(hintContainer = targetHint){
-        targetHint.classList.add('d-none');
+      if(hintContainer == targetHint){
+        scrollHints[hint].classList.add('d-none');
       }  
     }
 }));
