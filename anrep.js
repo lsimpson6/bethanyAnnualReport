@@ -146,15 +146,14 @@
     for(var gr = 0; gr < graphs.length; gr++){
 
       var graphTop = graphs[gr].getBoundingClientRect().top;
-
+      var graph = graphs[gr];
       if(graphTop < winHeight){
           setInterval(()=>{
             if(tmpGraphWidth < graphWidth[gr]){
-              var graph =  graphs[gr];
               graph.style = 'width: ' + tmpGraphWidth + 'px';
             }
+            tmpGraphWidth += 5;
           },10);
-          tmpGraphWidth += 5;
       }
 
     }
