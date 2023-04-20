@@ -403,10 +403,11 @@ min-height: 100vh;
  #drop-down-menu {
   position: absolute;
   right: 0px;
-  top:80%;
-  padding: 2%;
+  top: 80%;
+  padding: 1% 1% 1% 1%;
   width: auto;
   font-size: 1.8rem;
+  line-height: 4rem;
 }
 
 #dropdown-menu-toggle:hover {
@@ -418,6 +419,11 @@ margin-top:.5rem;
 margin-bottom: .5rem;
 text-decoration: none;
 }
+#drop-down-menu ul li a:hover {
+  transition: all .3s ease;
+  text-decoration: underline !important;
+}
+
 #drop-down-menu ul{
   list-style-type: none;
 }
