@@ -46,14 +46,14 @@
       //change header color
       if((firstElementTop-(topHeaderHeight + 60)) <= 0){
         topHeader.style.backgroundColor = '#ffffff';
-        for(let headIndex = 0; headIndex < voiletToWhite; headIndex ++){
+        for(let headIndex = 0; headIndex < voiletToWhite.length; headIndex ++){
           voiletToWhite[headIndex].style.fill = "#473C93";
           voiletToWhite[headIndex].style.color = "#473C93";
         }
       }
       else {
         topHeader.style.backgroundColor = 'transparent';
-        for(let headIndex = 0; headIndex < voiletToWhite; headIndex ++){
+        for(let headIndex = 0; headIndex < voiletToWhite.length; headIndex ++){
           voiletToWhite[headIndex].style.fill = "#ffffff";
           voiletToWhite[headIndex].style.color = "#ffffff";
         }
