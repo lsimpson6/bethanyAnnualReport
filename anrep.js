@@ -136,28 +136,7 @@
       heartSvg.classList.add('fillheart');
       heartSvg.classList.remove('todo');
     }
-
-    //anaimte graphs
-
-    var graphs = document.querySelectorAll('.bar-graph');
-    var graphWidth = [462.54, 462.54, 360.35, 388.39];
-    var tmpGraphWidth = 0;
-
-    for(var gr = 0; gr < graphs.length; gr++){
-
-      var graphTop = graphs[gr].getBoundingClientRect().top;
-      var graph = graphs[gr];
-      if(graphTop < winHeight){
-          setInterval(()=>{
-            if(tmpGraphWidth < graphWidth[gr]){
-              graph.style = 'width: ' + tmpGraphWidth + 'px';
-            }
-            tmpGraphWidth += 5;
-          },10);
-      }
-
-    }
-
+    
     });
       
 })();
