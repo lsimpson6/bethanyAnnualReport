@@ -148,9 +148,10 @@
       if(graphTop < winHeight){
         if(tmpGraphWidth < graphWidth[gr]){
           setInterval(()=>{
-            graphs[gr].style.width = tmpGraphWidth + 'px';
-            tmpGraphWidth += 5;
-          },1);
+            var graph =  graphs[gr];
+            graph.style.width = tmpGraphWidth + 'px';
+          },10);
+          tmpGraphWidth += 5;
         }
       }
 
