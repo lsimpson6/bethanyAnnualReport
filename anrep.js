@@ -235,7 +235,9 @@ var scrollContainer = document.querySelectorAll('.scroll-maps-container');
 
 scrollContainer.forEach(sc => sc.addEventListener('click', ()=>{
     hintContainer = sc.getAttribute('data-scroll-maps-hint');
-    targetHint = scrollHints.getAttribute('data-scroll-maps-hint');
+    for(hint < 0; hint < scrollHints.length; hint++){
+      targetHint = scrollHints[hint].getAttribute('data-scroll-maps-hint');
+    }
     if(hintContainer = targetHint){
       targetHint.classList.add('d-none');
     }
