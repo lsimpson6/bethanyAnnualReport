@@ -231,10 +231,9 @@ btnToggleMenu.addEventListener('click', ()=>{
   $(toggleMenu).toggleClass('show-dropdown-menu');
 });
 
-links.forEach(linkClick => linkClick.addEventListener(()=>{
+links.addEventListener('click', ()=>{
   $(toggleMenu).toggleClass('show-dropdown-menu');
-}))
-
+});
 
 var scrollHints = document.querySelectorAll('.scroll-hint');
 var scrollContainer = document.querySelectorAll('.scroll-maps-container');
