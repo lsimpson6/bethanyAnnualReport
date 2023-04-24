@@ -13,7 +13,7 @@
   opacity: .8;
 }
      
-.c-1 {
+.c-1, .c-3, .cls-2 {
   fill: #fdd0af;
   }
          
@@ -21,21 +21,13 @@
     fill: #ff8d6e;
   }
          
-  .c-3 {
-    
-  } 
-    
   .c-4 {
     
   }
-  
+
 .cls-2 {
-  fill: #EBF1F3;
   stroke: #fff;
   stroke-width: .5px;
-}
-.cls-1, .cls-2, .cls-3 {
-  fill: #473C93;
 }
 
 .cls-1, .cls-3 {
@@ -49,7 +41,7 @@
 }
 
 .state, .country, .country path {
-  fill : #f68b6f;
+  fill : #f68b6f !important;
   transition: all .4s ease;
 }
 .state:hover, .country:hover {opacity: .8 !important; cursor: pointer;}
