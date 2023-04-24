@@ -4,7 +4,7 @@
 #bethany-logo {width: 150px;}
 
 .location-pin:hover {
-  stroke: #473C93;
+  transform: scale(110%);
   transition: all .2s ease;
   cursor: pointer;
 }
@@ -12,7 +12,23 @@
 .country:hover {
   opacity: .8;
 }
-
+     
+.c-1 {
+  fill: #fdd0af;
+  }
+         
+  .c-2 {
+    fill: #ff8d6e;
+  }
+         
+  .c-3 {
+    
+  } 
+    
+  .c-4 {
+    
+  }
+  
 .cls-2 {
   fill: #EBF1F3;
   stroke: #fff;
@@ -33,7 +49,7 @@
 }
 
 .state, .country, .country path {
-  fill : #59CAE8;
+  fill : #f68b6f;
   transition: all .4s ease;
 }
 .state:hover, .country:hover {opacity: .8 !important; cursor: pointer;}
