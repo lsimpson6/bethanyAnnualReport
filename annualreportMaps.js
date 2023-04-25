@@ -239,11 +239,19 @@ function autoSelectStates(isAllowed){
   }
 } */
 
+function detoggle() {
+  setTimeout(function () {
+    let parent = document.querySelectorAll('.rotate-trigger-g');
+    $(parent).toggleClass('rotate-text');
+  }, 600);
+}
+
 
 function globalStats(value){
-    let parent = document.querySelectorAll('.rotate-trigger');
-    $(parent).toggleClass('.rotate-text');
-
+    let parent = document.querySelectorAll('.rotate-trigger-g');
+    $(parent).toggleClass('rotate-text');
+    detoggle();
+    
     unitedStatesSum();
     countryName.textContent = countries[value].country;
     let tmpServed = countries[value].served;
