@@ -479,21 +479,17 @@ text-decoration: none;
 }
 
 .rotate-text {
-	animation: .3s rotateText ease 1;
+	animation: .6s rotateText ease 1;
 }
 
 @keyframes rotateText {
-0% {
-	transform: rotateX(0deg);
-	opacity: 1;
+from{
+	transform: translateX(-30px);
+  opacity:0;
 }
-50% {
-	transform: rotateX(90deg);
-	opacity: 0;
-}
-100% {
-	transform: rotateX(0deg);
-	opacity: 1;
+to {
+	transform: translateX(0px);
+  opacity:0;
 }
 }
 
