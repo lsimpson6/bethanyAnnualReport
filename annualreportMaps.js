@@ -242,7 +242,7 @@ function autoSelectStates(isAllowed){
 
 
 function globalStats(value){
-    let parent = document.querySelectorAll('.rotate-trigger-g');
+    let parents = document.querySelectorAll('.rotate-trigger-g');
     parents.forEach((parent) => {
     
       parent.classList.add('rotate-text');
