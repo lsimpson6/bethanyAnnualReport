@@ -239,18 +239,18 @@ function autoSelectStates(isAllowed){
   }
 } */
 
-
+function animateStats(parents){
+  parents.forEach((parent) => {
+    parent.classList.add('rotate-text');
+    setTimeout(function(){
+      parent.classList.remove('rotate-text');
+    }, 600);
+  });
+}
 
 function globalStats(value){
     let parents = document.querySelectorAll('.rotate-trigger-g');
-    parents.forEach((parent) => {
-    
-      parent.classList.add('rotate-text');
-      setTimeout(function(){
-        parent.classList.remove('rotate-text');
-      }, 00);
-
-});
+    animateStats(parents);
 
     unitedStatesSum();
     countryName.textContent = countries[value].country;
@@ -264,6 +264,9 @@ function globalStats(value){
 }
 
 function stateStats(value){
+  let parents = document.querySelectorAll('.rotate-trigger-sr');
+  animateStats(parents);
+
   stateName.textContent = states[value].state;
   let tmpServed = states[value].served;
   stateServed.textContent = tmpServed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -274,6 +277,9 @@ function stateStats(value){
 }
 
 function regionStats(value){
+  let parents = document.querySelectorAll('.rotate-trigger-sr');
+  animateStats(parents);
+  
   regionName.textContent = regions[value].region;
   let tmpServed = regions[value].served;
   regionServed.textContent = tmpServed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
