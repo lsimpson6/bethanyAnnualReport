@@ -481,15 +481,19 @@ text-decoration: none;
 }
 
 @keyframes rotateText {
-from{
-	transform: rotateX(0deg);
-  opacity:0;
-}
-to {
-	transform: rotateX(90deg);
-  opacity:1;
-}
-}
+  0%{
+    transform: rotateX(0deg);
+    opacity:0;
+  }
+  33%{
+    transform: rotateX(90deg);
+    opacity:0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity:1;
+  }
+  }
 
 
 @media screen and (max-width: 1925px){
