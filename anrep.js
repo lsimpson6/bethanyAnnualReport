@@ -1,7 +1,10 @@
 (function (){
   var winHeight = window.innerHeight;
   var sectionTitle = document.getElementById('section-title');
-  var textSelector = ["Annual Report", "Motivated by Faith", "Global Impact","Local Impact","Mission and Vision", "Wins and Highlights", "Video Testimonials", "In the U.S.", "Refugees and Immigrants", "Around the world", "Testimonials", "Financials", "Power of Family", "Pray with Us", "Support Bethany"];
+  var textSelector = ["Annual Report", "Motivated by Faith", "Global Impact","Local Impact","Support Bethany",
+  "Mission and Vision", "Wins and Highlights", "Video Testimonials", "In the U.S.",
+   "Refugees and Immigrants", "Around the world", "Testimonials", "Financials", 
+   "Pray with Us"];
   var target = document.querySelectorAll('.title-target');
   var animate = document.querySelectorAll('.animate');
   var rainfall = document.querySelectorAll('.rainfall');
