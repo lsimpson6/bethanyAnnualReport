@@ -489,7 +489,7 @@ from{
 }
 to {
 	transform: translateX(0px);
-  opacity:0;
+  opacity:1;
 }
 }
 
