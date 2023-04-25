@@ -135,7 +135,6 @@
 }
   
 .rainfall-animation {
-  animation-delay: .3s;
 	animation: 1s rainfall ease 1; 
 }
   
