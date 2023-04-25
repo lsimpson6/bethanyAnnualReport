@@ -242,8 +242,7 @@ function autoSelectStates(isAllowed){
 
 function globalStats(value){
     let parent = document.querySelectorAll('.rotate-trigger');
-    let tc = document.querySelectorAll('.rotate-text');
-    parent.classList.add('rotate-text');
+    $(parent).toggleClass('.rotate-text');
 
     unitedStatesSum();
     countryName.textContent = countries[value].country;
@@ -254,9 +253,6 @@ function globalStats(value){
     let tmpExpenditures = countries[value].expenditures;
     globalExpenditures.textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tmpExpenditures);
     
-    setInterval(()=>{
-      parent.classList.remove('rotate-text')
-    }, 600);
 }
 
 function stateStats(value){
