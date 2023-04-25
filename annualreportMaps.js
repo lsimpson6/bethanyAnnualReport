@@ -240,10 +240,8 @@ function autoSelectStates(isAllowed){
 } */
 
 function toggleDetoggle(parent) {
-  $(parent).toggleClass('rotate-text');
-  setTimeout(function () {
-    $(parent).toggleClass('rotate-text');
-  }, 600);
+  parent.classList.remove('rotate-text');
+  parent.classList.add('rotate-text');
 }
 
 function globalStats(value){
