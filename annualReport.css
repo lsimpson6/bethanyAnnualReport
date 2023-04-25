@@ -482,11 +482,11 @@ text-decoration: none;
 
 @keyframes rotateText {
 from{
-	transform: translateX(-30px);
+	transform: rotateX(0deg);
   opacity:0;
 }
 to {
-	transform: translateX(0px);
+	transform: rotateX(90deg);
   opacity:1;
 }
 }
