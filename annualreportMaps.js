@@ -240,8 +240,10 @@ function autoSelectStates(isAllowed){
 } */
 
 function toggleDetoggle(parent) {
-  parent.classList.remove('rotate-text');
-  parent.classList.add('rotate-text');
+  for(let parentIndex = 0; parentIndex < parent.length; parent ++){
+    parent[parentIndex].classList.remove('rotate-text');
+    parent[parentIndex].classList.add('rotate-text');
+  }
 }
 
 function globalStats(value){
