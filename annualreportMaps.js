@@ -241,6 +241,9 @@ function autoSelectStates(isAllowed){
 
 
 function globalStats(value){
+    let parent = document.querySelectorAll('.rotate-trigger');
+    $(parent).toggleClass('rotate-text');
+
     unitedStatesSum();
     countryName.textContent = countries[value].country;
     let tmpServed = countries[value].served;
