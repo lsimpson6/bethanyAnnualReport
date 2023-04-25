@@ -8,6 +8,7 @@
   height: 50px;
   transition: all .2s ease;
   cursor: pointer;
+  stroke: 5px;
 }
   
 .country:hover {
@@ -22,9 +23,6 @@
     fill: #ff8d6e;
   }
          
-  .c-4 {
-    
-  }
 
 .cls-2 {
   stroke: #fff;
@@ -46,7 +44,7 @@
   transition: all .4s ease;
 }
 .state:hover, .country:hover {opacity: .8 !important; cursor: pointer;}
-.location-pin { fill:#ffffff !important;  width: auto;
+.location-pin { fill:#000000 !important;  width: auto;
   height: 40px;}
   
 .bg-transparent {
