@@ -97,15 +97,16 @@
     // animate bar graphs
     var bars = document.querySelectorAll('.bar');
     var barWidth;
+    var tmpBarWidth = 0;
     for(var b = 0; b < bars.length; b++){
       var barWidth = bars[b].getAttribute('data-bar-width');
       var barPosFromTop = bars[b].getBoundingClientRect().top;
+      var bar = bars[b];
 
       if(barPosFromTop < winHeight){
-        let tmpBarWidth = 0;
         if(tmpBarWidth < barWidth){
           setInterval(()=>{
-            bars[b].style.width == tmpBarWidth + '%';
+            bar.style.innerWidth = tmpBarWidth + '%';
           }, 10);
           tmpBarWidth += 2;
         }
