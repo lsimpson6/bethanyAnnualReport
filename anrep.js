@@ -98,13 +98,13 @@
     var bars = document.querySelectorAll('.bar');
     var barWidth;
     var tmpBarWidth = 0;
-    for(var b = 0; b < bars.length; b++){
-      var barWidth = bars[b].getAttribute('data-bar-width');
-      var barPosFromTop = bars[b].getBoundingClientRect().top;
-      var bar = bars[b];
+
+    bars.forEach((bar)=>{
+      var barWidth = bar.getAttribute('data-bar-width');
+      var barPosFromTop = bar.getBoundingClientRect().top;
 
       if(barPosFromTop < winHeight){
-        if(tmpBarWidth < barWidth){
+        if(tmpBarWidth <= barWidth){
           setInterval(()=>{
             bar.style.width = tmpBarWidth + '%';
           }, 10);
@@ -112,7 +112,7 @@
         }
       }
 
-    }
+    });
 
     // animate heart
     var heartSvg = document.getElementById('TODO-FILL');
