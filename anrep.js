@@ -98,9 +98,9 @@
     // animate bar graphs
     var bars = document.querySelectorAll('.bar');
     var barWidth;
-    for(let b = 0; b < bars.length; b++){
-      let barWidth = bars[b].getAttribute('data-bar-width');
-      let barPosFromTop = bars[b].getBoundingClientRect().top;
+    for(var b = 0; b < bars.length; b++){
+      var barWidth = bars[b].getAttribute('data-bar-width');
+      var barPosFromTop = bars[b].getBoundingClientRect().top;
 
       if(barPosFromTop < winHeight){
         let tmpBarWidth = 0;
