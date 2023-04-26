@@ -106,7 +106,7 @@
         let tmpBarWidth = 0;
         if(tmpBarWidth < barWidth){
           setInterval(()=>{
-            barWidth.style.width = tmpBarWidth;
+            bars[b].style.width = tmpBarWidth;
           }, 10);
           tmpBarWidth += 2;
         }
