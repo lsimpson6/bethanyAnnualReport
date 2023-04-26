@@ -95,40 +95,23 @@
         bgOverlay.classList.remove('d-none');
       }
 
-    // animate images 
-    var img = document.querySelectorAll('.animate-img');
+    // animate bar graphs
+    var bars = document.querySelectorAll('.bar');
+    var barWidth;
+    for(let b = 0; b < bars.length; b++){
+      let barWidth = bars[b].getAttribute('data-bar-width');
+      let barPosFromTop = bars[b].getBoundingClientRect().top;
 
-    for(var im = 0; im < img.length; im++){
-      var imgTop = img[im].getBoundingClientRect().top;
-      if(imgTop <=tmpHeight/1.2){
-        if($(img[im]).hasClass('animate-img')){
-          img[im].classList.replace('animate-img','grow-image');
+      if(barPosFromTop < winHeight){
+        let tmpBarWidth = 0;
+        if(tmpBarWidth < barWidth){
+          setInterval(()=>{
+            barWidth.style.width = tmpBarWidth;
+          }, 10);
+          tmpBarWidth += 2;
         }
       }
-    }
 
-    // change text opacity
-    var txtFade = document.querySelectorAll('.fade-text-items');
-
-    for(var txt = 0; txt < txtFade.length; txt ++){
-      var txtFadeTop = txtFade[txt].getBoundingClientRect().top;
-      var txtFadeBottom = txtFade[txt].getBoundingClientRect().bottom;
-
-      if(window.innerWidth < 768){
-        var fadeHeightLow = 200
-        var fadeHeightHigh =  400;
-      }
-      else {
-        fadeHeightLow = winHeight/1.5;
-        fadeHeightHigh =  winHeight/2.5;
-      }
-
-      if(txtFadeTop > fadeHeightLow && txtFadeBottom > fadeHeightHigh){
-        txtFade[txt].classList.replace('increase-opacity', 'defualt-opacity');
-      }
-      else {
-        txtFade[txt].classList.replace('defualt-opacity', 'increase-opacity');
-      }
     }
 
     // animate heart
