@@ -106,7 +106,7 @@
       if(barPosFromTop < winHeight){
         if(tmpBarWidth < barWidth){
           setInterval(()=>{
-            bar.style.innerWidth = tmpBarWidth + '%';
+            bar.style.width = tmpBarWidth + '%';
           }, 10);
           tmpBarWidth += 2;
         }
