@@ -104,12 +104,7 @@
       var barPosFromTop = bar.getBoundingClientRect().top;
 
       if(barPosFromTop < winHeight){
-        if(tmpBarWidth <= barWidth){
-          setInterval(()=>{
-            bar.style.width = tmpBarWidth + '%';
-            tmpBarWidth += 2;
-          }, 5);
-        }
+          bar.classList.replace('width-zero', 'grow-bars');
       }
 
     });
