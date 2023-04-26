@@ -22,17 +22,15 @@
     tmpHeight = winHeight/1.5;
   }
 
-  sectionTitle.textContent = textSelector[0];
-  
     window.addEventListener('scroll', ()=>{
       var firstElementTop = firstElement.getBoundingClientRect().top;
-      let targetTitle = target.getAttribute('data-title');
 
       // changes text on top
       for(var i = 0; i < target.length; i++){
         var tmpTarget = target[i];
         var tyPos = tmpTarget.getBoundingClientRect().top;
-        var x = 0;
+        let targetTitle = tmpTarget.getAttribute('data-title');
+
         if((tyPos-(topHeaderHeight + 60)) <= 0){
             if(targetTitle != ""){
               sectionTitle.textContent = targetTitle
