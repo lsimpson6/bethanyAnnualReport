@@ -41,7 +41,7 @@
 }
 
 .state, .country, .country path {
-  fill : #f68b6f !important;
+  fill : #f68b6f;
   transition: all .4s ease;
 }
 .state:hover, .country:hover {opacity: .8 !important; cursor: pointer;}
