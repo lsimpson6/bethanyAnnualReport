@@ -109,22 +109,6 @@
 
     });
 
-    for(var b = 0; b < bars.length; b++){
-      var bar = bars[b];
-      
-      var barWidth = bar.getAttribute('data-bar-width');
-      var barPosFromTop = bar.getBoundingClientRect().top;
-
-      if(barPosFromTop < winHeight){
-        if(tmpBarWidth <= barWidth){
-          setInterval(()=>{
-            bar.style.width = tmpBarWidth + '%';
-            tmpBarWidth += 2;
-          }, 5);
-        }
-      }
-
-    }
 
     // animate heart
     var heartSvg = document.getElementById('TODO-FILL');
