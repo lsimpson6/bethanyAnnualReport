@@ -10,7 +10,6 @@
   var topHeader = document.getElementById('blogofixed');
   var bgOverlay = document.getElementById('bgdarkoverlay');
   var clickToMoveMap = document.querySelectorAll('.drag-to-move-map');
-  var bars = document.querySelectorAll('.bar-chart');
   var desktopOnly = document.querySelectorAll('.desktop-only');
   var voiletToWhite = document.querySelectorAll('.v2w');
 
