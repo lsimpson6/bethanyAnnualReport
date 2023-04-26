@@ -107,8 +107,8 @@
         if(tmpBarWidth <= barWidth){
           setInterval(()=>{
             bar.style.width = tmpBarWidth + '%';
+            tmpBarWidth += 2;
           }, 5);
-          tmpBarWidth ++;
         }
       }
 
