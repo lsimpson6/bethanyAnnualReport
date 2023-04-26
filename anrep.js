@@ -96,10 +96,27 @@
 
     // animate bar graphs
     var bars = document.querySelectorAll('.bar');
+    var barWidth;
     var tmpBarWidth = 0;
+
+    bars.forEach((bar)=>{
+      var barWidth = bar.getAttribute('data-bar-width');
+      var barPosFromTop = bar.getBoundingClientRect().top;
+
+      if(barPosFromTop < winHeight){
+        if(tmpBarWidth <= barWidth){
+          setInterval(()=>{
+            bar.style.width = tmpBarWidth + '%';
+            tmpBarWidth += 2;
+          }, 5);
+        }
+      }
+
+    });
 
     for(var b = 0; b < bars.length; b++){
       var bar = bars[b];
+      
       var barWidth = bar.getAttribute('data-bar-width');
       var barPosFromTop = bar.getBoundingClientRect().top;
 
