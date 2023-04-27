@@ -318,12 +318,11 @@ min-height: 100vh;
 }
 
 .image-slider-items {
-  text-align:center;
-  min-height: 70vh;
+  min-height: 50vh;
 }
   
   .video-slider-items {
-    min-height: 70vh;
+    min-height: 50vh;
   }
   
   
