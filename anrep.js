@@ -66,6 +66,14 @@
           }
       }
 
+      var pieChart = document.querySelectorAll('.pie');
+      for(var pc = 0; pc < pieChart.length; pc ++){
+        let yPie = pieChart[pc].getBoundingClientRect().top;
+        if(yPie < winHeight){
+          pieChart[pc].classList.add('pie-animation');
+        }
+      }
+
       // rainfall effect on location pins
       for(let r = 0; r < rainfall.length; r++){
         var tmpRainfall = rainfall[r];
