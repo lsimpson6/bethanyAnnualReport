@@ -507,6 +507,8 @@ text-decoration: none;
     width: 50%;
     height: 100%;
 
+  }
+
 @media screen and (max-width: 1925px){
   .row-half, .row-third, .row-two-third {
       padding: 5rem;
