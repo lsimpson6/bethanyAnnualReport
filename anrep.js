@@ -176,7 +176,7 @@ prayerScrollBtn.forEach(btnPrayer => btnPrayer.addEventListener('click', ()=>{
   let prayerDirection = btnPrayer.getAttribute('data-prayer-slider');
   let scrollVal = 400;
   let boxs = document.querySelectorAll('.prayer-prompts');
-  var xMax = $(prayerContainer).css('max-width');
+  var xMax = prayerContainer.offsetWidth;
 
   if(window.innerWidth < 768){
     scrollVal = 150;
