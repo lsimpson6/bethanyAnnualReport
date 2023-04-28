@@ -158,14 +158,14 @@ var prayerScrollBtn = document.querySelectorAll('.scroll-arrows');
 var prayerPromts = document.querySelectorAll('.prayer-prompts');
 var tmpPrayerVal = 0;
 
-function hideArrowsOnScroll(x, xMax){
+function hideArrowsOnScroll(x, xMax, xScroll){
   if(x <= 0){
     prayerScrollBtn[0].classList.add('opacity-0');
   }else {
     prayerScrollBtn[0].classList.remove('opacity-0');
   }
 
-  if(x >= xMax){
+  if(x >= (xMax + xScroll)){
     prayerScrollBtn[1].classList.add('opacity-0');
   }else {
     prayerScrollBtn[1].classList.remove('opacity-0');
@@ -201,7 +201,7 @@ prayerScrollBtn.forEach(btnPrayer => btnPrayer.addEventListener('click', ()=>{
       break;
   }
 
-  hideArrowsOnScroll(tmpPrayerVal, xMax);
+  hideArrowsOnScroll(tmpPrayerVal, xMax, scrollVal);
 
 }));
 
