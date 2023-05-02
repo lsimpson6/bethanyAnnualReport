@@ -18,7 +18,7 @@
     window.addEventListener('load',()=>{
 
 
-      for(let pt = 0; pt < paymentText.length; pt ++){
+      for(let pt = 0; pt < paymentForm.length; pt ++){
         paymentForm[pt].classList.add('animate');
       }
       tmpHeight = 0;
