@@ -18,7 +18,7 @@
       var paymentForm = document.querySelectorAll('.fixed-600');
 
       for(let pt = 0; pt < paymentText.length; pt ++){
-        paymentText[pt].classList.add('animate');
+        paymentForm[pt].classList.add('animate');
       }
 
       var tmpHeight = 0;
