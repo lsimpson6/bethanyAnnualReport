@@ -13,7 +13,7 @@
   var desktopOnly = document.querySelectorAll('.desktop-only');
   var voiletToWhite = document.querySelectorAll('.v2w');
   var tmpHeight;
-  var paymentForm = document.querySelectorAll('.fixed-600');
+  var paymentForm = document.querySelectorAll('.form-title-and-description');
 
     window.addEventListener('load',()=>{
 
