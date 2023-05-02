@@ -13,13 +13,23 @@
   var desktopOnly = document.querySelectorAll('.desktop-only');
   var voiletToWhite = document.querySelectorAll('.v2w');
 
-  var tmpHeight = 0;
-  if(window.innerWidth < 768){
-    tmpHeight = winHeight/1.5;
-  }
-  else {
-    tmpHeight = winHeight/1.5;
-  }
+    window.addEventListener('load',()=>{
+
+      var paymentForm = document.querySelectorAll('.fixed-600');
+
+      for(let pt = 0; pt < paymentText.length; pt ++){
+        paymentText[pt].classList.add('animate');
+      }
+
+      var tmpHeight = 0;
+      if(window.innerWidth < 768){
+        tmpHeight = winHeight/1.5;
+      }
+      else {
+        tmpHeight = winHeight/1.5;
+      }
+    });
+
 
     window.addEventListener('scroll', ()=>{
       var firstElementTop = firstElement.getBoundingClientRect().top;
@@ -37,6 +47,15 @@
             else {
               sectionTitle.textContent = "Annual Report"
             }
+        }
+      }
+
+      //aniamte payment form 
+      for(let pt = 0; pt < paymentForm.length; pt ++){
+        var frmContent = paymentForm[pt].getBoundingClientRect().top;
+        if(frmContent < winHeight){
+          paymentForm[pt].classList.add('fade-in');
+          paymentForm[pt].classList.remove('animate');
         }
       }
 
@@ -167,13 +186,14 @@ var prayerPromts = document.querySelectorAll('.prayer-prompts');
 var tmpPrayerVal = 0;
 
 function hideArrowsOnScroll(x, xMax, xScroll){
+  let tmpXScroll = xScroll*1.5;
   if(x <= 0){
     prayerScrollBtn[0].classList.add('opacity-0');
   }else {
     prayerScrollBtn[0].classList.remove('opacity-0');
   }
 
-  if(x >= (xMax + xScroll)){
+  if(x >= (xMax + tmpXScroll)){
     prayerScrollBtn[1].classList.add('opacity-0');
   }else {
     prayerScrollBtn[1].classList.remove('opacity-0');
