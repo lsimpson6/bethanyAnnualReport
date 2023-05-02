@@ -12,16 +12,16 @@
   var clickToMoveMap = document.querySelectorAll('.drag-to-move-map');
   var desktopOnly = document.querySelectorAll('.desktop-only');
   var voiletToWhite = document.querySelectorAll('.v2w');
+  var tmpHeight;
+  var paymentForm = document.querySelectorAll('.fixed-600');
 
     window.addEventListener('load',()=>{
 
-      var paymentForm = document.querySelectorAll('.fixed-600');
 
       for(let pt = 0; pt < paymentText.length; pt ++){
         paymentForm[pt].classList.add('animate');
       }
-
-      var tmpHeight = 0;
+      tmpHeight = 0;
       if(window.innerWidth < 768){
         tmpHeight = winHeight/1.5;
       }
