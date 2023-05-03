@@ -588,8 +588,11 @@ text-decoration: none;
     }
       
     .stat-container {
-      color:#000000;
       width: 50%;
+    }
+
+    .stat-container h3 {
+      color:#000000 !important;
     }
 
     .stat-container p {
