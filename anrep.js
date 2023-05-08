@@ -267,3 +267,13 @@ function hideHint(sc){
     }  
   }
 }
+
+(function(){
+  var container = document.getElementById('wah-scroll-container');
+  var testTest = document.getElementById('text-test');
+
+  container.addEventListener('scroll', function s(){
+    testTest.textContent = s.scroll;
+  })
+
+})();
