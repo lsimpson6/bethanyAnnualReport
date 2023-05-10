@@ -63,8 +63,8 @@
     var img = document.querySelectorAll('.animate-img');
 
     for(var im = 0; im < img.length; im++){
+      var imgTop = img[im].getBoundingClientRect().top;
       if(imgTop <= winHeight && ($(img[im]).hasClass('animate-img'))){
-        var imgTop = img[im].getBoundingClientRect().top;
           if(imgTop <= winHeight){
             if($(img[im]).hasClass('animate-img')){
               img[im].classList.replace('animate-img','grow-image');
