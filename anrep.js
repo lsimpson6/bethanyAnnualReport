@@ -59,6 +59,20 @@
         }
       }
 
+      // animate images 
+      var img = document.querySelectorAll('.animate-img');
+      var imgTop = img[im].getBoundingClientRect().top;
+
+      for(var im = 0; im < img.length; im++){
+        if(imgTop <= winHeight && ($(img[im]).hasClass('animate-img'))){
+        var imgTop = img[im].getBoundingClientRect().top;
+        if(imgTop <= winHeight){
+          if($(img[im]).hasClass('animate-img')){
+            img[im].classList.replace('animate-img','grow-image');
+          }
+        }
+      }
+
       //change header color
       if((firstElementTop-(topHeaderHeight + 60)) <= 0){
         topHeader.style.backgroundColor = '#ffffff';
