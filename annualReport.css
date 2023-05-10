@@ -256,8 +256,7 @@
 }
 
 .animate-img {
-  opacity: 0;
-  transform: translateX(0px);
+  transform: scale(80%);
 }
 
 .grow-image {
@@ -265,8 +264,8 @@
 }
 
 @keyframes growImg {
-  from {transform: translateX(-20px);opacity:0;}
-  to {transform: translateX(0px);opacity:1;}
+  from {transform: scale(80%);opacity:0;}
+  to {transform: scale(100%);opacity:1;}
 }
 
 .winsandhightlights-img {
@@ -644,7 +643,7 @@ text-decoration: none;
     }
 
     .animate-img {
-      transform: scale(100%);
+      transform: scale(80%);
     }
     
     .grow-image {
