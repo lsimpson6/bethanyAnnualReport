@@ -256,7 +256,7 @@
 }
 
 .animate-img {
-  transform: scale(80%);
+  scale(80%);
 }
 
 .grow-image {
@@ -264,8 +264,8 @@
 }
 
 @keyframes growImg {
-  from {width: 25%; height: calc(100px - inherit); opacity:0;}
-  to {width: 33%; height: inherit;opacity:1;}
+  from {scale: 80%; opacity:0;}
+  to {scale:100%; opacity:1;}
 }
 
 .winsandhightlights-img {
