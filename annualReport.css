@@ -260,12 +260,12 @@
 }
 
 .grow-image {
-  animation: growImg .6s 1 ease;
+  animation: growImg 1.6s 1 ease;
 }
 
 @keyframes growImg {
-  from {transform: scale(80%);opacity:0;}
-  to {transform: scale(100%);opacity:1;}
+  from {width: calc(100px - inherit); height: calc(100px - inherit); opacity:0;}
+  to {width: inherit; height: inherit;opacity:1;}
 }
 
 .winsandhightlights-img {
