@@ -61,7 +61,6 @@
 
           // animate images 
     var img = document.querySelectorAll('.animate-img');
-    var imgTop = img[im].getBoundingClientRect().top;
 
     for(var im = 0; im < img.length; im++){
       if(imgTop <= winHeight && ($(img[im]).hasClass('animate-img'))){
@@ -282,13 +281,3 @@ function hideHint(sc){
     }  
   }
 }
-
-(function(){
-  var container = document.getElementById('wah-scroll-container');
-  var testTest = document.getElementById('text-test');
-
-  container.addEventListener('scroll', function s(){
-    testTest.textContent = s.scroll;
-  })
-
-})();
