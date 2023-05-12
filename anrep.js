@@ -150,15 +150,6 @@
 
     });
 
-
-    // animate heart
-    var heartSvg = document.getElementById('TODO-FILL');
-
-    if(heartSvg.getBoundingClientRect().top < winHeight && ($(heartSvg).hasClass('todo'))){
-      heartSvg.classList.add('fillheart');
-      heartSvg.classList.remove('todo');
-    }
-
     });
       
 })();
