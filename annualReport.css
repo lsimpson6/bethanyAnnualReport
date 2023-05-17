@@ -480,25 +480,17 @@ text-decoration: none;
 }
 
 .rotate-text {
-	animation: .6s rotateText ease 1;
+	animation: .4s rotateText ease 1;
 }
 
 @keyframes rotateText {
-  0%{
-	  	transform: rotateX(00deg);
-    opacity:0;
+  from {
+    opacity: 0;
   }
-  33%{
-	  	transform: rotateX(90deg);
+  to {
+    opacity: 1;
   }
-	66%{
-    transform: translateY(-20px);
-	}
-  100% {
-    transform: translateY(0px);
-    opacity:1;
-  }
-  }
+}
 
   .shadow-half {
     position: absolute;
