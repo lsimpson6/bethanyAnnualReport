@@ -480,7 +480,7 @@ text-decoration: none;
 }
 
 .rotate-text {
-	animation: .4s rotateText ease 1;
+	animation: .8s rotateText ease 1;
 }
 
 @keyframes rotateText {
