@@ -176,7 +176,7 @@ window.addEventListener('load', ()=>{
 })
 
 
-countrySelected.forEach(c => c.addEventListener('click', 'onmouseover', ()=>{
+countrySelected.forEach(c => c.addEventListener('click onmouseover', ()=>{
     let id = c.getAttribute('data-country');
     if(countryName.textContent != countries[id].country){
       globalStats(id);
