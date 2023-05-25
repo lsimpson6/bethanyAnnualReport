@@ -178,42 +178,42 @@ window.addEventListener('load', ()=>{
 
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
     let id = c.getAttribute('data-country');
-    if(countryName.textContent != countries[id].country){
+    if(countryName.textContent != countries[id].country && id != null){
       globalStats(id);
     }
 }))
 
 stateSelected.forEach(s => s.addEventListener('click', ()=>{
   let id = s.getAttribute('data-state');
-  if(stateName.textContent != states[id].state){
+  if(stateName.textContent != states[id].state && id != null){
     stateStats(id);
   }
 }))
 
 regionSelected.forEach(r => r.addEventListener('click', ()=>{
   let id = r.getAttribute('data-region');
-  if(regionName.textContent != regions[id].region){
+  if(regionName.textContent != regions[id].region && id != null){
     regionStats(id);
   }
 }))
 
 countrySelected.forEach(c => c.addEventListener('mouseover', ()=>{
     let id = c.getAttribute('data-country');
-    if(countryName.textContent != countries[id].country){
+    if(countryName.textContent != countries[id].country && id != null){
       globalStats(id);
     }
 }))
 
 stateSelected.forEach(s => s.addEventListener('mouseover', ()=>{
   let id = s.getAttribute('data-state');
-  if(stateName.textContent != states[id].state){
+  if(stateName.textContent != states[id].state && id != null){
     stateStats(id);
   }
 }))
 
 regionSelected.forEach(r => r.addEventListener('mouseover', ()=>{
   let id = r.getAttribute('data-region');
-  if(regionName.textContent != regions[id].region){
+  if(regionName.textContent != regions[id].region && id != null){
     regionStats(id);
   }
 }))
