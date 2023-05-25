@@ -190,17 +190,17 @@ regionSelected.forEach(r => r.addEventListener('click', ()=>{
   regionStats(id);
 }))
 
-countrySelected.forEach(c => c.addEventListener('hover', ()=>{
+countrySelected.forEach(c => c.addEventListener('mouseover', ()=>{
   let id = c.getAttribute('data-country');
   globalStats(id);
 }))
 
-stateSelected.forEach(s => s.addEventListener('hover', ()=>{
+stateSelected.forEach(s => s.addEventListener('mouseover', ()=>{
 let id = s.getAttribute('data-state');
   stateStats(id);
 }))
 
-regionSelected.forEach(r => r.addEventListener('hover', ()=>{
+regionSelected.forEach(r => r.addEventListener('mouseover', ()=>{
 let id = r.getAttribute('data-region');
 regionStats(id);
 }))
