@@ -177,8 +177,8 @@ window.addEventListener('load', ()=>{
 
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
     let id = c.getAttribute('data-country');
-    console.log("old country: " + countryName.textContent + "new country: " + id);
-    if(countryName.textContent != id){
+    console.log("old country: " + countryName.textContent + " new country: " + id.country);
+    if(countryName.textContent != id.country){
       globalStats(id);
     }
 }))
