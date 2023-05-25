@@ -28,17 +28,17 @@ var countrySelected = document.querySelectorAll('.country');
 var stateSelected = document.querySelectorAll('.state');
 var regionSelected = document.querySelectorAll('.region');
 
-var pacServedSum, pacProgramSum, pacLocationSum, pacExpenditureSum = 0;
+var pacServedSum = 0, pacProgramSum = 0, pacLocationSum = 0, pacExpenditureSum = 0;
 
-var swServedSum, swProgramSum, swLocationSum, swExpenditureSum = 0;
+var swServedSum = 0, swProgramSum = 0, swLocationSum = 0, swExpenditureSum = 0;
 
-var mwServedSum, mwProgramSum, mwLocationSum, mwExpenditureSum = 0;
+var mwServedSum = 0, mwProgramSum = 0, mwLocationSum = 0, mwExpenditureSum = 0;
 
-var seServedSum, seProgramSum, seProgramSum, seLocationSum, seExpenditureSum = 0;
+var seServedSum = 0, seProgramSum = 0, seProgramSum = 0, seLocationSum = 0, seExpenditureSum = 0;
 
-var maServedSum, maProgramSum, maLocationSum, maExpenditureSum = 0;
+var maServedSum = 0, maProgramSum = 0, maLocationSum = 0, maExpenditureSum = 0;
 
-var neServedSum, neProgramSum, neLocationSum, neExpenditureSum = 0;
+var neServedSum = 0, neProgramSum = 0, neLocationSum = 0, neExpenditureSum = 0;
 
 const states = {
   "us-ak": {state: "Arkansas", served: 432, programs: 4, locations: 1, expenditures: 218682},
@@ -177,35 +177,44 @@ window.addEventListener('load', ()=>{
 
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
     let id = c.getAttribute('data-country');
-    console.log("old country: " + countryName.textContent + " new country: " + id.country);
-    if(countryName.textContent != id.country){
+    if(countryName.textContent != countries[id].country){
       globalStats(id);
     }
 }))
 
 stateSelected.forEach(s => s.addEventListener('click', ()=>{
   let id = s.getAttribute('data-state');
+  if(stateName.textContent != states[id].state){
     stateStats(id);
+  }
 }))
 
 regionSelected.forEach(r => r.addEventListener('click', ()=>{
   let id = r.getAttribute('data-region');
-  regionStats(id);
+  if(regionName.textContent != regions[id].region){
+    regionStats(id);
+  }
 }))
 
 countrySelected.forEach(c => c.addEventListener('mouseover', ()=>{
-  let id = c.getAttribute('data-country');
-  globalStats(id);
+    let id = c.getAttribute('data-country');
+    if(countryName.textContent != countries[id].country){
+      globalStats(id);
+    }
 }))
 
 stateSelected.forEach(s => s.addEventListener('mouseover', ()=>{
-let id = s.getAttribute('data-state');
-  stateStats(id);
+  let id = s.getAttribute('data-state');
+  if(stateName.textContent != states[id].state){
+    stateStats(id);
+  }
 }))
 
 regionSelected.forEach(r => r.addEventListener('mouseover', ()=>{
-let id = r.getAttribute('data-region');
-regionStats(id);
+  let id = r.getAttribute('data-region');
+  if(regionName.textContent != regions[id].region){
+    regionStats(id);
+  }
 }))
 
 /* function autoSelectCountries(isAllowed){
