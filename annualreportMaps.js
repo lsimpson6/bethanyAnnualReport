@@ -28,35 +28,17 @@ var countrySelected = document.querySelectorAll('.country');
 var stateSelected = document.querySelectorAll('.state');
 var regionSelected = document.querySelectorAll('.region');
 
-var pacServedSum = 0;
-var pacProgramSum = 0; 
-var pacLocationSum = 0;
-var pacExpenditureSum = 0;
+var pacServedSum, pacProgramSum, pacLocationSum, pacExpenditureSum = 0;
 
-var swServedSum = 0;
-var swProgramSum = 0; 
-var swLocationSum = 0;
-var swExpenditureSum = 0;
+var swServedSum, swProgramSum, swLocationSum, swExpenditureSum = 0;
 
-var mwServedSum = 0;
-var mwProgramSum = 0; 
-var mwLocationSum = 0;
-var mwExpenditureSum = 0;
+var mwServedSum, mwProgramSum, mwLocationSum, mwExpenditureSum = 0;
 
-var seServedSum = 0;
-var seProgramSum = 0; 
-var seLocationSum = 0;
-var seExpenditureSum = 0;
+var seServedSum, seProgramSum, seProgramSum, seLocationSum, seExpenditureSum = 0;
 
-var maServedSum = 0;
-var maProgramSum = 0; 
-var maLocationSum = 0;
-var maExpenditureSum = 0;
+var maServedSum, maProgramSum, maLocationSum, maExpenditureSum = 0;
 
-var neServedSum = 0;
-var neProgramSum = 0; 
-var neLocationSum = 0;
-var neExpenditureSum = 0;
+var neServedSum, neProgramSum, neLocationSum, neExpenditureSum = 0;
 
 const states = {
   "us-ak": {state: "Arkansas", served: 432, programs: 4, locations: 1, expenditures: 218682},
@@ -189,7 +171,7 @@ window.addEventListener('load', ()=>{
     regionStats("reg-pa")
   }
   else {
-    stateStats("us-ak");
+    stateStats("us-mi");
   }
 })
 
@@ -206,6 +188,21 @@ stateSelected.forEach(s => s.addEventListener('click', ()=>{
 regionSelected.forEach(r => r.addEventListener('click', ()=>{
   let id = r.getAttribute('data-region');
   regionStats(id);
+}))
+
+countrySelected.forEach(c => c.addEventListener('hover', ()=>{
+  let id = c.getAttribute('data-country');
+  globalStats(id);
+}))
+
+stateSelected.forEach(s => s.addEventListener('hover', ()=>{
+let id = s.getAttribute('data-state');
+  stateStats(id);
+}))
+
+regionSelected.forEach(r => r.addEventListener('hover', ()=>{
+let id = r.getAttribute('data-region');
+regionStats(id);
 }))
 
 /* function autoSelectCountries(isAllowed){
