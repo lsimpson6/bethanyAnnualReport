@@ -177,7 +177,9 @@ window.addEventListener('load', ()=>{
 
 countrySelected.forEach(c => c.addEventListener('click', ()=>{
     let id = c.getAttribute('data-country');
-    globalStats(id);
+    if(countryName.textContent != id){
+      globalStats(id);
+    }
 }))
 
 stateSelected.forEach(s => s.addEventListener('click', ()=>{
