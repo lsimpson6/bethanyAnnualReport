@@ -176,7 +176,7 @@ window.addEventListener('load', ()=>{
 })
 
 
-countrySelected.forEach(c => c.addEventListener('click', 'mouseover', ()=>{
+countrySelected.forEach(c => c.addEventListener('click', ()=>{
     let id = c.getAttribute('data-country');
     if(countryName.textContent != countries[id].country){
       globalStats(id);
@@ -197,6 +197,12 @@ regionSelected.forEach(r => r.addEventListener('click', ()=>{
   }
 }))
 
+countrySelected.forEach(c => c.addEventListener('mouseover', ()=>{
+    let id = c.getAttribute('data-country');
+    if(countryName.textContent != countries[id].country){
+      globalStats(id);
+    }
+}))
 
 stateSelected.forEach(s => s.addEventListener('mouseover', ()=>{
   let id = s.getAttribute('data-state');
