@@ -1,9 +1,10 @@
-(function({
-  
 var scrollBar = document.getElementById('site-progress');
-var pageHeight = window.innerHeight;
-var pageWidth = window.innerWidth;
-  
+var h = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+var w = window.innerWidth;
+var scroll = scrollY;
 
-  
-})();
+window.addEventListener('scroll', ()=>{
+    scrollBar.style.width = `${w/h}px`;
+})
+
+
