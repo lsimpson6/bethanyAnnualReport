@@ -8,7 +8,7 @@ var oldValue = 0;
 
 window.addEventListener('scroll', ()=>{
     
-    var incr = (h-screenHeight)/w;
+    var incr = (h/w) + screenHeight/w;
     newValue = window.pageYOffset;
 
     if(oldValue - newValue < 0){
