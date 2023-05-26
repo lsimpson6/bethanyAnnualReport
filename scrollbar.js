@@ -3,9 +3,11 @@ var body = document.body, html = document.documentElement;
 var h = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
 var w = window.innerWidth;
 var scroll = scrollY;
+var widthOverHeight = w/h;
 
 window.addEventListener('scroll', ()=>{
-    scrollBar.style.width = `${w/h}px`;
+    let tmpWidthHeight =+ widthOverHeight;
+    scrollBar.style.width = `${tmpWidthHeight}px`;
 })
 
 
