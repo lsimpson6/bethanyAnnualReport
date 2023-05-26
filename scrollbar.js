@@ -6,7 +6,9 @@ var scroll = scrollY;
 var widthOverHeight = w/h;
 
 window.addEventListener('scroll', ()=>{
-    let tmpWidthHeight =+ widthOverHeight;
+    let tmpWidthHeight = 0;
+    tmpWidthHeight += widthOverHeight;
+    cons
     scrollBar.style.width = `${tmpWidthHeight}px`;
 })
 
