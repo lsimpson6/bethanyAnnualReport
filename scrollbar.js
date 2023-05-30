@@ -12,6 +12,8 @@ var amountScrolled = scrollY;
 var barWidth = 0;
 window.addEventListener('scroll', ()=>{
 
+    console.log("percent: " + onePercent);
+    console.log("scrolled: " + scrollY);
 
     if(amountScrolled = onePercent){
         barWidth ++;
