@@ -5,22 +5,19 @@ var w = window.innerWidth;
 var screenHeight = screen.clientHeight;
 var tmpWidthHeight = 0;
 var oldValue = 0;
-var onePercent = screenHeight*.01;
-
-for(var i = 0; i <= h; i + onePercent){
-    console.log(i);
-}
+var onePercent = h*.01;
 
 
-// get percent value scrolled
-//var onePercent = screenHeight*.01;
-
-//window.addEventListener('scroll', ()=>{
-
-//    if(scrollY = )
-    
-
-//})
+var amountScrolled = scrollY;
+var barWidth = 0;
+window.addEventListener('scroll', ()=>{
 
 
-//        scrollBar.style.width = `${tmpWidthHeight}px`;
+    if(amountScrolled = onePercent){
+        barWidth ++;
+        scrollBar.style.width = `${barWidth}%`;
+        onePercent += onePercent;
+    }
+  
+
+})
