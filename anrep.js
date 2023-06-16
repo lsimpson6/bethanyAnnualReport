@@ -53,14 +53,16 @@
         }
       }
 
-      if(wmmIndex < wmmFade.length){
-        let fadeTop = wmmFade[wmmIndex].getBoundingClientRect().top;
-        if(fadeTop <= tmpHeight){
-          setTimeout(()=>{
-            wmmFade[wmmIndex].style = 'opacity:1;';
-            wmmIndex ++;
-          }, 100)
-        } 
+      if(wmmFade.length > 0){
+        if(wmmIndex < wmmFade.length){
+          let fadeTop = wmmFade[wmmIndex].getBoundingClientRect().top;
+          if(fadeTop <= tmpHeight){
+            setTimeout(()=>{
+              wmmFade[wmmIndex].style = 'opacity:1;';
+              wmmIndex ++;
+            }, 100)
+          } 
+        }
       }
 
       //aniamte payment form 
