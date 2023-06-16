@@ -59,7 +59,7 @@
             if(fadeTop <= tmpHeight){
                 wmmFade[wmmIndex].style = 'opacity:1;';
             }
-            setTimeout(()=>{
+            setInterval(()=>{
             wmmIndex ++;
             }, 100) 
           }
