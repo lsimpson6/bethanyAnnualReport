@@ -1,4 +1,5 @@
 (function (){
+  var wmmIndex = 0;
   var winHeight = window.innerHeight;
   var sectionTitle = document.getElementById('section-title');
   var target = document.querySelectorAll('.title-target');
@@ -52,13 +53,13 @@
         }
       }
 
-      for(let wmmIndex = 0; wmmIndex < wmmFade.length; wmmIndex++){
+      if(wmmIndex < wmmFade.length){
         let fadeTop = wmmFade[wmmIndex].getBoundingClientRect().top;
         if(fadeTop <= tmpHeight){
           setTimeout(()=>{
             wmmFade[wmmIndex].style = 'opacity:1;';
+            wmmIndex ++;
           }, 40)
-        }
       }
 
       //aniamte payment form 
@@ -70,7 +71,7 @@
         }
       }
 
-          // animate images 
+    // animate images 
     var img = document.querySelectorAll('.animate-img');
 
     for(var im = 0; im < img.length; im++){
