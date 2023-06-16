@@ -59,7 +59,7 @@
           setTimeout(()=>{
             wmmFade[wmmIndex].style = 'opacity:1;';
             wmmIndex ++;
-          }, 40)
+          }, 100)
         } 
       }
 
