@@ -60,6 +60,7 @@
             wmmFade[wmmIndex].style = 'opacity:1;';
             wmmIndex ++;
           }, 40)
+        } 
       }
 
       //aniamte payment form 
