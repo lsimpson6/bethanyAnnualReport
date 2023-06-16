@@ -55,7 +55,9 @@
       for(let wmmIndex = 0; wmmIndex < wmmFade.length; wmmIndex++){
         let fadeTop = wmmFade[wmmIndex].getBoundingClientRect().top;
         if(fadeTop <= tmpHeight){
-          wmmFade[wmmIndex].style = 'opacity:1';
+          setTimeout(()=>{
+            wmmFade[wmmIndex].style = 'opacity:1;';
+          }, 40)
         }
       }
 
