@@ -14,6 +14,8 @@
   var voiletToWhite = document.querySelectorAll('.v2w');
   var tmpHeight;
   var paymentForm = document.querySelectorAll('.form-title-and-description');
+  var wmmFade = document.querySelectorAll('.wmm-fade');
+
 
     window.addEventListener('load',()=>{
 
@@ -47,6 +49,13 @@
             else {
               sectionTitle.textContent = "Annual Report"
             }
+        }
+      }
+
+      for(let wmmIndex = 0; wmmIndex < wmmFade.length; wmmIndex++){
+        let fadeTop = wmmFade[wmmIndex].getBoundingClientRect().top;
+        if(fadeTop <= tmpHeight){
+          wmmFade[wmmIndex].style = 'opacity:1';
         }
       }
 
