@@ -133,9 +133,11 @@
       }
 
       // remove fixed after a page is scrolled
+      var headTextRemoveFixed = document.getElementById('head-text');
       if(firstElementTop <= 0){
         for(let f = 0; f <= 2; f++){
           if($(fixed[f]).hasClass('fixed')){
+            fixed[f].classList.add('d-none');
             fixed[f].classList.remove('fixed');
           }
         }
@@ -145,6 +147,7 @@
         for(let f = 0; f <= 2; f++){
           if(!($(fixed[f]).hasClass('fixed'))){
             fixed[f].classList.add('fixed');
+            fixed[f].classList.remove('d-none');
           }
         }
         bgOverlay.classList.remove('d-none');
